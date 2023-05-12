@@ -8,8 +8,10 @@ function test() {
   const openers = document.querySelectorAll(".opener-form");
   const openersPdf = document.querySelectorAll(".opener-pdf");
   const closers = document.querySelectorAll(".closer");
-  const loaderImg = "http://localhost/gemma/wp-content/themes/gemma/";
-  const ajaxy = "http://localhost/gemma/wp-admin/admin-ajax.php";
+  // const loaderImg = "http://localhost/gemma/wp-content/themes/gemma/";
+  // const ajaxy = "http://localhost/gemma/wp-admin/admin-ajax.php";
+  const loaderImg = "https://gemma.regalestate.pl/wp-content/themes/gemma/";
+  const ajaxy = "https://gemma.regalestate.pl/wp-admin/admin-ajax.php";
 
   for (let i = 0; i < openersPdf.length; i++) {
     openersPdf[i].addEventListener("click", function (e) {

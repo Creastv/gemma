@@ -148,7 +148,8 @@ $inw = get_field( 'lokale' );
     var pageNumber = 1;
     var idd = <?php echo json_encode($inw->slug); ?>;
     var test = <?php echo json_encode($ex->slug); ?>;
-    var ajaxpagination = "http://localhost/gemma/wp-admin/admin-ajax.php";
+    var ajaxpagination = "https://gemma.regalestate.pl/wp-admin/admin-ajax.php";
+    // var ajaxpagination = "http://localhost/gemma/wp-admin/admin-ajax.php";
     
     function load_posts(){
         pageNumber++;
