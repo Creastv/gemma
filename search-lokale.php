@@ -1,6 +1,9 @@
 <?php
 global $searchandfilter;
 $sf_current_query = $searchandfilter->get(477)->current_query();
+// $link = 'http://localhost/gemma/lokale';
+$link = 'https://gemma.regalestate.pl';
+
 
 get_header(); ?>
 <header class="entry-header">
@@ -17,7 +20,7 @@ get_header(); ?>
     <div class="search-results-count">
         <span> Znaleziono <?php echo $wp_query->found_posts; ?> wyników wyszukiwania. </span>
         <?php if($sf_current_query->is_filtered()) : ?>
-        <a class="btn" href="<?php echo 'http://localhost/gemma/lokale'; ?>" class="btn-revers">Resetuj wyniki</a>
+        <a class="btn" href="<?php echo $link; ?>" class="btn-revers">Resetuj wyniki</a>
         <?php endif; ?>
     </div>
     <div class="swicher-results-display">
