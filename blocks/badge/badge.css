@@ -1,0 +1,30 @@
+.badge-one {
+  text-align: center;
+  margin-left: 25%;
+}
+@media only screen and (max-width: 1300px) {
+  .badge-one {
+    margin-left: 0px;
+  }
+}
+.badge-one .badge-one__wraper {
+  background-color: #122b4f;
+  padding: 20px;
+}
+.badge-one .badge-one__wraper hr {
+  opacity: 0.5;
+  margin: 20px 0;
+}
+.badge-one .badge-one__wraper p,
+.badge-one .badge-one__wraper span {
+  color: #fff;
+  margin-bottom: 0px;
+}
+.badge-one .badge-one__wraper p {
+  font-size: 61px;
+  line-height: 69px;
+  font-weight: 600;
+}
+.badge-one .badge-one__wraper span {
+  font-size: 14px;
+}/*# sourceMappingURL=badge.css.map */

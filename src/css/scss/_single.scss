@@ -1,0 +1,132 @@
+.posts-wraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  @media #{$md} {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media #{$sm} {
+    grid-template-columns: 1fr;
+  }
+}
+.post-item {
+  header {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .entry-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 29px;
+    margin: 20px 0;
+    a {
+      text-align: left;
+      color: $black;
+    }
+  }
+  p {
+    font-size: 12px;
+    line-height: 21px;
+    margin: 0 0 20px;
+  }
+  .btn-wraper {
+    text-align: right;
+  }
+
+  &:hover {
+    .entry-title {
+      a {
+        color: $main2;
+      }
+    }
+    .btn {
+      color: #fff;
+      background-color: $black;
+      svg,
+      path,
+      line,
+      rect {
+        stroke: #fff;
+      }
+    }
+  }
+}
+
+body.single-post {
+  .img-wraper {
+    max-width: 998px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .entry-content {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+// bio
+#author-bio {
+  margin-top: 30px;
+  padding: 20px 20px;
+  border-top: 1px solid $light;
+  border-bottom: 1px solid $light;
+  display: flex;
+  gap: 10px;
+  @media #{$sm} {
+    flex-wrap: wrap;
+  }
+
+  #author-avatar {
+    img {
+      // border-radius: 100%;
+    }
+  }
+  #author-details {
+    .author-head {
+      p.h3 {
+        font-size: 21px;
+        margin-bottom: 10px;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    .author-footer {
+      font-size: 13px;
+    }
+  }
+}
+
+.kk-ata {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media #{$sm} {
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .kk-ata__wraper {
+    span {
+      display: block;
+      font-size: 12px;
+      color: $light-black;
+      margin-bottom: 5px;
+    }
+  }
+  .kksr-muted,
+  .kksr-legend {
+    font-size: 12px;
+  }
+}

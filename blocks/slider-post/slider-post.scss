@@ -1,0 +1,37 @@
+@import "../../src/css/scss/variable";
+
+.arrows {
+  .swiper-button-next {
+    right: -60px;
+    width: 45px;
+    height: 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-color: yellow!important;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABHNCSVQICAgIfAhkiAAAAVpJREFUWEft1rtKxEAUBmAn0UJCYHuVQBoR8VLYKsHKUsQUK5tLIcFG9kms0qVKJA+S0qeIacTGVlQ2EP+BFNu4OcMyY4pJM0XOHD7+cwJhdV13GyN7GEe5rsvG4uIejaJMQydFSYnX6KR0UtQEqHV6p/49qSRJtrIsW1Ahy3XSxud53qbjOE9FUcxFYdJQHBLH8SOOozzPExGYVBSHhGF4zxjzkNiMCpOO6hO767ruFrAbCkwJqodd43zAKK+GYGRUFEVTjOFiqOGq97i/i8Q+m6aZVVXV/lVLRmFpz9HkcB0UQPuAXSKtk1V9yKh1MP3CHxuG8QzQ6VAvJSh8gTtI6AWLvjcEUvI/5fv+tmVZH0jIooCUoLCLX7ZtT9I0/RkFCqC3tm3PyrJ8p4KkJhUEwYFpmq8Y27cISCpKFLJcr+TrEwVqFDUxnZROipoAtU7vlHBS1Auq6n4Bq0NdUtt1zukAAAAASUVORK5CYII=");
+    &:after {
+      font-size: 0px;
+    }
+    @media #{$xxlg} {
+      right: 0px;
+      background-color: #fff;
+    }
+  }
+  .swiper-button-prev {
+    left: -60px;
+    width: 45px;
+    height: 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-color: yellow!important;
+    transform: rotate(180deg);
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABHNCSVQICAgIfAhkiAAAAVpJREFUWEft1rtKxEAUBmAn0UJCYHuVQBoR8VLYKsHKUsQUK5tLIcFG9kms0qVKJA+S0qeIacTGVlQ2EP+BFNu4OcMyY4pJM0XOHD7+cwJhdV13GyN7GEe5rsvG4uIejaJMQydFSYnX6KR0UtQEqHV6p/49qSRJtrIsW1Ahy3XSxud53qbjOE9FUcxFYdJQHBLH8SOOozzPExGYVBSHhGF4zxjzkNiMCpOO6hO767ruFrAbCkwJqodd43zAKK+GYGRUFEVTjOFiqOGq97i/i8Q+m6aZVVXV/lVLRmFpz9HkcB0UQPuAXSKtk1V9yKh1MP3CHxuG8QzQ6VAvJSh8gTtI6AWLvjcEUvI/5fv+tmVZH0jIooCUoLCLX7ZtT9I0/RkFCqC3tm3PyrJ8p4KkJhUEwYFpmq8Y27cISCpKFLJcr+TrEwVqFDUxnZROipoAtU7vlHBS1Auq6n4Bq0NdUtt1zukAAAAASUVORK5CYII=");
+    &:after {
+      font-size: 0px;
+    }
+    @media #{$xxlg} {
+      left: 0px;
+      background-color: #fff;
+    }
+  }
+}

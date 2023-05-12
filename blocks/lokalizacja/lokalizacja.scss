@@ -1,0 +1,32 @@
+@import "../../src/css/scss/variable";
+.go-lokalizacja {
+  margin-bottom: 20px;
+  .row {
+    display: flex;
+    align-items: center;
+    @media #{$md} {
+      flex-wrap: wrap;
+    }
+    .col {
+      &:nth-child(2) {
+        width: 60%;
+        @media #{$md} {
+          width: 100%;
+        }
+      }
+      &:nth-child(1) {
+        width: 40%;
+        @media #{$md} {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .go-lokalizacja__opis {
+    padding: 20px 20px;
+  }
+  iframe {
+    display: block;
+    min-height: 450px;
+  }
+}

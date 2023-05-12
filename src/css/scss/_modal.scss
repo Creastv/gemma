@@ -1,0 +1,159 @@
+body.active {
+  overflow: hidden;
+}
+.form-lokale__header {
+  h4 {
+    font-size: 30px;
+  }
+}
+.go-modal {
+  position: relative;
+  z-index: 999999;
+  .close-modal {
+    color: red;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-color: #e2e2e2;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    text-align: center;
+    font-weight: 900;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .go-modal__bg {
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 999;
+    width: 100%;
+    height: 0%;
+    top: -110%;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transform: opacity 0.1s, height 0.3s linear;
+    padding: 50px 0;
+  }
+  .go-modal__container {
+    position: relative;
+    z-index: 2;
+    transition: all 0.2s linear;
+    z-index: 999;
+    width: 95%;
+    max-width: 998px;
+    margin: 0 auto;
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+    top: -110%;
+  }
+  .go-modal__wraper {
+  }
+  .go-modal__wraper.active {
+    top: 100px !important;
+    @media #{$sm} {
+      top: 30px !important;
+    }
+  }
+}
+
+.go-modal.active {
+  .go-modal__container {
+    top: 0px !important;
+
+    // height: calc(90vh - 100px);
+  }
+  .go-modal__bg {
+    min-height: 100%;
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+.lokal-ms {
+  .row {
+    width: 100%;
+    display: flex;
+    @media #{$sm} {
+      flex-wrap: wrap;
+    }
+    .col {
+      &:nth-child(1) {
+        width: 70%;
+        padding-right: 50px;
+        @media #{$sm} {
+          width: 100%;
+          padding-right: 0px;
+          order: 2;
+        }
+      }
+      &:nth-child(2) {
+        width: 30%;
+        @media #{$sm} {
+          width: 100%;
+          order: 1;
+        }
+      }
+    }
+  }
+  .pdf-display {
+    width: 100%;
+  }
+  .lokal-ms__info {
+    h4 {
+      font-size: 30px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #000;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #e2e2e2;
+        span {
+          &:nth-child(2) {
+            font-weight: 500;
+          }
+        }
+      }
+      .status {
+        width: 100%;
+        padding: 5px 10px;
+        text-align: center;
+        color: #fff;
+      }
+      .status.sold {
+        background-color: red;
+        color: #fff;
+      }
+      .status.booked {
+        background-color: orange;
+      }
+      .status.available {
+        background-color: green;
+      }
+    }
+  }
+}
+
+.loading {
+  padding: 100px 0;
+  img {
+    width: 50px;
+    height: auto;
+    border: none !important;
+    margin: 0 auto;
+    display: block;
+  }
+}

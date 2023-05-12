@@ -1,0 +1,163 @@
+#header {
+  width: 100%;
+  padding: 20px 30px;
+  background-color: #fff;
+  @media #{$sm} {
+    padding: 15px;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    .navbar__navigation {
+      flex: auto;
+    }
+    @media #{$xx} {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+#header.active {
+  position: fixed;
+  z-index: 99;
+  top: 0px;
+  @media #{$xx} {
+    position: relative !important;
+  }
+}
+.navbar__brand {
+  margin-right: 20px;
+  @media #{$lg} {
+    flex: auto;
+  }
+
+  @media #{$xs} {
+    width: 30%;
+    margin-right: 10px;
+  }
+  @media #{$xx} {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+  img {
+    @media #{$xs} {
+      width: 80%;
+      height: auto;
+    }
+    @media #{$xx} {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+.navbar__navigation {
+  transition: all 0.3s;
+  @media #{$lg} {
+    position: fixed;
+    z-index: 99;
+    max-width: 300px;
+    width: 70%;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    background-color: $black;
+  }
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    @media #{$lg} {
+      display: block;
+      padding: 30px;
+    }
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        padding: 10px 15px;
+        color: $light-black;
+        text-transform: uppercase;
+        font-size: 15px;
+        @media #{$lg} {
+          color: #fff;
+          font-size: 21px;
+          margin-bottom: 20px;
+          display: block;
+          &:hover {
+            color: $main2 !important;
+          }
+        }
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+    .current_page_item {
+      a {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.navbar__navigation.active {
+  left: 0px;
+}
+
+.navbar__icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  li {
+    a {
+      padding: 15px;
+      @media #{$sm} {
+        padding: 7.5px;
+      }
+    }
+    &:last-child {
+      a {
+        padding-right: 0px;
+        @media #{$lg} {
+          padding-right: 15px;
+        }
+        @media #{$sm} {
+          padding-right: 7.5px;
+        }
+      }
+    }
+  }
+}
+
+.navbar__swicher {
+  padding: 15px;
+  @media #{$sm} {
+    padding: 0 7.5px;
+  }
+  @media #{$xx} {
+    width: 20%;
+    text-align: right;
+  }
+}
+
+.navbar__toggler {
+  display: none;
+  padding: 15px;
+  @media #{$lg} {
+    display: block;
+    padding: 7.5px 0 7.5px 7.5px;
+  }
+  .navbar__toggler__btn {
+    width: 28px;
+    span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $light-black;
+      margin-bottom: 3px;
+    }
+  }
+}

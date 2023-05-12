@@ -1,0 +1,31 @@
+@import "../../src/css/scss/variable";
+
+.badge-one {
+  text-align: center;
+  margin-left: 25%;
+  @media #{$lg} {
+    margin-left: 0px;
+  }
+
+  .badge-one__wraper {
+    background-color: $main;
+    padding: 20px;
+    hr {
+      opacity: 0.5;
+      margin: 20px 0;
+    }
+    p,
+    span {
+      color: #fff;
+      margin-bottom: 0px;
+    }
+    p {
+      font-size: 61px;
+      line-height: 69px;
+      font-weight: 600;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../src/css/scss/variable";
+.go-makieta {
+  // position: relative;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.tooltip-makieta {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  border: 1px solid #333;
+  background-color: $main;
+  opacity: 1;
+  padding: 5px;
+  color: #fff;
+  font-size: 12px Arial;
+  padding: 20px;
+  p {
+    font-size: 33px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    @media #{$sm} {
+      font-size: 21px;
+    }
+  }
+  span {
+    font-size: 19px;
+    @media #{$sm} {
+      font-size: 16px;
+    }
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -10px;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid $main;
+  }
+}

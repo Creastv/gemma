@@ -1,0 +1,53 @@
+.btn {
+  // display: block;
+  transition: all 0.3s linear;
+  border: 1px solid #dedede;
+  color: #606060;
+  height: 45px;
+  padding: 9.5px 12px;
+  display: inline-block;
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    path {
+      stroke: #606060;
+    }
+  }
+  &:hover {
+    background-color: $black;
+    color: #fff;
+  }
+}
+.btn-revers {
+  // display: block;
+  transition: all 0.3s linear;
+  border: 1px solid #fff;
+  height: 45px;
+  padding: 9.5px 12px;
+  display: inline-block;
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &:hover {
+    background-color: #fff;
+    path {
+      stroke: $black;
+    }
+    span {
+      color: $black !important;
+    }
+  }
+}

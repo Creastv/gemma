@@ -1,0 +1,73 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: $black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  color: $black;
+  font-weight: 300;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 300;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+p {
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+a {
+  color: $main2;
+  text-decoration: none;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.entry-header {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+  @media #{$sm} {
+    padding: 30px 0;
+  }
+  .entry-title {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 300;
+    @media #{$sm} {
+      font-size: 31px;
+    }
+  }
+}
+
+.title-page-big {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
+}

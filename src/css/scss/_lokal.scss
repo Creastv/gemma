@@ -1,0 +1,264 @@
+.local-item {
+  header {
+    position: relative;
+    display: block;
+    border: 1px solid $black;
+    a {
+      display: block;
+      border: 1px solid $black;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .entry-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 29px;
+    margin: 20px 0;
+    a {
+      text-align: left;
+      color: $black;
+    }
+  }
+  .entry-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .label-status {
+    padding: 5px 15px;
+    font-size: 13px;
+    position: absolute;
+    background-color: #dedede;
+    color: #fff;
+    right: 0px;
+    bottom: 0;
+  }
+  .sold {
+    background-color: red;
+  }
+  .booked {
+    background-color: orange;
+  }
+  .available {
+    background-color: green;
+  }
+}
+
+table {
+  // table-layout: fixed;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+tr {
+  &:nth-child(even) {
+    td {
+      background-color: #fbfbfb;
+    }
+  }
+  &:hover {
+    td {
+      background-color: #ebebeb;
+    }
+  }
+}
+table.dataTable thead th {
+  // text-align: center;
+  border-left: 1px solid #e2e2e2;
+  border-bottom: 1px solid #959fad !important;
+  padding: 10px 36px 10px 18px;
+  font-size: 16px;
+  font-weight: 300;
+  @media #{$sm} {
+    width: auto !important;
+  }
+  &:first-child {
+    border-left: 1px solid transparent;
+    width: 50px;
+    padding: 0px;
+  }
+  &:nth-child(2) {
+    border-left: 1px solid transparent;
+  }
+  &:nth-child(3) {
+    width: 200px;
+  }
+  &:nth-child(6) {
+    width: 100px;
+  }
+  &:nth-child(8) {
+    width: 100px;
+  }
+  &:nth-child(9) {
+    width: 200px;
+  }
+}
+table.dataTable.no-footer {
+  border: none !important;
+}
+table.dataTable tbody td {
+  // text-align: center;
+  border-left: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  vertical-align: top;
+  padding: 20px;
+  &:first-child {
+    border-left: 1px solid transparent;
+  }
+  &:last-child {
+  }
+  &:nth-child(2) {
+    border-left: 1px solid transparent;
+  }
+  .size {
+    position: relative;
+    display: inline-block;
+    padding-right: 35px;
+    margin-bottom: 10px;
+    &:after {
+      content: " m";
+      position: absolute;
+      right: 12px;
+    }
+    &:before {
+      content: " 2";
+      position: absolute;
+      right: 0px;
+      transform: translate(0px, -4px);
+      font-size: 14px;
+    }
+  }
+
+  &:nth-child(8) {
+    p {
+      font-size: 14px !important;
+    }
+  }
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 0px;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+  span {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    display: block;
+  }
+  a {
+    word-break: keep-all;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+    display: block;
+  }
+}
+
+.dataTables_paginate {
+  text-align: center !important;
+  width: 100% !important;
+  float: none;
+  padding: 20px 0 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 0px;
+  color: $main2 !important;
+  border: none !important;
+  box-shadow: none !important;
+  &:hover {
+    background: none;
+    color: $main2 !important;
+    opacity: 0.8;
+  }
+}
+.paginate_button.current {
+  border: none !important;
+  background: none !important;
+}
+
+.stat.sold {
+  color: red;
+}
+.stat.booked {
+  color: orange;
+}
+.stat.available {
+  color: green;
+}
+
+td.child {
+  ul {
+    width: 100%;
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.extras {
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  li {
+    img {
+      display: block;
+    }
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+      font-size: 12px;
+      visibility: hidden;
+      width: auto;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 0px;
+      padding: 2px 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      margin-bottom: 3px;
+      // margin-left: -60px;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+  }
+}
+
+.size-info {
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  li {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    span {
+      margin-bottom: 5px !important;
+      font-size: 14px;
+    }
+  }
+}
