@@ -5,10 +5,10 @@ $term = get_field( 'inwestycja' );
 $filter = get_field( 'clasa_filtra' );
 $form = get_field( 'formularz_filtrujacy' );
 
-$stroke_color = "528ABF";
-$fill_color = "528ABF";
-$fill_opacity = "0.5";
-$stroke_opacity = "0.5";
+$stroke_color = "00000";
+$fill_color = "00000";
+$fill_opacity = "0.4";
+$stroke_opacity = "0.0";
 
 ?>
 

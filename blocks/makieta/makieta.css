@@ -11,7 +11,7 @@
   position: absolute;
   z-index: 999;
   border: 1px solid #333;
-  background-color: #122b4f;
+  background-color: black;
   opacity: 1;
   padding: 5px;
   color: #fff;
@@ -45,5 +45,5 @@
   height: 0px;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-right: 10px solid #122b4f;
+  border-right: 10px solid black;
 }/*# sourceMappingURL=makieta.css.map */
