@@ -81,6 +81,28 @@ function register_acf_block_types() {
             wp_enqueue_style( 'go-container',  get_template_directory_uri() . '/blocks/container/container.min.css' );
         },
     ));
+     acf_register_block_type(array(
+        'name'              => 'btn',
+        'title'             => __('Button'),
+        'render_template'   => 'blocks/btn/btn.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#122b4f',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+        'mode'            => 'preview', 
+        'keywords'          => array( 'Button' ),
+        'supports'		=> [
+            'align'			=> true,
+            'anchor'		=> false,
+            'customClassName'	=> false,
+            'jsx' 			=> false,
+          ],
+        'enqueue_assets'    => function(){
+            wp_enqueue_style( 'go-btn',  get_template_directory_uri() . '/blocks/btn/btn.min.css' );
+        },
+    ));
 
     acf_register_block_type(array(
         'name'              => 'makieta',
@@ -322,3 +344,13 @@ function register_acf_block_types() {
 if( function_exists('acf_register_block_type') ) {
     add_action('acf/init', 'register_acf_block_types');
 }
+
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+ 
+function my_acf_json_save_point( $path ) {
+    // Update path
+    $path = get_template_directory() . '/blocks/acf-json';
+    // Return path
+    return $path;
+}
+

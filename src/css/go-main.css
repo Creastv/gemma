@@ -82,6 +82,14 @@ a:hover {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1258,6 +1266,7 @@ td.child ul li {
   height: 45px;
   padding: 9.5px 12px;
   display: inline-block;
+  color: #fff;
 }
 .btn-revers span {
   display: inline-block;
