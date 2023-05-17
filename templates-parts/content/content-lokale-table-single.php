@@ -62,7 +62,7 @@ $sizeInfo = get_field( 'dodatkowe_info_o_powierzchni', get_the_ID() );
     <td></td>
     <td>
         <?php if ( has_post_thumbnail() )  : ?>
-        <?php the_post_thumbnail(); ?>
+        <?php the_post_thumbnail('local-table'); ?>
         <?php else: ?>
         <img src="<?php echo get_template_directory_uri()."/src/img/thumbnail.png"; ?>" width="120" height="120" alt="<?php the_title(); ?>">
         <?php endif; ?>
