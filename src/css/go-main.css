@@ -90,6 +90,16 @@ a:hover {
   text-align: left;
 }
 
+.aligncenter {
+  text-align: center;
+}
+
+.wp-block-embed__wrapper iframe {
+  max-width: 100%;
+  width: 715px;
+  height: 400px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -223,6 +233,23 @@ figure img {
   .badge-two .span {
     font-size: 35px;
   }
+}
+
+.kontakt-pod-klucz {
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 998px) {
+  .kontakt-pod-klucz div:nth-child(1) {
+    order: 2;
+  }
+}
+@media only screen and (max-width: 998px) {
+  .kontakt-pod-klucz div:nth-child(2) {
+    text-align: center;
+  }
+}
+.kontakt-pod-klucz figure {
+  margin-bottom: 0px;
 }
 
 #footer {

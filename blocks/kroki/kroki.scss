@@ -1,0 +1,128 @@
+@import "../../src/css/scss/variable";
+
+.steps {
+  margin-bottom: 20px;
+  @media #{$sm} {
+    padding: 0px;
+  }
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+  }
+}
+.steps--6 {
+  li {
+    width: 16.666%;
+    @media #{$sm} {
+      width: inherit;
+    }
+  }
+}
+.steps--5 {
+  li {
+    width: 20%;
+    @media #{$sm} {
+      width: inherit;
+    }
+  }
+}
+.steps--4 {
+  li {
+    width: 25%;
+    @media #{$sm} {
+      width: inherit;
+    }
+  }
+}
+
+.steps--3 {
+  li {
+    width: 33.333%;
+    @media #{$sm} {
+      width: inherit;
+    }
+  }
+}
+
+.steps__content {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    @media #{$sm} {
+      display: block;
+    }
+    li {
+      position: relative;
+      padding: 0 10px;
+      text-align: center;
+      @media #{$sm} {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 23px;
+        width: 50%;
+        height: 1px;
+        background-color: $black;
+        @media #{$sm} {
+          width: 1px;
+          height: 50%;
+          left: 33px;
+          top: 0px;
+        }
+      }
+      &:after {
+        @media #{$sm} {
+          top: 50%;
+        }
+      }
+      &:before {
+        left: 0px;
+        @media #{$sm} {
+          left: 33px;
+        }
+      }
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      .steps__number {
+        display: block;
+        position: relative;
+        z-index: 3;
+        margin: 0 auto;
+        width: 46px;
+        height: 46px;
+        font-size: 21px;
+        padding: 8px;
+        background-color: #fff;
+        border: 1px solid $black;
+        border-radius: 100%;
+        margin-bottom: 20px;
+        @media #{$sm} {
+          margin: 10px 0;
+        }
+      }
+      .steps__title {
+        font-size: 21px;
+        line-height: 28px;
+        @media #{$sm} {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

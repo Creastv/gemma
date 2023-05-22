@@ -77,3 +77,15 @@ a {
 .text-left {
   text-align: left;
 }
+
+.aligncenter {
+  text-align: center;
+}
+
+.wp-block-embed__wrapper {
+  iframe {
+    max-width: 100%;
+    width: 715px;
+    height: 400px;
+  }
+}

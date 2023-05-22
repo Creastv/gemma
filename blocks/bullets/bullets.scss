@@ -48,16 +48,76 @@
     grid-template-columns: 1fr;
   }
 }
+.bullets.flex-6 {
+  display: flex;
+  gap: 20px;
+  @media #{$xlg} {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media #{$md} {
+    gap: 0px;
+  }
+  @media #{$sm} {
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+  li {
+    width: 16.666%;
+    @media #{$xlg} {
+      width: 25%;
+    }
+    @media #{$md} {
+      width: calc(50% - 20px);
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+}
+.bullets.flex-5 {
+  display: flex;
+  gap: 20px;
+  @media #{$xlg} {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media #{$md} {
+    gap: 0px;
+  }
+  @media #{$sm} {
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+  li {
+    width: 25%;
+    @media #{$xlg} {
+      width: 25%;
+    }
+    @media #{$md} {
+      width: calc(50% - 20px);
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+}
 
 .bullets.flex-4 {
   display: flex;
   gap: 20px;
-
   @media #{$md} {
+    flex-wrap: wrap;
   }
   @media #{$sm} {
-    flex-wrap: wrap;
-    li {
+    gap: 0px;
+  }
+  li {
+    width: 25%;
+    @media #{$md} {
+      width: calc(50% - 20px);
+    }
+    @media #{$sm} {
       width: 100%;
     }
   }
@@ -69,7 +129,11 @@
 
   @media #{$sm} {
     flex-wrap: wrap;
-    li {
+    gap: 0px;
+  }
+  li {
+    width: 33.333%;
+    @media #{$sm} {
       width: 100%;
     }
   }
@@ -80,14 +144,20 @@
 
   @media #{$sm} {
     flex-wrap: wrap;
-    li {
-      width: 100%;
-    }
+  }
+  li {
+    width: 100%;
   }
 }
 
 .bullets.flex-1 {
   display: block;
+}
+
+.bullets.auto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .bullets.align-left {
@@ -99,4 +169,32 @@
 }
 .bullets.align-center {
   justify-content: center;
+}
+
+.bullets.middle {
+  li {
+    .top {
+      display: block !important;
+      text-align: center;
+    }
+  }
+}
+
+.space-between {
+  justify-content: space-between !important;
+  gap: 10px !important;
+  li {
+    width: inherit !important;
+  }
+}
+.center {
+  justify-content: center !important;
+  gap: 10px !important;
+  li {
+    width: inherit !important;
+  }
+}
+
+.space-around {
+  justify-content: space-around !important;
 }

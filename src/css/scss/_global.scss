@@ -124,3 +124,22 @@ figure {
     }
   }
 }
+
+.kontakt-pod-klucz {
+  margin-bottom: 0px;
+  div {
+    &:nth-child(1) {
+      @media #{$md} {
+        order: 2;
+      }
+    }
+    &:nth-child(2) {
+      @media #{$md} {
+        text-align: center;
+      }
+    }
+  }
+  figure {
+    margin-bottom: 0px;
+  }
+}

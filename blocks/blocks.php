@@ -298,6 +298,28 @@ function register_acf_block_types() {
             wp_enqueue_style( 'go-etapy',  get_template_directory_uri() . '/blocks/etapy/etapy.min.css' );
         },
     ));
+    acf_register_block_type(array(
+        'name'              => 'kroki',
+        'title'             => __('Kroki'),
+        'render_template'   => 'blocks/kroki/kroki.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#122b4f',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+        'mode'            => 'preview', 
+        'keywords'          => array( 'kroki' ),
+        'supports'		=> [
+            'align'			=> false,
+            'anchor'		=> false,
+            'customClassName'	=> false,
+            'jsx' 			=> true,
+          ],
+        'enqueue_assets'    => function(){
+            wp_enqueue_style( 'go-kroki',  get_template_directory_uri() . '/blocks/kroki/kroki.min.css' );
+        },
+    ));
 
     acf_register_block_type(array(
         'name'              => 'bullets',
