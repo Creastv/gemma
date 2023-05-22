@@ -1,71 +1,27 @@
 <?php
 $etapy = get_field( 'etapy' );
 ?>
+<?php
+if($etapy):
+    echo '<div class="etapy etapy--desktop">';
+    echo '<ul class="etapy__wraper">';
+    $i = 0;
+    // $ii = 1;
+    foreach($etapy as $etap):
+        // if($i%2==0) :
+            $stat =  $etap['aktywny'] == true ? 'active' : false;
+        echo ' <li class="' . $stat . '">';
+            echo '<div class="etap">';
+                echo '<div class="etap__content">';
+                    echo '<p> ' . $etap['opis'] . ' </p>';
+                echo '</div>';
+                echo '<span class="etap__pointer"></span>';
+                echo '<span class="etap__spacer"></span>';
+            echo '</div>';
+        echo '</li>';
 
-<div class="etapy">
-    <ul>
-        <li class="active">
-            <div class="etap">
-                <div class="etap__content">
-                    <span class="pointer"></span>
-                     <p>Dokumentacja<br>budowy</p>
-                </div>
-                <div class="etap__space"></div>
-            </div>
-        </li>
-        <li class="active">
-            <div class="etap">
-                <div class="etap__space"></div>
-                <div class="etap__content">
-                    <span class="pointer"></span>
-                     <p>Rozpoczęcie<br>prac budowlanych</p>
-                </div>
-            </div>
-        </li>
-        <li class="active">
-            <div class="etap">
-                <div class="etap__content">
-                    <span class="pointer"></span>
-                     <p>Stan surowy<br>otwarty</p>
-                </div>
-                <div class="etap__space"></div>
-            </div>
-        </li>
-        <li>
-            <div class="etap">
-                 <div class="etap__space"></div>
-                <div class="etap__content">
-                    <span class="pointer"></span>
-                     <p>Stan surowy<br>otwarty</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="etap">
-                <div class="etap__content">
-                    <span class="pointer"></span>
-                     p>Rozpoczęcie<br>prac budowlanych</p>
-                </div>
-                <div class="etap__space"></div>
-            </div>
-        </li>
-        <li>
-            <div class="etap">
-                 <div class="etap__space"></div>
-                <div class="etap__content">
-                    <span class="pointer"></span>
-                     <p>Stan surowy<br>otwarty</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="etap">
-                <div class="etap__content">
-                    <span class="pointer"></span>
-                     <p>Etap 1</p>
-                </div>
-                <div class="etap__space"></div>
-            </div>
-        </li>
-    </ul>
-</div>
+    endforeach;
+    echo '</ul>';
+    echo '</div>';
+endif;
+?>

@@ -74,7 +74,7 @@
   position: absolute;
   top: 23px;
   width: 50%;
-  height: 1px;
+  height: 2px;
   background-color: black;
 }
 @media only screen and (max-width: 768px) {
