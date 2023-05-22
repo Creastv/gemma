@@ -151,28 +151,7 @@ function register_acf_block_types() {
             wp_enqueue_style( 'go-badge',  get_template_directory_uri() . '/blocks/badge/badge.min.css' );
         },
     ));
-    acf_register_block_type(array(
-        'name'              => 'lokalizacja',
-        'title'             => __('Lokalizacja'),
-        'render_template'   => 'blocks/lokalizacja/lokalizacja.php',
-        'category'          => 'formatting',
-        'icon' => array(
-          'background' => '#122b4f',
-          'foreground' => '#fff',
-          'src' => 'ellipsis',
-        ),
-        'mode'            => 'preview', 
-        'keywords'          => array( 'lokalizacja' ),
-        'supports'		=> [
-            'align'			=> false,
-            'anchor'		=> false,
-            'customClassName'	=> false,
-            'jsx' 			=> true,
-          ],
-        'enqueue_assets'    => function(){
-            wp_enqueue_style( 'go-lokalizacja',  get_template_directory_uri() . '/blocks/lokalizacja/lokalizacja.min.css' );
-        },
-    ));
+
     acf_register_block_type(array(
         'name'              => 'lokalizacja',
         'title'             => __('Lokalizacja'),
