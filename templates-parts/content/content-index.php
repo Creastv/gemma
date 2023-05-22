@@ -3,7 +3,7 @@
         <header>
             <a href="<?php the_permalink(); ?>">
                 <?php if ( has_post_thumbnail() )  : ?>
-                <?php the_post_thumbnail('post'); ?>
+                <?php the_post_thumbnail('post-item'); ?>
                 <?php else: ?>
                 <img src="<?php echo get_template_directory_uri()."/src/img/thumbnail.png"; ?>" width="350" height="490" alt="<?php the_title(); ?>">
                 <?php endif; ?>
