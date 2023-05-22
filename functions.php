@@ -3,7 +3,7 @@ add_theme_support('post-thumbnails');
 add_image_size( 'licytacja', 220, 220, array( 'center', 'center' ) );
 add_image_size( 'post-item', 350, 490, array( 'center', 'center' ) );
 add_image_size( 'post', 350, 490 );
-add_image_size( 'local-table', 120, 120 );
+add_image_size( 'local-table', 120, 120, true );
 add_image_size( 'galeria', 400, 300, array( 'center', 'center' ) );
 
 if ( ! function_exists( 'go_register_nav_menu' ) ) {
