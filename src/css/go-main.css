@@ -44,7 +44,7 @@ p {
 }
 
 a {
-  color: #528ABF;
+  color: black;
   text-decoration: none;
   transition: all 0.3s;
 }
@@ -76,6 +76,11 @@ a:hover {
 .title-page-big {
   font-size: 52px;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .title-page-big {
+    font-size: 31px;
+  }
 }
 
 .text-center {

@@ -38,7 +38,7 @@ p {
   margin-bottom: 20px;
 }
 a {
-  color: $main2;
+  color: $black;
   text-decoration: none;
   transition: all 0.3s;
   &:hover {
@@ -66,6 +66,9 @@ a {
 .title-page-big {
   font-size: 52px;
   margin-bottom: 20px;
+  @media #{$sm} {
+    font-size: 31px;
+  }
 }
 
 .text-center {
