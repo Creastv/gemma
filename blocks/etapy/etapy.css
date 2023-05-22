@@ -1,1 +1,42 @@
-/*# sourceMappingURL=etapy.css.map */
+.etapy ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.etapy ul li {
+  position: relative;
+}
+.etapy ul li .etap .etap__content {
+  position: relative;
+}
+.etapy ul li .etap .etap__content .pointer {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border-radius: 100%;
+}
+.etapy ul li .etap .etap__content:nth-child(odd) {
+  padding-bottom: 36px;
+  margin-bottom: 20px;
+}
+.etapy ul li .etap .etap__content:nth-child(odd) .pointer {
+  bottom: 0px;
+}
+.etapy ul li .etap .etap__content:nth-child(even) {
+  padding-top: 36px;
+  margin-top: 20px;
+}
+.etapy ul li .etap .etap__content:nth-child(even) .pointer {
+  top: 0px;
+}
+.etapy ul li .etap .etap__content p {
+  font-size: 14px;
+  margin: 0;
+}
+.etapy ul li .etap .etap__space {
+  height: 50px;
+  background-color: green;
+  opacity: 0.3;
+}/*# sourceMappingURL=etapy.css.map */
