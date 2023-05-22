@@ -14,7 +14,7 @@ for (i = 0; i < tablinks.length; i++) {
     let tabId = e.target.getAttribute("data-id");
     document.querySelector(`#${tabId}`).classList.add("active");
     document.querySelector(`[data-id="${tabId}"]`).classList.add("active");
-    console.log(e.target.getAttribute("data-id"), document.querySelector(`#${tabId}`));
+    // console.log(e.target.getAttribute("data-id"), document.querySelector(`#${tabId}`));
   });
 }
 
@@ -22,7 +22,7 @@ for (i = 0; i < tablinks.length; i++) {
   let id = `.galeria-${tablinks[i].getAttribute("data-id")}`;
 
   let idSwiper = "swiper" + i;
-  console.log(id, idSwiper);
+  // console.log(id, idSwiper);
   idSwiper = new Swiper(id, {
     slidesPerView: 2,
     //   centeredSlides: true,
