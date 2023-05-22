@@ -27,7 +27,7 @@ $stroke_opacity = "0.0";
         coords="<?php echo $cord['cords']; ?>" <?php echo $cord['link'] ? ' href="'.$cord['link'].'"' : false ; ?>
         data-maphilight='{"strokeOpacity ": "<?php echo $stroke_opacity; ?>", "strokeColor":"<?php echo $stroke_color; ?>","strokeWidth":1,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
         shape="poly">
-        <?php $test++; endforeach; ?>
+        <?php endforeach; ?>
     </map>
     <?php endif; ?>
 </div>

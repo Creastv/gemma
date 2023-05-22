@@ -27,7 +27,9 @@ $display = get_field( 'wylacz_formularz_u_dolu_srony' );
                         endforeach;
                         echo '</ul>';
                         endif;
-                        echo $item['bottom'] ? '<span class="info__item__desc">' . $item['bottom'] . '</span>' : false;
+                        if($item['bottom']){ 
+                         echo '<span class="info__item__desc">' . $item['bottom'] . '</span>';
+                        }
                     echo '</div>';
                     endforeach;
                     echo '</div>';

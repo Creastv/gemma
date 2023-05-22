@@ -2,7 +2,7 @@
 $bullets = get_field( 'bullets' );
 $id = $block['id'];
 
-
+$className = '';
 if( !empty($block['align']) ) {
     $className .= ' align-' . $block['align'];
 }
@@ -12,12 +12,14 @@ $rows = 'flex-' . count($bullets);
   $rows = 'auto';
 endif;
 
-$ukladIkony= get_field( 'uklad' );
+$ukladIkony = get_field( 'uklad' );
+$polIkony = "";
 if($ukladIkony == 'Środek'){
   $polIkony = 'middle';
 }
 
 $ukladNaglowka = get_field( 'uklad_naglowka' );
+$polNagl = "";
 if($ukladNaglowka == 'Środek'){
   $polNagl = 'text-center';
 } elseif($ukladNaglowka == 'Lewo') {
