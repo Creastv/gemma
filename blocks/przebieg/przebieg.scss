@@ -1,0 +1,120 @@
+@import "../../src/css/scss/variable";
+.go-flow {
+  margin-bottom: 50px;
+
+  .go-flow__wraper {
+  }
+  .go-flow__nav {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    @media #{$sm} {
+      display: block;
+      padding-bottom: 20px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+    }
+    li {
+      //   width: 25%;
+      opacity: 0.3;
+      &:last-child {
+        svg {
+          opacity: 0;
+        }
+      }
+    }
+    li.active {
+      opacity: 1;
+    }
+  }
+  .go-flow__item-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .tab-number {
+      margin-right: 20px;
+      font-size: 65px;
+      line-height: 65px;
+      font-weight: bold;
+      @media #{$md} {
+        margin-right: 10px;
+      }
+    }
+    .tab-name {
+      font-size: 21px;
+      text-transform: uppercase;
+      margin: 0;
+      @media #{$md} {
+        font-size: 18px;
+      }
+      @media #{$sm} {
+        flex: auto;
+      }
+    }
+    svg {
+      margin: 0 50px 0 50px;
+      flex: auto;
+      @media #{$lg} {
+        margin: 0 20px;
+      }
+      @media #{$sm} {
+        flex: initial;
+        margin: 0 20px;
+      }
+    }
+  }
+  .go-flow__item-content {
+    display: none;
+    .tab-desc {
+    }
+  }
+  ul.go-flow__content {
+    position: relative;
+    list-style: none;
+    padding: 0px;
+    li {
+      position: relative;
+      max-width: 500px;
+      padding: 0 20px;
+      display: none;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -18px;
+        left: 0px;
+        height: calc(100% + 40px);
+        width: 1px;
+        background-color: $black;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -18px;
+        left: -12px;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 12px solid $black;
+      }
+    }
+    li.active {
+      display: block;
+    }
+  }
+  .go-flow__item-content {
+    display: block;
+  }
+}

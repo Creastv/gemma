@@ -1,0 +1,44 @@
+@import "../../src/css/scss/variable";
+.go-contact {
+  .go-contact__wraper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @media #{$sm} {
+      flex-wrap: wrap;
+    }
+
+    .col {
+      &:nth-child(1) {
+        @media #{$sm} {
+          order: 2;
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      padding: 0px;
+      gap: 20px;
+      @media #{$md} {
+        flex-wrap: wrap;
+      }
+      @media #{$sm} {
+        flex-wrap: wrap;
+      }
+      li {
+        span {
+          display: block;
+          font-weight: bold;
+          font-size: 14px;
+        }
+        p {
+          font-size: 21px;
+          margin-bottom: 20px;
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -175,6 +175,52 @@ function register_acf_block_types() {
         },
     ));
     acf_register_block_type(array(
+        'name'              => 'kontakt',
+        'title'             => __('Kontakt kredyt'),
+        'render_template'   => 'blocks/kontakt/kontakt.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#122b4f',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+        'mode'            => 'preview', 
+        'keywords'          => array( 'kontakt' ),
+        'supports'		=> [
+            'align'			=> false,
+            'anchor'		=> false,
+            'customClassName'	=> false,
+            'jsx' 			=> true,
+          ],
+        'enqueue_assets'    => function(){
+            wp_enqueue_style( 'go-kontakt',  get_template_directory_uri() . '/blocks/kontakt/kontakt.min.css' );
+        },
+    ));
+    acf_register_block_type(array(
+        'name'              => 'przebieg',
+        'title'             => __('Przebieg'),
+        'render_template'   => 'blocks/przebieg/przebieg.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#122b4f',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+        'mode'            => 'preview', 
+        'keywords'          => array( 'przebieg' ),
+        'supports'		=> [
+            'align'			=> false,
+            'anchor'		=> false,
+            'customClassName'	=> false,
+            'jsx' 			=> true,
+          ],
+        'enqueue_assets'    => function(){
+          wp_enqueue_script( 'go-przebieg', get_template_directory_uri() . '/blocks/przebieg/przebieg.js', array(), '20130459', true );
+          wp_enqueue_style( 'go-przebieg',  get_template_directory_uri() . '/blocks/przebieg/przebieg.min.css' );
+        },
+    ));
+
+    acf_register_block_type(array(
         'name'              => 'lokale',
         'title'             => __('Lokale'),
         'render_template'   => 'blocks/lokale/lokale.php',
