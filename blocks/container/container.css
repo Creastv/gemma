@@ -1,5 +1,6 @@
 .bg-section {
   background-size: cover;
+  position: relative;
 }
 
 .bg-section-normal {
