@@ -47,7 +47,7 @@ jQuery(document).ready(function () {
   jQuery(".hasTooltip").on("click", function () {
     var value = jQuery(this).attr("data-valu");
     jQuery(this).data("value", value);
-    jQuery('[name="' + filterData + '[]"]').val(value
+    jQuery('[name="' + filterData + '[]"]').val(value);
 
     var formElement = jQuery(`#search-filter-form-${idFormData}`);
     formElement.submit();
