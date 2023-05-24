@@ -129,12 +129,12 @@ figure {
   margin-bottom: 0px;
   div {
     &:nth-child(1) {
-      @media #{$md} {
+      @media #{$sm} {
         order: 2;
       }
     }
     &:nth-child(2) {
-      @media #{$md} {
+      @media #{$sm} {
         text-align: center;
       }
     }
