@@ -27,6 +27,11 @@
 }
 .go-flow .go-flow__nav li {
   opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.go-flow .go-flow__nav li:hover {
+  opacity: 1;
 }
 .go-flow .go-flow__nav li:last-child svg {
   opacity: 0;

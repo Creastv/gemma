@@ -28,6 +28,11 @@
     li {
       //   width: 25%;
       opacity: 0.3;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover{
+        opacity: 1;
+      }
       &:last-child {
         svg {
           opacity: 0;
@@ -116,5 +121,6 @@
   }
   .go-flow__item-content {
     display: block;
+   
   }
 }
