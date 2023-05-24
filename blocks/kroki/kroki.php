@@ -5,7 +5,7 @@ $col = 'steps--' . count($steps);
 ?>
 <?php
 if($steps) :
-    $i=0;
+    $i=1;
     echo '<div class="steps ' . $col . '">';
     echo '<div class="steps__content">';
     echo '<ul>';
@@ -13,7 +13,7 @@ if($steps) :
         echo '<li>';
         echo '<span class="steps__number">'.$i.'</span>';
         echo '<p class="steps__title">'.$step['naglowek'].'</p>';
-        echo $step['opis'] ? $step['opis'] : false;
+        echo $step['opis'] ? '<div class="steps__desc">' . $step['opis'] . '</div>' : false;
         echo '</li>';
         $i++;
     endforeach;

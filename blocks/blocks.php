@@ -342,6 +342,7 @@ function register_acf_block_types() {
             'jsx' 			=> true,
           ],
         'enqueue_assets'    => function(){
+           wp_enqueue_script( 'go-kroki', get_template_directory_uri() . '/blocks/kroki/kroki.js', array(), '20130459', true );
             wp_enqueue_style( 'go-kroki',  get_template_directory_uri() . '/blocks/kroki/kroki.min.css' );
         },
     ));
