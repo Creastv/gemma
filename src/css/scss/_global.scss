@@ -143,3 +143,12 @@ figure {
     margin-bottom: 0px;
   }
 }
+
+
+.br-no-md{
+  br{
+     @media #{$md} {
+      display: none;
+     }
+  }
+}
