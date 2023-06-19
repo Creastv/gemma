@@ -50,7 +50,7 @@ for (i = 0; i < tablinks.length; i++) {
         slidesPerView: 2
       },
       998: {
-        slidesPerView: 4
+        slidesPerView: 3
       }
     }
   });
