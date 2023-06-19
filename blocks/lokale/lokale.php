@@ -147,13 +147,12 @@ $inw = get_field( 'lokale' );
     var ppp = 4; // Post per page
     var pageNumber = 1;
     var idd = <?php echo json_encode($inw->slug); ?>;
-    var test = <?php echo json_encode($ex->slug); ?>;
     var ajaxpagination = "https://gemma.regalestate.pl/wp-admin/admin-ajax.php";
     // var ajaxpagination = "http://localhost/gemma/wp-admin/admin-ajax.php";
     
     function load_posts(){
         pageNumber++;
-        var str = '&pageNumber=' + pageNumber + '&ppp=' + ppp + '&idd=' + idd + '&test=' + test + '&action=more_post_ajax';
+        var str = '&pageNumber=' + pageNumber + '&ppp=' + ppp + '&idd=' + idd + '&action=more_post_ajax';
         $.ajax({
             type: "POST",
             dataType: "html",
