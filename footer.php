@@ -6,15 +6,9 @@
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
     <span class="footer_bg"></span>
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <?php get_template_part('templates-parts/footer/footer', 'left'); ?>
-            </div>
-            <div class="col">
-                <?php get_template_part('templates-parts/footer/footer', 'right'); ?>
-            </div>
-
-        </div>
+        <?php get_template_part('templates-parts/footer/footer', 'top'); ?>
+        <?php get_template_part('templates-parts/footer/footer', 'bottom'); ?>
+        
         <div class="row">
             <div class="col">
                 <?php get_template_part('templates-parts/footer/footer', 'nav'); ?>

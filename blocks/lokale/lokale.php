@@ -134,7 +134,7 @@ $inw = get_field( 'lokale' );
 
 <?php if ( !is_single('407') ) { ?>        
     <div class="wr-btn">
-        <div class="btn" id="more_posts">Wczytaj więcej</div>
+        <div class="btn" id="more_posts"><span>Wczytaj więcej</span></div>
     </div>
 <?php } ?>
         
