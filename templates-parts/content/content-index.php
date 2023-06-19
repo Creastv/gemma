@@ -20,12 +20,7 @@ $zf = get_field( 'zdjecie' );
             </h2>
             <?php the_excerpt(); ?>
             <div class="btn-wraper">
-                <a href="<?php the_permalink(); ?>" class="btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19.022" height="12.496" viewBox="0 0 19.022 12.496">
-                        <path d="M1775.331,1321.291l5.778,5.551-5.778,6.245" transform="translate(-1762.787 -1320.931)" fill="none" stroke="#606060" stroke-width="1" />
-                        <line x1="18" transform="translate(0 5.849)" fill="none" stroke="#606060" stroke-width="1" />
-                    </svg>
-                </a>
+                <a href="<?php the_permalink(); ?>" class="btn"> </a>
             </div>
         </div>
     </div>
