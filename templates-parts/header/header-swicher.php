@@ -1,4 +1,4 @@
-<div class="navbar__swicher">
+<!-- <div class="navbar__swicher">
     <svg xmlns="http://www.w3.org/2000/svg" width="38.326" height="33" viewBox="0 0 38.326 33">
         <g id="Moduł_języka" transform="translate(-39.49 2.519)">
             <text id="PL" transform="translate(39.49 23.481)" fill="#535353" font-size="24" font-family="OpenSans-Medium, Open Sans" font-weight="500">
@@ -8,4 +8,4 @@
         </g>
     </svg>
 
-</div>
+</div> -->
