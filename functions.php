@@ -180,3 +180,123 @@ function more_post_ajax(){
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 
+
+// Dodatkowe ploe selector
+function status_metaboks() {
+    add_meta_box(
+        'stat_metabox',
+        'Status mieszkania',
+        'status_metabox',
+        'page', // Tutaj określ, do jakiego typu zawartości chcesz dodać pole (np. 'page' dla stron)
+        'side',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'status_metaboks');
+
+function status_metabox($post) {
+    $wartosc = get_post_meta($post->ID, 'status_metabox', true);
+
+    $opcje = array(
+        '0' => 'Wolne',
+        '1' => 'Wolne',
+        '2' => 'Sprzedane',
+        '3' => 'Zajęte'
+    );
+  
+    echo '<label for="status_metabox">Dodatkowe pole:</label>';
+    echo '<select name="status_metabox" id="status_metabox">';
+    foreach ($opcje as $wartosc_opcji => $etykieta_opcji) {
+        $selected = ($wartosc == $wartosc_opcji) ? 'selected' : '';
+        echo '<option value="' . $wartosc_opcji . '" ' . $selected . '>' . $etykieta_opcji . '</option>';
+    }
+    echo '</select>';
+}
+
+function zapisz_status_metabox_metabox($post_id) {
+    if (array_key_exists('status_metabox', $_POST)) {
+        update_post_meta($post_id, 'status_metabox', $_POST['status_metabox']);
+    }
+}
+add_action('save_post', 'zapisz_status_metabox_metabox');
+
+// Shortcode
+function form_by_status($atts) {
+    $atts = shortcode_atts(array(
+        'title' => 'Zapytaj o mieskanie',
+    ), $atts);
+    
+    $title = $atts['title'];
+    $form_shortcode = '[contact-form-7 id="4346" title="Zapytaj o mieszkanie"]';
+    $form_output = do_shortcode($form_shortcode);
+
+    $wartosc = get_post_meta(get_the_ID(), 'status_metabox', true);
+    if ($wartosc == '1' ) {
+       $output = '<h2>' . esc_html($title) . '</h2>';
+       $output .= $form_output;
+       return $output;
+    }
+}
+add_shortcode('form_by_status', 'form_by_status');
+
+
+function status() {
+  $wartosc = get_post_meta(get_the_ID(), 'status_metabox', true);
+    $class = " ";
+    $text = " ";
+
+    if ($wartosc == '0' ) {
+      $class = 'stat-none';
+    } else if($wartosc == '1') {
+      $class = "avaliable";
+      $text = "Wolne";
+    } else if( $wartosc == '2' ){
+       $class = "sold";
+       $text = "Sprzedane";
+    } else if( $wartosc == '3' ){
+       $class = "booked";
+       $text = "Zarezerwowane";
+    }
+    return'<div class="status-label ' . $class . ' "> ' . $text . '</div>';
+
+}
+add_shortcode('status', 'status');
+
+
+
+function dodaj_dodatkowy_metaboks() {
+    add_meta_box(
+        'dodatkowy_metaboks',
+        'Dodatkowy Metaboks',
+        'renderuj_dodatkowy_metaboks',
+        'page', // Tutaj określ, do jakiego typu zawartości chcesz dodać metaboks (np. 'page' dla stron)
+        'side', // Ustawienie kontekstu na 'side' spowoduje wyświetlenie metaboksu po prawej stronie
+        'default'
+    );
+}
+add_action('add_meta_boxes', 'dodaj_dodatkowy_metaboks');
+
+function renderuj_dodatkowy_metaboks($post) {
+    $wartosc = get_post_meta($post->ID, 'dodatkowe_pole', true);
+
+    $opcje = array(
+        'opcja1' => 'Opcja 1',
+        'opcja2' => 'Opcja 2',
+        'opcja3' => 'Opcja 3'
+    );
+   
+    echo '<label for="dodatkowe_pole">Dodatkowe pole:</label>';
+    echo '<select name="dodatkowe_pole" id="dodatkowe_pole">';
+    foreach ($opcje as $wartosc_opcji => $etykieta_opcji) {
+        $selected = ($wartosc === $wartosc_opcji) ? 'selected' : '';
+        echo '<option value="' . $wartosc_opcji . '" ' . $selected . '>' . $etykieta_opcji . '</option>';
+    }
+    echo '</select>';
+}
+
+function zapisz_dodatkowe_pole($post_id) {
+    if (array_key_exists('dodatkowe_pole', $_POST)) {
+        update_post_meta($post_id, 'dodatkowe_pole', $_POST['dodatkowe_pole']);
+    }
+}
+add_action('save_post', 'zapisz_dodatkowe_pole');

@@ -12,6 +12,10 @@ $display = get_field( 'wylacz_formularz_u_dolu_srony' );
                 if($info) :
                     echo '<div class="footer-contact__info">';
                     foreach($info as $item) :
+                        $bottom = "";
+                        if(isset($item['bottom'])) {
+                         $bottom = $item['bottom'];
+                        }
                     echo '<div class="info__item">';
                         echo $item['tytul'] ? '<p class="info__item__title">'  . $item['tytul'] . '</p>' : false ;
                         echo $item['opis_top'] ? '<span class="info__item__desc">' . $item['opis_top'] . '</span>' : false;
@@ -27,8 +31,8 @@ $display = get_field( 'wylacz_formularz_u_dolu_srony' );
                         endforeach;
                         echo '</ul>';
                         endif;
-                        if($item['bottom']){ 
-                         echo '<span class="info__item__desc">' . $item['bottom'] . '</span>';
+                        if($bottom){ 
+                         echo '<span class="info__item__desc">' . $bottom . '</span>';
                         }
                     echo '</div>';
                     endforeach;

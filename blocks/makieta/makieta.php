@@ -18,13 +18,20 @@ $stroke_opacity = "0.0";
     <?php endif; ?>
     <?php if($maping) : ?>
     <map name="image-map">
-        <?php foreach($maping as $cord) : ?>
+        <?php foreach($maping as $cord) : 
+           $cordsNumber = $cord['cords'] ? $cord['cords'] : '';
+           $cordsLink = "";
+           if(isset($cord['link'])) {
+            $cordsLink = $cord['link'] ;
+           }
+        ?>
         <area
         title="<?php echo $cord['naglowek']; ?>"
         date-na="<?php echo $cord['opis']; ?>"
         data-valu="<?php echo $cord['value']; ?>"
         class=" hasTooltip "
-        coords="<?php echo $cord['cords']; ?>" <?php echo $cord['link'] ? ' href="'.$cord['link'].'"' : false ; ?>
+        coords="<?php echo $cordsNumber; ?>"
+        <?php echo $cordsLink ? $cordsLink : ''; ?>
         data-maphilight='{"strokeOpacity ": "<?php echo $stroke_opacity; ?>", "strokeColor":"<?php echo $stroke_color; ?>","strokeWidth":1,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
         shape="poly">
         <?php endforeach; ?>

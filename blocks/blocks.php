@@ -215,7 +215,9 @@ function register_acf_block_types() {
             'jsx' 			=> true,
           ],
         'enqueue_assets'    => function(){
+          if ( ! is_admin() ) {
           wp_enqueue_script( 'go-przebieg', get_template_directory_uri() . '/blocks/przebieg/przebieg.js', array(), '20130459', true );
+          }
           wp_enqueue_style( 'go-przebieg',  get_template_directory_uri() . '/blocks/przebieg/przebieg.min.css' );
         },
     ));
@@ -293,11 +295,13 @@ function register_acf_block_types() {
             'jsx' 			=> true,
           ],
         'enqueue_assets'    => function(){
+            if ( ! is_admin() ) {
           wp_enqueue_script('go-galeria-fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js', array( 'jquery' ),'4', true );
           wp_enqueue_style( 'ra_svipeer_css', 'https://unpkg.com/swiper/swiper-bundle.min.css' );
           wp_enqueue_script('ra-swiper_js', 'https://unpkg.com/swiper/swiper-bundle.min.js',  array(), '20130456', true );
            wp_enqueue_script('go-galeria-init', get_template_directory_uri().'/blocks/galeria/tab-galeria.js', array( 'jquery' ),'4', true );
-          wp_enqueue_style( 'go-fancybox',  'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css' );
+            }
+           wp_enqueue_style( 'go-fancybox',  'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css' );
           wp_enqueue_style( 'go-tab-galeria',  get_template_directory_uri() . '/blocks/galeria/galeria.min.css' );
         },
     ));
