@@ -14,12 +14,12 @@
 .steps--6 {
   li {
     width: 16.666%;
-     @media #{$lg} {
+    @media #{$lg} {
       width: 33.333%;
-     }
-     @media #{$md} {
+    }
+    @media #{$md} {
       width: 50%;
-     }
+    }
     @media #{$sm} {
       width: inherit;
     }
@@ -30,10 +30,10 @@
     width: 20%;
     @media #{$lg} {
       width: 33.333%;
-     }
-     @media #{$md} {
+    }
+    @media #{$md} {
       width: 50%;
-     }
+    }
     @media #{$sm} {
       width: inherit;
     }
@@ -44,10 +44,10 @@
     width: 25%;
     @media #{$lg} {
       width: 33.333%;
-     }
-     @media #{$md} {
+    }
+    @media #{$md} {
       width: 50%;
-     }
+    }
     @media #{$sm} {
       width: inherit;
     }
@@ -55,15 +55,14 @@
 }
 
 .steps--3 {
-
   li {
     width: 33.333%;
     @media #{$lg} {
       width: 33.333%;
-     }
-     @media #{$md} {
+    }
+    @media #{$md} {
       width: 50%;
-     }
+    }
     @media #{$sm} {
       width: inherit;
     }
@@ -81,7 +80,7 @@
     li {
       position: relative;
       padding: 0 10px;
-     
+
       // @media #{$sm} {
       //   display: flex;
       //   align-items: center;
@@ -94,7 +93,7 @@
         position: absolute;
         top: 23px;
         width: 50%;
-        height: 2px;
+        height: 1px;
         background-color: $black;
         @media #{$sm} {
           width: 1px;
@@ -127,7 +126,7 @@
       }
 
       .steps__number {
-         text-align: center;
+        text-align: center;
         display: block;
         position: relative;
         z-index: 3;
@@ -142,9 +141,9 @@
         margin-bottom: 20px;
         cursor: pointer;
         transition: all 0.2s;
-        &:hover{
+        &:hover {
           background-color: $black;
-          color:#fff;
+          color: #fff;
         }
         @media #{$sm} {
           position: absolute;
@@ -153,42 +152,41 @@
         }
       }
       .steps__title {
-         cursor: pointer;
+        cursor: pointer;
         font-size: 21px;
         line-height: 28px;
-         text-align: center;
+        text-align: center;
         @media #{$sm} {
           margin: 10px 0;
           text-align: left;
           padding-left: 70px;
         }
       }
-      .steps__desc{
+      .steps__desc {
         display: none;
-         position: relative;
-         padding-top: 20px;
+        position: relative;
+        padding-top: 20px;
         //  padding-bottom: 20px;
-         border-bottom: 2px solid $black;
-         margin-bottom: 20px;
-          @media #{$sm} {
-           border:none;
-           }
-          @media #{$sm} {
-            display: block!important;
-            padding-top: 0px;
-
-          }
-        &:before{
-          content:"";
+        border-bottom: 2px solid $black;
+        margin-bottom: 20px;
+        @media #{$sm} {
+          border: none;
+        }
+        @media #{$sm} {
+          display: block !important;
+          padding-top: 0px;
+        }
+        &:before {
+          content: "";
           position: absolute;
           top: 0;
           left: 0px;
           width: 100%;
-          height: 2px;
+          height: 1px;
           background-color: $black;
-           @media #{$sm} {
+          @media #{$sm} {
             display: none;
-           }
+          }
         }
         &:after {
           content: "";
@@ -201,21 +199,21 @@
           border-left: 12px solid transparent;
           border-right: 12px solid transparent;
           border-top: 12px solid $black;
-           @media #{$sm} {
+          @media #{$sm} {
             display: none;
-           }
+          }
         }
-         @media #{$sm} {
+        @media #{$sm} {
           padding-left: 70px;
         }
       }
     }
-    li.active{
+    li.active {
       .steps__number {
         background-color: $black;
-        color:#fff;
+        color: #fff;
       }
-      .steps__desc{
+      .steps__desc {
         display: block;
       }
     }

@@ -13,7 +13,7 @@ const tabs = function () {
 
   document.querySelector(`[data-tabcontent="tab1"]`).style.left = navTab[0].offsetLeft + 20 + "px";
   document.querySelector(`[data-tabcontent="tab1"]`).style.maxWidth = navTab[0].offsetWidth + "px";
-  navTab[1].classList.add("active");
+  navTab[0].classList.add("active");
   document.querySelector(`[data-tabcontent="tab1"]`).classList.add("active");
 
   for (i = 0; i < navTab.length; i++) {
@@ -33,7 +33,5 @@ const tabs = function () {
       el.classList.add("active");
       console.log(goFlow.offsetWidth / 2, el.offsetLeft);
     });
-
-    console.log(goFlow.offsetWidth);
   }
 };

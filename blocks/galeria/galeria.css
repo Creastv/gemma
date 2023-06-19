@@ -13,7 +13,7 @@
   color: #528ABF;
 }
 .go-tabs .tab a.active {
-  font-weight: 600;
+  border: 1px solid black;
 }
 .go-tabs .tab-wraper .tab-content {
   display: none;
