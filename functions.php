@@ -167,9 +167,6 @@ function more_post_ajax(){
 	$loop = new WP_Query($args);
 	$out = '';
 	if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
-	  //   $ex = get_field('inwestycja');
-		// $out .= 'test';
-		// $out .= $ex->slug;
     get_template_part( 'templates-parts/content/content-lokale-grid', 'single' ); 
 
 	endwhile; endif;

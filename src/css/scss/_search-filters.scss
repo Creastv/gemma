@@ -174,15 +174,44 @@ form.searchandfilter {
 }
 
 label {
+  position: relative;
+  width: 100%;
+  &:after {
+    content: "";
+    position: absolute;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+
+    bottom: 0px;
+
+    left: 51%;
+    right: 51%;
+    bottom: 0px;
+    // width: 100%;
+    height: 1px;
+    background-color: $black;
+  }
+  &:hover {
+    &:after {
+      left: 0%;
+      right: 0%;
+    }
+  }
   .select2.select2-container {
     .select2-selection {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      position: relative;
       height: 55px;
       display: flex;
       align-items: center;
       border-radius: 0px;
       background: none;
       border: none;
-      border-bottom: 2px solid $black;
+      border-bottom: 1px solid #e9e9e9;
+      width: 100%;
     }
     .select2-selection__arrow {
       height: 100%;

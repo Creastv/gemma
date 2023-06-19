@@ -158,17 +158,20 @@ figure img {
 #go-to-top {
   cursor: pointer;
   position: fixed;
+  text-align: center;
   z-index: 22;
-  right: 20px;
-  bottom: 20px;
-  transform: translate(0, 100px);
-  background-color: #fff;
-  padding: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: 45px;
+  height: 45px;
+  transform: rotate(-90deg) translate(0, 100px);
+  border: 1px solid rgba(179, 179, 179, 0.5098039216);
+  padding: 11px;
   transition: all 0.3s linear;
 }
 
 #go-to-top.active {
-  transform: translate(0, 0px);
+  transform: rotate(-90deg);
 }
 
 .go-pagination {
@@ -378,7 +381,7 @@ figure img {
 #footer .footer__adrress p {
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 14px !important;
   line-height: 20px;
 }
 

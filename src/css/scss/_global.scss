@@ -40,17 +40,20 @@ figure {
 #go-to-top {
   cursor: pointer;
   position: fixed;
+  text-align: center;
   z-index: 22;
-  right: 20px;
-  bottom: 20px;
-  transform: translate(0, 100px);
-  background-color: #fff;
-  padding: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: 45px;
+  height: 45px;
+  transform: rotate(-90deg) translate(0, 100px);
+  border: 1px solid #b3b3b382;
+  padding: 11px;
   transition: all 0.3s linear;
 }
 
 #go-to-top.active {
-  transform: translate(0, 0px);
+  transform: rotate(-90deg);
 }
 
 .go-pagination {
@@ -144,11 +147,10 @@ figure {
   }
 }
 
-
-.br-no-md{
-  br{
-     @media #{$md} {
+.br-no-md {
+  br {
+    @media #{$md} {
       display: none;
-     }
+    }
   }
 }
