@@ -26,7 +26,7 @@
         <li <?php echo $curentId == get_the_ID() ? 'class="active"' : false; ?> >
             <a href="<?php the_permalink(); ?>">
             
-                <h3><?php the_title(); ?></h3>
+                <h2><?php the_title(); ?></h2>
                 <?php the_excerpt();  ?>
             </a>
         </li>
