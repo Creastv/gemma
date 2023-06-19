@@ -31,7 +31,6 @@
 }
 .go-lokalizacja .sticky {
   position: sticky;
-  position: -webkit-sticky;
   top: 110px;
 }
 .go-lokalizacja iframe {
