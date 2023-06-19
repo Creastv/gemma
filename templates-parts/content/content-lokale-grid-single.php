@@ -61,9 +61,7 @@ $priceDisplay = $price ? $price . ' zł' : false ;
     <div class="post-item__wraper">
         <header>
             <?php if ( has_post_thumbnail() )  : ?>
-
-            <?php the_post_thumbnail(); ?>
-
+            <?php the_post_thumbnail('post-item'); ?>
             <?php else: ?>
             <img src="<?php echo get_template_directory_uri()."/src/img/thumbnail.png"; ?>" width="350" height="490" alt="<?php the_title(); ?>">
             <?php endif; ?>
