@@ -3,7 +3,7 @@
 }
 .go-lokalizacja .row {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 @media only screen and (max-width: 998px) {
   .go-lokalizacja .row {
@@ -28,6 +28,11 @@
 }
 .go-lokalizacja .go-lokalizacja__opis {
   padding: 20px 20px;
+}
+.go-lokalizacja .sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 110px;
 }
 .go-lokalizacja iframe {
   display: block;

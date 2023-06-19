@@ -13,7 +13,7 @@ echo '<div class="go-lokalizacja" ' . $bgColor . '>';
                echo '<div class="go-lokalizacja__opis">' . $desc . '</div>';
             echo '</div>';
             echo '<div class="col">';
-                echo  $mapa;
+                echo  $mapa ? '<div classs="sticky"> ' . $mapa . ' </div>' :  '';
             echo '</div>';
         echo '</div>';
     echo '</div>';
