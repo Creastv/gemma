@@ -115,7 +115,7 @@ a:hover {
   margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 998px) {
   .meeting {
     padding-bottom: 20px;
     gap: 0px;
@@ -337,6 +337,11 @@ figure img {
     flex-wrap: wrap;
   }
 }
+@media only screen and (max-width: 768px) {
+  #footer .row .col {
+    width: 100%;
+  }
+}
 #footer .row .col:nth-child(1) {
   flex: auto;
 }
@@ -351,12 +356,20 @@ figure img {
 #footer .top {
   margin-bottom: 30px;
   align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 #footer .bottom {
   margin-bottom: 30px;
 }
 #footer .bottom .col:nth-child(2) .footer__desc {
   text-align: right;
+}
+@media only screen and (max-width: 768px) {
+  #footer .bottom .col:nth-child(2) .footer__desc {
+    text-align: left;
+    margin-bottom: 20px;
+  }
 }
 #footer .footer__socialmedia {
   margin: 0;
