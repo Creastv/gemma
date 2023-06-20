@@ -40,8 +40,8 @@ $posts = new WP_Query( array(
                         <a href="<?php echo get_the_permalink($post->ID); ?>">
                             <?php if (  $zf  )  : ?>
                                 <?php echo wp_get_attachment_image( $zf, 'post-item' );?>
-                            <?php elseif ( has_post_thumbnail()  )  : ?>
-                                <?php echo the_post_thumbnail('post-item');?>
+                            <?php elseif ( has_post_thumbnail($post->ID)  )  : ?>
+                                <?php echo get_the_post_thumbnail($post->ID, 'post-item');?>
                             <?php else: ?>
                             <img src="<?php echo get_template_directory_uri()."/src/img/thumbnail.png"; ?>" width="350" height="490" alt="<?php the_title(); ?>">
                             <?php endif; ?>
