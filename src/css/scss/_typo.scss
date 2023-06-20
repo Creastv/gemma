@@ -97,3 +97,22 @@ a {
     height: 400px;
   }
 }
+
+.wp-block-columns {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .meeting {
+    padding-bottom: 20px;
+    gap: 0px;
+  }
+  .meeting .btn-wraper {
+    display: block;
+    text-align: left;
+  }
+  .bg-section-normal {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
