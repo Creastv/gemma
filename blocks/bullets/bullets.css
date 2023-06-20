@@ -1,5 +1,6 @@
 .bullets {
   padding: 0px;
+  margin: 0;
   list-style: none;
 }
 .bullets li .top {
