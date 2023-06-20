@@ -94,6 +94,9 @@ figure {
       right: 0px;
       background-color: #fff;
     }
+    &:hover {
+      background-color: #000;
+    }
   }
   .swiper-button-prev {
     left: -60px;
@@ -111,6 +114,9 @@ figure {
     @media #{$xxlg} {
       left: 0px;
       background-color: #fff;
+    }
+    &:hover {
+      background-color: #000;
     }
   }
 }

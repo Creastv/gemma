@@ -209,6 +209,9 @@ figure img {
     background-color: #fff;
   }
 }
+.arrows .swiper-button-next:hover {
+  background-color: #000;
+}
 .arrows .swiper-button-prev {
   left: -60px;
   width: 45px;
@@ -227,6 +230,9 @@ figure img {
     left: 0px;
     background-color: #fff;
   }
+}
+.arrows .swiper-button-prev:hover {
+  background-color: #000;
 }
 
 .badge-two {

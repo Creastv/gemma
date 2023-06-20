@@ -3,6 +3,11 @@
   text-align: center;
 }
 .wr-btn .btn {
+  cursor: pointer;
   background-color: black;
   color: #fff;
+}
+.wr-btn .btn:hover {
+  background-color: #fff;
+  color: black;
 }/*# sourceMappingURL=lokale.css.map */

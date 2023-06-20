@@ -79,7 +79,7 @@ function go_post_types_lokale() {
 	);
 
 	$args = array( 
-	    'public' => true,
+	    'public' => false,
 		'has_archive' => false,
 		'show_in_rest' => true,
 		'hierarchical'      => false,
@@ -87,7 +87,7 @@ function go_post_types_lokale() {
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'publicly_queryable' => true,
+		'publicly_queryable' => false,
 		'show_in_rest' => true,
 		"rewrite"             => array( "slug" => "lokale", "with_front" => true ),
 		'supports'      => array( 'title', 'thumbnail' ),
