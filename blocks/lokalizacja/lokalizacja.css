@@ -26,9 +26,6 @@
     width: 100%;
   }
 }
-.go-lokalizacja .go-lokalizacja__opis {
-  padding: 20px 20px;
-}
 .go-lokalizacja .sticky {
   position: sticky;
   top: 110px;
