@@ -24,6 +24,10 @@
   }
   .go-lokalizacja__opis {
     // padding: 20px 0px;
+    padding-right: 30px;
+    @media #{$md} {
+      padding-right: 0px;
+    }
   }
   .sticky {
     position: sticky;
