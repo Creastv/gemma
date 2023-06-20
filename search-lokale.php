@@ -20,7 +20,7 @@ get_header(); ?>
     <div class="search-results-count">
         <span> Znaleziono <?php echo $wp_query->found_posts; ?> wyników wyszukiwania. </span>
         <?php if($sf_current_query->is_filtered()) : ?>
-        <a class="btn" href="<?php echo $link; ?>" class="btn-revers">Resetuj wyniki</a>
+        <a class="btn" href="<?php echo $link; ?>" class="btn-revers"><span>Resetuj wyniki</span></a>
         <?php endif; ?>
     </div>
     <div class="swicher-results-display">
