@@ -60,7 +60,7 @@ $inw = get_field( 'lokale' );
 
 <div class="search-resoults-info">
     <div class="search-results-count">
-        <span> Znaleziono <?php echo $loop->found_posts; ?> wyników wyszukiwania. </span>
+        <span> Znaleziono <?php echo $loop->found_posts; ?> <?php echo $wp_query->found_posts; ?>  <?php if($wp_query->found_posts == '1')  { echo 'wynik'; } else if($wp_query->found_posts >= '1' && $wp_query->found_posts <= '4' ) { echo 'wyniki'; } else { echo 'wyników'; } ;?> wyszukiwania. </span>
     </div>
     <div class="swicher-results-display">
         <span> Widok prezentacji: </span>
