@@ -1093,7 +1093,7 @@ body.active {
   position: relative;
   display: block;
   border: 1px solid black;
-  padding: 20px;
+  padding: 40px;
 }
 .local-item header a {
   display: block;
@@ -1449,4 +1449,61 @@ html :where(.wp-block)[data-align=left],
 html :where(.wp-block)[data-align=right] {
   width: 100%;
   height: initial !important;
+}
+
+.search-resoults-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .search-resoults-info {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.search-resoults-info .swicher-results-display {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.search-resoults-info .swicher-results-display .swicher {
+  transition: all 0.3s linear;
+}
+
+.search-resoults-info .swicher-results-display .swicher:hover path,
+.search-resoults-info .swicher-results-display .swicher:hover rect,
+.search-resoults-info .swicher-results-display .swicher:hover text {
+  transition: all 0.3s linear;
+  fill: #528abf;
+}
+
+.search-resoults-info path,
+.search-resoults-info rect,
+.search-resoults-info text {
+  transition: all 0.3s linear;
+  fill: #e2e2e2;
+}
+
+.search-resoults-info .active {
+  cursor: auto;
+}
+
+.search-resoults-info .active path,
+.search-resoults-info .active rect,
+.search-resoults-info .active text {
+  fill: black;
+}
+
+.search-resoults-info .active:hover path,
+.search-resoults-info .active:hover rect,
+.search-resoults-info .active:hover text {
+  fill: black !important;
+}
+
+.search-filter-disabled {
+  opacity: 0.2 !important;
 }/*# sourceMappingURL=go-admin.css.map */

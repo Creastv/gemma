@@ -1094,7 +1094,7 @@ body.active {
   position: relative;
   display: block;
   border: 1px solid black;
-  padding: 20px;
+  padding: 40px;
 }
 .local-item header a {
   display: block;
