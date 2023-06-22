@@ -178,18 +178,3 @@ add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 
 
-// Form7
-add_action('wpcf7_before_send_mail', 'set_hidden_field_value');
-
-function set_hidden_field_value($contact_form)
-{
-    $submission = WPCF7_Submission::get_instance();
-    if ($submission) {
-        global $post;
-        $page_name = $post->post_name;
-        $page_field_name = 'your-link'; // Nazwa pola ukrytego w formularzu
-        $posted_data = $submission->get_posted_data();
-        $posted_data[$page_field_name] = $page_name;
-        $submission->set_posted_data($posted_data);
-    }
-}
