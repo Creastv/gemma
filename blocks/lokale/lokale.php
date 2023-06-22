@@ -135,13 +135,13 @@ $inw = get_field( 'lokale' );
     endif; wp_reset_query();
 ?>
 
-
+<?php if( $loop->found_posts >= 4) { ?>
 <?php if ( !is_single('407') ) { ?>        
     <div class="wr-btn">
         <div class="btn" id="more_posts"><span>Wczytaj więcej</span></div>
     </div>
 <?php } ?>
-        
+ <?php } ?>
 <?php endif; ?>
 
 
