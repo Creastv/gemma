@@ -56,6 +56,18 @@ $excerpt = $roomsDisplay . ' ' . $floorDisplay . ' ' . $sizeDisplay; ;
 $price = get_field( 'cena', get_the_ID() );
 $priceDisplay = $price ? $price . ' zł' : false ;
 
+$typ_lokalu = get_the_terms($post->ID, 'typ-lokalu');
+$typ = $typ_lokalu[0];
+
+$tekstButton = "";
+if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
+    $textButton = "Zapytaj o mieszkanie >";
+} else if($typ->name == "Lokal usługowy" ) {
+    $textButton = "Zapytaj o lokal >";
+} else {
+    $textButton = "Zapytaj o " . strtolower($typ->name) . " >";
+}
+
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('local-item'); ?>>
     <div class="post-item__wraper">
@@ -75,7 +87,7 @@ $priceDisplay = $price ? $price . ' zł' : false ;
                 <p><?php echo $excerpt; ?></p>
                 <p><?php echo $priceDisplay; ?></p>
             </div>
-            <a href="#" class="opener-form" data-id="<?php the_ID(); ?>">Zapytaj o mieszkanie ></a>
+            <a href="#" class="opener-form" data-id="<?php the_ID(); ?>"><?php echo $textButton; ?></a>
         </div>
     </div>
 </article>

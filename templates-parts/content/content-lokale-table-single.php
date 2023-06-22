@@ -56,6 +56,19 @@ $pdf3D = get_field( 'rzut_3d', get_the_ID() );
 
 $extras = get_field( 'udogodnienia_lokalu', get_the_ID() );
 $sizeInfo = get_field( 'dodatkowe_info_o_powierzchni', get_the_ID() );
+
+$typ_lokalu = get_the_terms(get_the_ID(), 'typ-lokalu');
+$typ = $typ_lokalu[0];
+
+$tekstButton = "";
+if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
+    $tekstButton = "Zapytaj o mieszkanie >";
+} else if($typ->name == "Lokal usługowy" ) {
+    $tekstButton = "Zapytaj o lokal >";
+} else {
+    $tekstButton = "Zapytaj o " . strtolower($typ->name) . " >";
+}
+
 ?>
 
 <tr>
@@ -111,7 +124,7 @@ $sizeInfo = get_field( 'dodatkowe_info_o_powierzchni', get_the_ID() );
         <?php echo $label; ?>
     </td>
     <td>
-        <a href="#" class="opener-form" data-id="<?php the_ID(); ?>">Zapytaj o mieszkanie ></a>
+        <a href="#" class="opener-form" data-id="<?php the_ID(); ?>"><?php echo $tekstButton; ?></a>
         <?php if($pdfRzut) { ?>
         <a href="#" class="opener-pdf" data-pdf="<?php echo $pdfRzut; ?>">Pobierz PDF ></a>
         <?php } ?>
