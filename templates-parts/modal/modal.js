@@ -1,13 +1,9 @@
-function test() {
+function main() {
   // 'use strict';
-  // jQuery(document).ajaxStart(function () {
-  //   const openers = document.querySelectorAll(".opener-form");
-  //   const openersPdf = document.querySelectorAll(".opener-pdf");
-  //   const closers = document.querySelectorAll(".closer");
-  // });
   const openers = document.querySelectorAll(".opener-form");
   const openersPdf = document.querySelectorAll(".opener-pdf");
   const closers = document.querySelectorAll(".closer");
+  const lokal = document.querySelector('[name="lokal-number"]');
   // const loaderImg = "http://localhost/gemma/wp-content/themes/gemma/";
   // const ajaxy = "http://localhost/gemma/wp-admin/admin-ajax.php";
   const loaderImg = "https://gemma.regalestate.pl/wp-content/themes/gemma/";
@@ -29,6 +25,7 @@ function test() {
       document.querySelector(".go-modal-form").classList.add("active");
       document.body.classList.add("active");
       const lokalId = e.target.getAttribute("data-id");
+      lokal.value = e.target.parentElement.querySelector(".entry-title").innerText;
       localPage(lokalId);
     });
   }
@@ -79,7 +76,7 @@ function test() {
     });
   }
 }
-test();
+main();
 jQuery(document).ajaxComplete(function () {
-  test();
+  main();
 });
