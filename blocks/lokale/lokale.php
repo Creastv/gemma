@@ -5,8 +5,11 @@ $inw = get_field( 'lokale' );
         'post_type' => 'lokale',
         'post_status' => 'publish',
         'posts_per_page' => -1,
-        'orderby' => 'meta_value_num',
-        'order' => 'ASC',   
+        // 'orderby' => 'meta_value_num',
+        // 'order' => 'DSC',  
+        'meta_key'       => 'status', // Klucz pola ACF
+        'orderby'        => 'meta_value_num', 
+        'order'          => 'ASC', 
         'tax_query' =>  array (
             array(
                 'taxonomy' => 'inwestycje',
@@ -28,8 +31,9 @@ $inw = get_field( 'lokale' );
         'post_type' => 'lokale',
         'post_status' => 'publish',
         'posts_per_page' => $postsPerPage,
-        'orderby' => 'meta_value_num',
-        'order' => 'ASC',   
+        'meta_key'       => 'status', // Klucz pola ACF
+        'orderby'        => 'meta_value_num', 
+        'order'          => 'ASC', 
         'tax_query' =>  array (
             array(
                 'taxonomy' => 'inwestycje',

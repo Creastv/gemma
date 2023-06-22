@@ -146,8 +146,11 @@ function more_post_ajax(){
 		'post_status' => 'publish',
 		'posts_per_page' => $ppp,
 		'paged'    => $page,
-		'orderby' => 'meta_value_num',
-		'order' => 'ASC',
+
+		'meta_key'       => 'status', // Klucz pola ACF
+		'orderby'        => 'meta_value_num', // Sortowanie według wartości numerycznej
+		'order'          => 'ASC', // Kolejność sortowania (ASC - rosnąco, DESC - malejąco)
+
 		'tax_query' =>  array (
 		    array(
 		        'taxonomy' => 'inwestycje',
