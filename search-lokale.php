@@ -18,7 +18,7 @@ get_header(); ?>
 </div>
 <div class="search-resoults-info">
     <div class="search-results-count">
-        <span> Znaleziono <?php echo $wp_query->found_posts; ?> wyników wyszukiwania. </span>
+        <span> Znaleziono <?php echo $wp_query->found_posts; ?>  <?php if($wp_query->found_posts == '1')  { echo 'wynik'; } else if($wp_query->found_posts >= '1' && $wp_query->found_posts <= '4' ) { echo 'wyniki'; } else { echo 'wyników'; } ;?> wyszukiwania. </span>
         <?php if($sf_current_query->is_filtered()) : ?>
         <a class="btn" href="<?php echo $link; ?>" class="btn-revers"><span>Resetuj wyniki</span></a>
         <?php endif; ?>
