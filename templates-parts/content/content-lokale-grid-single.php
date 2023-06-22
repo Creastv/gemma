@@ -80,7 +80,7 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
             <?php echo $label; ?>
         </header>
         <div class="content">
-            <h2 class="entry-title">
+            <h2 class="entry-title title-local">
                 <?php the_title(); ?>
             </h2>
             <div class="entry-content">

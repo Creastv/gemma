@@ -276,6 +276,19 @@ function register_acf_block_types() {
 
         },
     ));
+       acf_register_block_type(array(
+      'name'              => 'anchor',
+      'title'             => __('Anchor'),
+      'render_template'   => 'blocks/anchor/anchor.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#122b4f',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'anchor' ),
+    ));
     acf_register_block_type(array(
         'name'              => 'tab_galeria',
         'title'             => __('Tab galeria'),

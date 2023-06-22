@@ -25,7 +25,8 @@ function main() {
       document.querySelector(".go-modal-form").classList.add("active");
       document.body.classList.add("active");
       const lokalId = e.target.getAttribute("data-id");
-      lokal.value = e.target.parentElement.querySelector(".entry-title").innerText;
+      lokal.value = e.target.parentElement.parentElement.querySelector(".title-local").innerText;
+      // console.log(e.target.parentElement.parentElement);
       localPage(lokalId);
     });
   }

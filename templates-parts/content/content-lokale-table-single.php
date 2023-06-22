@@ -81,7 +81,7 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
         <?php endif; ?>
     </td>
     <td>
-        <p><?php the_title(); ?></p>
+        <p class="title-local"><?php the_title(); ?></p>
         <span><?php echo $rooms; ?></span>
         <?php if($pdf3D) { ?>
         <a href="#" class="opener-pdf" data-pdf="<?php echo $pdf3D; ?>">Pobierz rzuty 3D ></a>
