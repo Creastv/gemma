@@ -1349,6 +1349,15 @@ td.child ul li {
   font-size: 14px;
 }
 
+.xs-display {
+  display: none;
+}
+@media only screen and (max-width: 460px) {
+  .xs-display {
+    display: block;
+  }
+}
+
 .btn {
   display: inline-block;
   transition: all 0.3s linear;

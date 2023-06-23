@@ -83,9 +83,17 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
     <td>
         <p class="title-local"><?php the_title(); ?></p>
         <span><?php echo $rooms; ?></span>
+        <div class="xs-display">
+         <a href="#" class="opener-form" data-id="<?php the_ID(); ?>"><?php echo $tekstButton; ?></a>
+        <?php if($pdfRzut) { ?>
+        <a href="#" class="opener-pdf" data-pdf="<?php echo $pdfRzut; ?>">Pobierz PDF ></a>
+        <?php } ?>
+        </div>
+
         <?php if($pdf3D) { ?>
         <a href="#" class="opener-pdf" data-pdf="<?php echo $pdf3D; ?>">Pobierz rzuty 3D ></a>
         <?php } ?>
+        
     </td>
     <td>
         <p class="size"><?php echo $sizeDisplay ? $sizeDisplay : "---"; ?></p>
