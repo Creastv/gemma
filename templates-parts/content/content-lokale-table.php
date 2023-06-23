@@ -2,14 +2,14 @@
     <thead>
         <tr>
             <th></th>
-            <th ></th>
-            <th data-priority="1" >Nazwa i liczba pokoi</th>
-            <th>Powierzchnia</th>
-            <th>Pietro</th>
-            <th>Cena</th>
-            <th>Udogodienia</th>
-            <th>Status</th>
-            <th data-priority="2"></th>
+            <th data-priority="1"></th>
+            <th data-priority="2">Nazwa i liczba pokoi</th>
+            <th data-priority="6">Powierzchnia</th>
+            <th data-priority="5">Pietro</th>
+            <th data-priority="2">Cena</th>
+            <th data-priority="7">Udogodienia</th>
+            <th data-priority="4">Status</th>
+            <th data-priority="3"></th>
         </tr>
     </thead>
     <tbody>
