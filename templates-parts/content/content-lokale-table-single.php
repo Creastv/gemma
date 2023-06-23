@@ -106,7 +106,7 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
     <td>
         <p class="price"> <?php echo $priceDisplay ? $priceDisplay : "---"; ?></p>
     </td>
-    <td>
+    <td class="ud">
         <?php if($extras) :
         echo '<ul class="extras">';
         foreach($extras as $extra) :
@@ -116,6 +116,7 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
             echo '<span class="tooltiptext">'.$extra['tresc_tooltip'].'</span >';
             echo '</span >';
             echo '</li>';
+       
         endforeach;
          echo '</ul>';
         endif;?>

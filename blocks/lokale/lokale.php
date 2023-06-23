@@ -66,10 +66,10 @@ $inw = get_field( 'lokale' );
         <span> Widok prezentacji: </span>
         <div class="swicher results-display-grid <?php echo !isset($_COOKIE['resultsDisplay']) ? 'active' : false; ?>">
             <svg xmlns="http://www.w3.org/2000/svg" width="65.617" height="19" viewBox="0 0 65.617 19">
-                <rect id="Prostokąt_508_kopia" data-name="Prostokąt 508 kopia" width="6.8" height="6.8" transform="translate(9.35 0.422)" />
-                <rect id="Prostokąt_508_kopia_2" data-name="Prostokąt 508 kopia 2" width="6.8" height="6.8" transform="translate(0 0.422)" />
-                <path id="Prostokąt_508_kopia_3" data-name="Prostokąt 508 kopia 3" d="M0,0H6.8V6.8H0Z" transform="translate(9.35 9.772)" />
-                <rect id="Prostokąt_508_kopia_3-2" data-name="Prostokąt 508 kopia 3" width="6.8" height="6.8" transform="translate(0 9.772)" />
+                <rect  width="6.8" height="6.8" transform="translate(9.35 0.422)" />
+                <rect  width="6.8" height="6.8" transform="translate(0 0.422)" />
+                <path  d="M0,0H6.8V6.8H0Z" transform="translate(9.35 9.772)" />
+                <rect  width="6.8" height="6.8" transform="translate(0 9.772)" />
                 <text id="Kafelki" transform="translate(24.617 15)" font-size="14" font-family="OpenSans-Light, Open Sans" font-weight="300">
                     <tspan x="0" y="0">Kafelki</tspan>
                 </text>
@@ -77,12 +77,12 @@ $inw = get_field( 'lokale' );
         </div>
         <div class="swicher results-display-table <?php echo isset($_COOKIE['resultsDisplay']) ? 'active' : false; ?>">
             <svg xmlns="http://www.w3.org/2000/svg" width="53.617" height="19" viewBox="0 0 53.617 19">
-                <rect id="Prostokąt_508_kopia" data-name="Prostokąt 508 kopia" width="11.02" height="4" transform="translate(4.99 0.752)" />
-                <rect id="Prostokąt_508_kopia_2" data-name="Prostokąt 508 kopia 2" width="2.99" height="4" transform="translate(0 0.752)" />
-                <rect id="Prostokąt_508_kopia_4" data-name="Prostokąt 508 kopia 4" width="11.02" height="4" transform="translate(4.99 6.762)" />
-                <rect id="Prostokąt_508_kopia_4-2" data-name="Prostokąt 508 kopia 4" width="2.99" height="4" transform="translate(0 6.762)" />
-                <rect id="Prostokąt_508_kopia_5" data-name="Prostokąt 508 kopia 5" width="11.02" height="4" transform="translate(4.99 12.762)" />
-                <rect id="Prostokąt_508_kopia_5-2" data-name="Prostokąt 508 kopia 5" width="2.99" height="4" transform="translate(0 12.762)" />
+                <rect  width="11.02" height="4" transform="translate(4.99 0.752)" />
+                <rect  width="2.99" height="4" transform="translate(0 0.752)" />
+                <rect  width="11.02" height="4" transform="translate(4.99 6.762)" />
+                <rect  width="2.99" height="4" transform="translate(0 6.762)" />
+                <rect  width="11.02" height="4" transform="translate(4.99 12.762)" />
+                <rect  width="2.99" height="4" transform="translate(0 12.762)" />
                 <text id="Lista" transform="translate(24.617 15)" font-size="14" font-family="OpenSans-Light, Open Sans" font-weight="300">
                     <tspan x="0" y="0">Lista</tspan>
                 </text>

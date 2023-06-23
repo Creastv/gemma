@@ -1291,12 +1291,20 @@ td.child ul li {
   justify-content: space-between;
 }
 
+.ud {
+  min-width: 200px;
+}
+
 .extras {
   list-style: none;
   padding: 0px;
   margin: 0;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.extras li span {
+  margin-bottom: 0 !important;
 }
 .extras li img {
   display: block;
@@ -1320,7 +1328,7 @@ td.child ul li {
   bottom: 100%;
   left: 50%;
   transform: translate(-50%, 0);
-  margin-bottom: 3px;
+  margin-bottom: 3px !important;
 }
 .extras li .tooltip:hover .tooltiptext {
   visibility: visible;
