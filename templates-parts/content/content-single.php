@@ -8,11 +8,6 @@
         <div class="img-wraper">
             <div class="img">
                 <?php the_post_thumbnail(); ?>
-                <div class="o-border">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
         </div>
     </header>

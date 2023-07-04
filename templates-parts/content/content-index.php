@@ -1,5 +1,5 @@
 <?php
-$zf = get_field( 'zdjecie' );
+$zf = get_field( 'zdjecie', $post->ID );
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
     <div class="post-item__wraper">
