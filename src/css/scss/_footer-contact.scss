@@ -80,6 +80,8 @@
       list-style: none;
 
       li {
+        align-items: center;
+        display: flex;
         img {
           display: inline-block;
           margin-right: 6px;

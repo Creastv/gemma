@@ -48,6 +48,13 @@
   .bottom {
     margin-bottom: 30px;
     .col {
+      &:nth-child(1) {
+        .footer__desc {
+          p {
+            font-size: 12px;
+          }
+        }
+      }
       &:nth-child(2) {
         .footer__desc {
           text-align: right;
@@ -111,7 +118,7 @@
       a {
         margin: 0;
         padding: 0px;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 20px;
       }
       &:nth-child(1) {

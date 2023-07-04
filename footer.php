@@ -16,7 +16,7 @@
         </div>
     </div>
 </footer>
-<span id="go-to-top"></span>
+<!-- <span id="go-to-top"></span> -->
 
 <?php
 get_template_part( 'templates-parts/modal/modal' ); 

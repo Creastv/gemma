@@ -25,7 +25,7 @@ get_header(); ?>
     </div>
     <div class="swicher-results-display">
         <span> Widok prezentacji: </span>
-        <div class="swicher results-display-grid <?php echo !isset($_COOKIE['resultsDisplay']) ? 'active' : false; ?>">
+        <div class="swicher results-display-table <?php echo isset($_COOKIE['resultsDisplay']) ? 'active' : false; ?>">
             <svg xmlns="http://www.w3.org/2000/svg" width="65.617" height="19" viewBox="0 0 65.617 19">
                 <rect id="Prostokąt_508_kopia" data-name="Prostokąt 508 kopia" width="6.8" height="6.8" transform="translate(9.35 0.422)" />
                 <rect id="Prostokąt_508_kopia_2" data-name="Prostokąt 508 kopia 2" width="6.8" height="6.8" transform="translate(0 0.422)" />
@@ -36,8 +36,8 @@ get_header(); ?>
                 </text>
             </svg>
         </div>
-        <div class="swicher results-display-table <?php echo isset($_COOKIE['resultsDisplay']) ? 'active' : false; ?>">
-            <svg xmlns="http://www.w3.org/2000/svg" width="53.617" height="19" viewBox="0 0 53.617 19">
+        <div class="swicher results-display-grid <?php echo !isset($_COOKIE['resultsDisplay']) ? 'active' : false; ?>">
+             <svg xmlns="http://www.w3.org/2000/svg" width="53.617" height="19" viewBox="0 0 53.617 19">
                 <rect id="Prostokąt_508_kopia" data-name="Prostokąt 508 kopia" width="11.02" height="4" transform="translate(4.99 0.752)" />
                 <rect id="Prostokąt_508_kopia_2" data-name="Prostokąt 508 kopia 2" width="2.99" height="4" transform="translate(0 0.752)" />
                 <rect id="Prostokąt_508_kopia_4" data-name="Prostokąt 508 kopia 4" width="11.02" height="4" transform="translate(4.99 6.762)" />
@@ -49,12 +49,13 @@ get_header(); ?>
                 </text>
             </svg>
         </div>
+        
     </div>
 </div>
 
 <?php 
 if ( have_posts() ) : ?>
-<?php if(isset($_COOKIE['resultsDisplay'])) :
+<?php if(!isset($_COOKIE['resultsDisplay'])) :
         get_template_part( 'templates-parts/content/content-lokale', 'table' ); 
     else :
         get_template_part( 'templates-parts/content/content-lokale', 'grid' ); 

@@ -369,6 +369,9 @@ figure img {
 #footer .bottom {
   margin-bottom: 30px;
 }
+#footer .bottom .col:nth-child(1) .footer__desc p {
+  font-size: 12px;
+}
 #footer .bottom .col:nth-child(2) .footer__desc {
   text-align: right;
 }
@@ -426,7 +429,7 @@ figure img {
 #footer ul.menu li a {
   margin: 0;
   padding: 0px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
 }
 #footer ul.menu li:nth-child(1) a,
@@ -519,6 +522,10 @@ figure img {
   padding: 0px;
   margin: 0;
   list-style: none;
+}
+.footer-contact__info .info__item ul li {
+  align-items: center;
+  display: flex;
 }
 .footer-contact__info .info__item ul li img {
   display: inline-block;

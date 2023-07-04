@@ -42,17 +42,17 @@
   }
 
   // Go to Top
-  const goToTop = document.querySelector("#go-to-top");
-  goToTop.addEventListener("click", () => {
-    document.documentElement.scrollTop = 0;
-  });
-  document.addEventListener("scroll", () => {
-    if (window.pageYOffset >= 200) {
-      goToTop.classList.add("active");
-    } else {
-      goToTop.classList.remove("active");
-    }
-  });
+  // const goToTop = document.querySelector("#go-to-top");
+  // goToTop.addEventListener("click", () => {
+  //   document.documentElement.scrollTop = 0;
+  // });
+  // document.addEventListener("scroll", () => {
+  //   if (window.pageYOffset >= 200) {
+  //     goToTop.classList.add("active");
+  //   } else {
+  //     goToTop.classList.remove("active");
+  //   }
+  // });
 
   // sticy nabvbar
   const navbar = document.querySelector("#header");

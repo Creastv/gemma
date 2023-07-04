@@ -64,8 +64,9 @@ $inw = get_field( 'lokale' );
     </div>
     <div class="swicher-results-display">
         <span> Widok prezentacji: </span>
-        <div class="swicher results-display-grid <?php echo !isset($_COOKIE['resultsDisplay']) ? 'active' : false; ?>">
-            <svg xmlns="http://www.w3.org/2000/svg" width="65.617" height="19" viewBox="0 0 65.617 19">
+        
+        <div class="swicher results-display-table <?php echo isset($_COOKIE['resultsDisplay']) ? 'active' : false; ?>">
+              <svg xmlns="http://www.w3.org/2000/svg" width="65.617" height="19" viewBox="0 0 65.617 19">
                 <rect  width="6.8" height="6.8" transform="translate(9.35 0.422)" />
                 <rect  width="6.8" height="6.8" transform="translate(0 0.422)" />
                 <path  d="M0,0H6.8V6.8H0Z" transform="translate(9.35 9.772)" />
@@ -75,8 +76,8 @@ $inw = get_field( 'lokale' );
                 </text>
             </svg>
         </div>
-        <div class="swicher results-display-table <?php echo isset($_COOKIE['resultsDisplay']) ? 'active' : false; ?>">
-            <svg xmlns="http://www.w3.org/2000/svg" width="53.617" height="19" viewBox="0 0 53.617 19">
+        <div class="swicher results-display-grid <?php echo !isset($_COOKIE['resultsDisplay']) ? 'active' : false; ?>">
+         <svg xmlns="http://www.w3.org/2000/svg" width="53.617" height="19" viewBox="0 0 53.617 19">
                 <rect  width="11.02" height="4" transform="translate(4.99 0.752)" />
                 <rect  width="2.99" height="4" transform="translate(0 0.752)" />
                 <rect  width="11.02" height="4" transform="translate(4.99 6.762)" />
@@ -87,10 +88,11 @@ $inw = get_field( 'lokale' );
                     <tspan x="0" y="0">Lista</tspan>
                 </text>
             </svg>
+          
         </div>
     </div>
 </div>
-<?php if (isset($_COOKIE['resultsDisplay'])) : ?>
+<?php if (!isset($_COOKIE['resultsDisplay'])) : ?>
 
 <?php  if($loop->have_posts() ) : ?>
 <table id="mieszkania-inw" cellspacing="0" class=" table table-hover" style="width:100%">
