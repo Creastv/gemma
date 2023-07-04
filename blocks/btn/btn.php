@@ -12,7 +12,7 @@ if($style == 'btn-revers'){
     $btClass = 'btn-revers';
 }
 
-$class_name = 'testimonial-block';
+$class_name = '';
 if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
 }
