@@ -36,7 +36,7 @@ $posts = new WP_Query( array(
                 <div class="post-item__wraper">
                     <header>
              
-                        <a href="<?php the_permalink(); ?>">
+                        <a href="<?php the_permalink($post->ID); ?>">
                             <?php if (  $zf || $zf !== NULL  )  : ?>
                                  <?php echo wp_get_attachment_image( $zf, 'post-item' );?>
                             <?php else : ?>
