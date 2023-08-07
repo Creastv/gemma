@@ -92,6 +92,6 @@ $colorBg = get_field( 'kolor_tla_nad_zdjeciem' );
              </div>
              <?php  endforeach; ?>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination "></div>
     </div>
 </section>

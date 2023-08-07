@@ -1,7 +1,7 @@
 <?php 
 $inw = get_field( 'lokale' );
 
-    $table = array(
+    $grid = array(
         'post_type' => 'lokale',
         'post_status' => 'publish',
         'posts_per_page' => -1,
@@ -27,7 +27,7 @@ $inw = get_field( 'lokale' );
         // ),
     );
     $postsPerPage = 4;
-    $grid = array(
+     $table = array(
         'post_type' => 'lokale',
         'post_status' => 'publish',
         'posts_per_page' => $postsPerPage,

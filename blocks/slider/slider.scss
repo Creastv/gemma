@@ -22,21 +22,7 @@
       transform: translate(-50%, -50%);
     }
   }
-  .swiper-pagination {
-    padding: 10px 20px;
-    // text-align: right;
-    .swiper-pagination-bullet {
-      width: 15px;
-      height: 15px;
-      border: 1px solid #fff;
-      opacity: 1;
-      background-color: transparent;
-      margin-right: 10px;
-    }
-    .swiper-pagination-bullet-active {
-      background-color: #fff;
-    }
-  }
+
   .slider__content {
     position: relative;
     z-index: 3;
@@ -95,5 +81,24 @@
   }
   .right .slider__content {
     padding-right: calc((100% - 1480px) / 2);
+  }
+}
+
+.swiper-pagination {
+  padding: 10px 20px;
+  // text-align: right;
+  // background-color: red;
+  // position: relative;
+  // z-index: 2;
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    opacity: 1;
+    background-color: transparent;
+    margin-right: 10px;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #fff;
   }
 }
