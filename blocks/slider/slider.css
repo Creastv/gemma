@@ -19,12 +19,11 @@
 }
 #slider .swiper-pagination {
   padding: 10px 20px;
-  text-align: right;
 }
 #slider .swiper-pagination .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #fff;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
   opacity: 1;
   background-color: transparent;
   margin-right: 10px;
