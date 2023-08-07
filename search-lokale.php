@@ -4,13 +4,18 @@ $sf_current_query = $searchandfilter->get(477)->current_query();
 // $link = 'http://localhost/gemma/lokale';
 $link = 'https://gemma.regalestate.pl/lokale/';
 
+$title = get_field( 'title', 'options' );
+$subtitle = get_field( 'subtitle', 'opinions' );
 
 get_header(); ?>
 <header class="entry-header">
     <h1 class="entry-title">
-        ZNAJDŹ SWOJE WMARZONE MIESZKANIE
+        <?php echo $title ? $title : ' ZNAJDŹ SWOJE WMARZONE MIESZKANIE'; ?>
     </h1>
-    <p>Wybierz interesujące Cię piętro na fotografii obok lub skorzystaj z filtrów poniżej.</p>
+    <p>
+        <?php echo $subtitle ? $subtitle : ' Wybierz interesujące Cię piętro na fotografii obok lub skorzystaj z filtrów poniżej.'; ?>
+       
+    </p>
 </header>
 
 <div class="search-filters">

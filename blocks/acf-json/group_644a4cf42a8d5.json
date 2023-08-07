@@ -592,6 +592,63 @@
             "default_value": "",
             "enable_opacity": 1,
             "return_format": "string"
+        },
+        {
+            "key": "field_64d0b86597b59",
+            "label": "Podstrona wyszukiwania",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64d0b87697b5a",
+            "label": "Tytuł podstrony",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64d0b88797b5b",
+            "label": "Opis pod tytułem",
+            "name": "subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -612,5 +669,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684317951
+    "modified": 1691400379
 }

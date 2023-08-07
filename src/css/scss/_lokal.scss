@@ -235,14 +235,15 @@ td.child {
     }
 
     .tooltip .tooltiptext {
-      font-size: 12px;
+      font-size: 11px;
+      line-height: 1;
       visibility: hidden;
       width: auto;
       background-color: black;
       color: #fff;
       text-align: center;
       border-radius: 0px;
-      padding: 2px 5px;
+      padding: 5px 5px;
       position: absolute;
       z-index: 1;
       bottom: 100%;
