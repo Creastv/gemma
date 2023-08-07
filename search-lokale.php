@@ -12,10 +12,7 @@ get_header(); ?>
     <h1 class="entry-title">
         <?php echo $title ? $title : ' ZNAJDŹ SWOJE WMARZONE MIESZKANIE'; ?>
     </h1>
-    <p>
-        <?php echo $subtitle ? $subtitle : ' Wybierz interesujące Cię piętro na fotografii obok lub skorzystaj z filtrów poniżej.'; ?>
-       
-    </p>
+    <?php echo $subtitle ? '<p>' . $subtitle  . '</p>': false; ?>
 </header>
 
 <div class="search-filters">
