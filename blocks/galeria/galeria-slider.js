@@ -22,7 +22,7 @@ var swiper = new Swiper(".galeria", {
       slidesPerView: 2
     },
     998: {
-      slidesPerView: 4
+      slidesPerView: 3
     }
   }
 });
