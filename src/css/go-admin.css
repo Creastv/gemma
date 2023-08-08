@@ -1095,7 +1095,7 @@ body.active {
   color: #fff;
 }
 .lokal-ms .lokal-ms__info ul .status.booked {
-  background-color: orange;
+  background-color: #1788c9;
 }
 .lokal-ms .lokal-ms__info ul .status.available {
   background-color: green;
@@ -1299,7 +1299,7 @@ table.dataTable tbody td a {
 }
 
 .stat.booked {
-  color: orange;
+  color: #1788c9;
 }
 
 .stat.available {

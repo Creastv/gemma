@@ -33,7 +33,7 @@ jQuery(document).ready(function () {
         const content = `
               <div class="${status}" >
                 <span><b>Budynek ${title}</b></span>
-                <span>Powierzchnia: <b>${powierzchnia}</b></span>
+                <span>Powierzchnia: <b>${powierzchnia} m<sup>2</sup></b></span>
                 <span>Pokoje: <b>${pokoje}</b></span>
                 <span><b>${status}</b></span>
               </div>
