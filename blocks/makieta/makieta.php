@@ -20,11 +20,9 @@ $stroke_opacity = "0.0";
     <map name="image-map">
         <?php foreach($maping as $cord) : 
            $cordsNumber = $cord['cords'] ? $cord['cords'] : '';
-           $cordsLink = "";
-           if(isset($cord['link'])) {
-            $cordsLink = $cord['link'] ;
-           }
+
            $idPost = $cord['mieszkaniedomlokal'];
+
            $idStatus = get_field( 'status', $idPost);
            $status = '';
            switch ($idStatus) {
@@ -44,18 +42,31 @@ $stroke_opacity = "0.0";
                     break;
                 case '3':
                     $status = 'Sprzedane';
+                    $stroke_color = "ff0000";
+                    $fill_color = "ff0000";
+                    $fill_opacity = "0.5";
+                    $stroke_opacity = "0.5";
+                    break;
                     break;
             }
+
+            $tileLocal = get_the_title($idPost);
+            $liczbaPoki = get_field( 'liczba_pokoi', $idPost);
+            
+            $powierzchnia = get_field( 'powierzchnia', $idPost);
+
+
         ?>
         <area
         data-id="<?php echo  $idPost; ?>"
         data-status="<?php echo $status ?>"
-        title="<?php echo $cord['naglowek']; ?>"
-        date-na="<?php echo $cord['opis']; ?>"
-        data-valu="<?php echo $cord['value']; ?>"
+        title="<?php echo $tileLocal; ?>"
+        date-powierzchnia="<?php echo $powierzchnia; ?>"
+        date-pokoje="<?php echo $liczbaPoki; ?>"
+
         class=" hasTooltip opener-form "
         coords="<?php echo $cordsNumber; ?>"
-        <?php echo $cordsLink ? $cordsLink : ''; ?>
+
         data-maphilight='{"strokeOpacity ": "<?php echo $stroke_opacity; ?>", "strokeColor":"<?php echo $stroke_color; ?>","strokeWidth":1,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
         shape="poly">
         <?php endforeach; ?>

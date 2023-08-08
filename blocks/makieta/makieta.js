@@ -26,12 +26,18 @@ jQuery(document).ready(function () {
       function () {
         // Hover over code
         var title = jQuery(this).attr("title");
-        var subtitle = jQuery(this).attr("date-na");
+        var powierzchnia = jQuery(this).attr("date-powierzchnia");
+        var pokoje = jQuery(this).attr("date-pokoje");
+        var status = jQuery(this).attr("data-status");
         jQuery(this).data("tipText", title).removeAttr("title");
         const content = `
-                <p>${title}</p>
-                <span>${subtitle}</span>
-                `;
+              <div class="${status}" >
+                <span><b>Budynek ${title}</b></span>
+                <span>Powierzchnia: <b>${powierzchnia}</b></span>
+                <span>Pokoje: <b>${pokoje}</b></span>
+                <span><b>${status}</b></span>
+              </div>
+              `;
         jQuery('<div class="tooltip-makieta"></div>').html(content).appendTo("body").fadeIn("fast");
       },
       function () {
