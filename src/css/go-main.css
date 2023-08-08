@@ -36,9 +36,21 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 30px;
+  line-height: 1.2;
   text-transform: uppercase;
   font-weight: 300;
+}
+@media only screen and (max-width: 1300px) {
+  h2 {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 19px;
+    line-height: 11px;
+  }
 }
 
 p {
@@ -61,7 +73,7 @@ a:hover {
 .entry-header {
   width: 100%;
   text-align: center;
-  padding: 50px 0;
+  padding: 20px 0;
 }
 @media only screen and (max-width: 768px) {
   .entry-header {
@@ -552,6 +564,10 @@ figure img {
   font-size: 13px;
   line-height: 18px;
   font-weight: 300;
+}
+
+.page-id-18 .footer-contact {
+  padding: 0 0 50px 0;
 }
 
 #header {

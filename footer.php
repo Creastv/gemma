@@ -1,6 +1,6 @@
 </div>
 </div>
-
+<div class="spacer"></div>
 <?php get_template_part('templates-parts/footer/footer', 'contact'); ?>
 </main>
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">

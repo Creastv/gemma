@@ -10,10 +10,21 @@
   margin-bottom: 20px;
 }
 .bullets li .top__title p {
-  font-size: 21px;
-  line-height: 28px;
+  font-size: 30px;
+  line-height: 1.2;
   margin-bottom: 0px;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1300px) {
+  .bullets li .top__title p {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .bullets li .top__title p {
+    font-size: 19px;
+    line-height: 11px;
+  }
 }
 
 .bullets.rows-4 {

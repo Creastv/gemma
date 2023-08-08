@@ -13,10 +13,17 @@
     }
     .top__title {
       p {
-        font-size: 21px;
-        line-height: 28px;
+        font-size: 30px;
+        line-height: 1.2;
         margin-bottom: 0px;
         text-transform: uppercase;
+        @media #{$lg} {
+          font-size: 22px;
+        }
+        @media #{$sm} {
+          font-size: 19px;
+          line-height: 11px;
+        }
       }
     }
   }
