@@ -92,10 +92,13 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
         <p class="title-local"><?php the_title(); ?></p>
         <span><?php echo $rooms; ?></span>
         <div class="xs-display">
-         <a href="#" class="opener-form" data-id="<?php the_ID(); ?>" data-titlelocal="<?php the_title(); ?>" ><?php echo $tekstButton; ?></a>
-        <?php if($pdfRzut) { ?>
-        <a href="<?php echo $pdfRzut; ?>"  target="_blank">Pobierz PDF ></a>
-        <?php } ?>
+            <a href="#" class="opener-form" data-id="<?php the_ID(); ?>" data-titlelocal="<?php the_title(); ?>" ><?php echo $tekstButton; ?></a>
+            <?php if($pdfRzut) { ?>
+            <a href="<?php echo $pdfRzut; ?>"  target="_blank">Pobierz PDF ></a>
+            <?php } ?>
+            <?php if($wirtualnySpacer) { ?>
+            <a href="<?php echo $wirtualnySpacer; ?>" target="_blank" >Wirtualny spacer ></a>
+            <?php } ?>
         </div>
     </td>
     <td>
@@ -143,7 +146,7 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
         <?php if($pdf3D) { ?>
         <a href="<?php echo $pdf3D; ?>" target="_blank" >Pobierz rzuty 3D ></a>
         <?php } ?>
-          <?php if($wirtualnySpacer) { ?>
+        <?php if($wirtualnySpacer) { ?>
         <a href="<?php echo $wirtualnySpacer; ?>" target="_blank" >Wirtualny spacer ></a>
         <?php } ?>
     </td>

@@ -11,7 +11,7 @@
   }
 }
 .go-lokalizacja .row .col:nth-child(2) {
-  width: 60%;
+  width: 65%;
 }
 @media only screen and (max-width: 998px) {
   .go-lokalizacja .row .col:nth-child(2) {
@@ -19,7 +19,7 @@
   }
 }
 .go-lokalizacja .row .col:nth-child(1) {
-  width: 40%;
+  width: 35%;
 }
 @media only screen and (max-width: 998px) {
   .go-lokalizacja .row .col:nth-child(1) {
@@ -41,4 +41,5 @@
 .go-lokalizacja iframe {
   display: block;
   min-height: 450px;
+  height: 100%;
 }/*# sourceMappingURL=lokalizacja.css.map */

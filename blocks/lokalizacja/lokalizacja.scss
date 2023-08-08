@@ -9,13 +9,13 @@
     }
     .col {
       &:nth-child(2) {
-        width: 60%;
+        width: 65%;
         @media #{$md} {
           width: 100%;
         }
       }
       &:nth-child(1) {
-        width: 40%;
+        width: 35%;
         @media #{$md} {
           width: 100%;
         }
@@ -36,5 +36,6 @@
   iframe {
     display: block;
     min-height: 450px;
+    height: 100%;
   }
 }
