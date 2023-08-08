@@ -63,7 +63,7 @@ $stroke_opacity = "0.0";
         title="<?php echo $tileLocal; ?>"
         date-powierzchnia="<?php echo $powierzchnia; ?>"
         date-pokoje="<?php echo $liczbaPoki; ?>"
-
+        data-titlelocal="<?php echo $tileLocal; ?>"
         class=" hasTooltip opener-form "
         coords="<?php echo $cordsNumber; ?>"
 
