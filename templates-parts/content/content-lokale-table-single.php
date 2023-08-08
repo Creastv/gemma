@@ -84,7 +84,7 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
         <p class="title-local"><?php the_title(); ?></p>
         <span><?php echo $rooms; ?></span>
         <div class="xs-display">
-         <a href="#" class="opener-form" data-id="<?php the_ID(); ?>"><?php echo $tekstButton; ?></a>
+         <a href="#" class="opener-form" data-id="<?php the_ID(); ?>" data-titlelocal="<?php the_title(); ?>" ><?php echo $tekstButton; ?></a>
         <?php if($pdfRzut) { ?>
         <a href="#" class="opener-pdf" data-pdf="<?php echo $pdfRzut; ?>">Pobierz PDF ></a>
         <?php } ?>
@@ -133,7 +133,7 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
         <?php echo $label; ?>
     </td>
     <td>
-        <a href="#" class="opener-form" data-id="<?php the_ID(); ?>"><?php echo $tekstButton; ?></a>
+        <a href="#" class="opener-form" data-id="<?php the_ID(); ?>" data-titlelocal="<?php the_title(); ?>"><?php echo $tekstButton; ?></a>
         <?php if($pdfRzut) { ?>
         <a href="#" class="opener-pdf" data-pdf="<?php echo $pdfRzut; ?>">Pobierz PDF ></a>
         <?php } ?>

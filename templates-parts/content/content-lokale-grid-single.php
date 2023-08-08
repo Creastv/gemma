@@ -87,7 +87,7 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
                 <p><?php echo $excerpt; ?></p>
                 <p><?php echo $priceDisplay; ?></p>
             </div>
-            <a href="#" class="opener-form" data-id="<?php the_ID(); ?>"><?php echo $textButton; ?></a>
+            <a href="#" class="opener-form"  data-titlelocal="<?php the_title(); ?>" data-id="<?php the_ID(); ?>"><?php echo $textButton; ?></a>
         </div>
     </div>
 </article>
