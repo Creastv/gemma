@@ -25,6 +25,7 @@ $stroke_opacity = "0.0";
 
            $idStatus = get_field( 'status', $idPost);
            $status = '';
+           $disabled = '';
            switch ($idStatus) {
                 case '1':
                     $status = 'Wolne';
@@ -46,9 +47,17 @@ $stroke_opacity = "0.0";
                     $fill_color = "ff0000";
                     $fill_opacity = "0.5";
                     $stroke_opacity = "0.5";
+                    $disabled = "disabled";
                     break;
-                    break;
-            }
+               default:
+                    $status = 'Sprzedane';
+                    $stroke_color = "ff0000";
+                    $fill_color = "ff0000";
+                    $fill_opacity = "0.5";
+                    $stroke_opacity = "0.5";
+                    $disabled = "disabled";
+                     break;
+            }  
 
             $tileLocal = get_the_title($idPost);
             $liczbaPoki = get_field( 'liczba_pokoi', $idPost);
@@ -64,7 +73,7 @@ $stroke_opacity = "0.0";
         date-powierzchnia="<?php echo $powierzchnia; ?>"
         date-pokoje="<?php echo $liczbaPoki; ?>"
         data-titlelocal="<?php echo $tileLocal; ?>"
-        class=" hasTooltip opener-form "
+        class=" hasTooltip  <?php echo $disabled !== 'disabled' ? 'opener-form' : false; ?> "
         coords="<?php echo $cordsNumber; ?>"
 
         data-maphilight='{"strokeOpacity ": "<?php echo $stroke_opacity; ?>", "strokeColor":"<?php echo $stroke_color; ?>","strokeWidth":1,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'

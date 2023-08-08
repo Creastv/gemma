@@ -38,6 +38,7 @@
   }
   > div.Sprzedane {
     background-color: red;
+    display: none !important;
   }
 
   span {
@@ -63,4 +64,12 @@
   //   border-bottom: 10px solid transparent;
   //   border-right: 10px solid $black;
   // }
+}
+
+.hasTooltip.disabled {
+  pointer-events: none;
+
+  .tooltip-makieta {
+    display: none !important;
+  }
 }

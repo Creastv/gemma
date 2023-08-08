@@ -137,6 +137,69 @@
                     "parent_repeater": "field_645c9e8d7db3c"
                 },
                 {
+                    "key": "field_645c9eb47db3f",
+                    "label": "Nagłówek",
+                    "name": "naglowek",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_645c9e8d7db3c"
+                },
+                {
+                    "key": "field_645c9ebe7db40",
+                    "label": "Opis",
+                    "name": "opis",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_645c9e8d7db3c"
+                },
+                {
+                    "key": "field_645c9ead7db3e",
+                    "label": "Value",
+                    "name": "value",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_645c9e8d7db3c"
+                },
+                {
                     "key": "field_64d0c5b3edc37",
                     "label": "Mieszkanie\/dom\/lokal - (Pobierany status)",
                     "name": "mieszkaniedomlokal",
@@ -181,5 +244,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691493085
+    "modified": 1691502244
 }

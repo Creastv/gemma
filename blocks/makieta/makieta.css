@@ -32,6 +32,7 @@
 }
 .tooltip-makieta > div.Sprzedane {
   background-color: red;
+  display: none !important;
 }
 .tooltip-makieta span {
   display: block;
@@ -43,4 +44,11 @@
 }
 .tooltip-makieta span b {
   font-weight: 500 !important;
+}
+
+.hasTooltip.disabled {
+  pointer-events: none;
+}
+.hasTooltip.disabled .tooltip-makieta {
+  display: none !important;
 }/*# sourceMappingURL=makieta.css.map */

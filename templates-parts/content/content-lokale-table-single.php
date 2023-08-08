@@ -53,6 +53,7 @@ $sizeDisplay = $size ?  $size  : false;
 
 $pdfRzut = get_field( 'rzut_pdf', get_the_ID() );
 $pdf3D = get_field( 'rzut_3d', get_the_ID() );
+$wirtualnySpacer = get_field( 'spacer_wirtualny', get_the_ID() );
 
 $extras = get_field( 'udogodnienia_lokalu', get_the_ID() );
 $sizeInfo = get_field( 'dodatkowe_info_o_powierzchni', get_the_ID() );
@@ -96,11 +97,6 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
         <a href="<?php echo $pdfRzut; ?>"  target="_blank">Pobierz PDF ></a>
         <?php } ?>
         </div>
-
-        <?php if($pdf3D) { ?>
-        <a href="#" class="opener-pdf" data-pdf="<?php echo $pdf3D; ?>">Pobierz rzuty 3D ></a>
-        <?php } ?>
-        
     </td>
     <td>
         <p class="size"><?php echo $sizeDisplay ? $sizeDisplay : "---"; ?></p>
@@ -143,6 +139,12 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
         <a href="#" class="opener-form" data-id="<?php the_ID(); ?>" data-titlelocal="<?php the_title(); ?>"><?php echo $tekstButton; ?></a>
         <?php if($pdfRzut) { ?>
         <a href="<?php echo $pdfRzut; ?>"  target="_blank">Pobierz PDF ></a>
+        <?php } ?>
+        <?php if($pdf3D) { ?>
+        <a href="<?php echo $pdf3D; ?>" target="_blank" >Pobierz rzuty 3D ></a>
+        <?php } ?>
+          <?php if($wirtualnySpacer) { ?>
+        <a href="<?php echo $wirtualnySpacer; ?>" target="_blank" >Wirtualny spacer ></a>
         <?php } ?>
     </td>
 </tr>
