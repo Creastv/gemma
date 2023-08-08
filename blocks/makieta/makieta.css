@@ -41,8 +41,6 @@
   font-size: 13px !important;
   line-height: 16px;
 }
-@media only screen and (max-width: 768px) {
-  .tooltip-makieta span {
-    font-size: 16px;
-  }
+.tooltip-makieta span b {
+  font-weight: 500 !important;
 }/*# sourceMappingURL=makieta.css.map */

@@ -1156,7 +1156,7 @@ body.active {
   background-color: red;
 }
 .local-item .booked {
-  background-color: orange;
+  background-color: #1788c9;
 }
 .local-item .available {
   background-color: green;
