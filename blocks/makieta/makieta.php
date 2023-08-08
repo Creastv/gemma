@@ -53,7 +53,7 @@ $stroke_opacity = "0.0";
         title="<?php echo $cord['naglowek']; ?>"
         date-na="<?php echo $cord['opis']; ?>"
         data-valu="<?php echo $cord['value']; ?>"
-        class=" hasTooltip opener-pdf "
+        class=" hasTooltip opener-form "
         coords="<?php echo $cordsNumber; ?>"
         <?php echo $cordsLink ? $cordsLink : ''; ?>
         data-maphilight='{"strokeOpacity ": "<?php echo $stroke_opacity; ?>", "strokeColor":"<?php echo $stroke_color; ?>","strokeWidth":1,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
