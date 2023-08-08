@@ -75,9 +75,16 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
     <td></td>
     <td>
         <?php if ( has_post_thumbnail() )  : ?>
+        <?php if($pdfRzut) { ?>
+        <a href="<?php echo $pdfRzut; ?>"  target="_blank">
+        <?php } ?>   
         <?php the_post_thumbnail('local-table'); ?>
+        <?php if($pdfRzut) { ?>
+        </a>
+        <?php } ?>
         <?php else: ?>
         <img src="<?php echo get_template_directory_uri()."/src/img/thumbnail.png"; ?>" width="120" height="120" alt="<?php the_title(); ?>">
+ 
         <?php endif; ?>
     </td>
     <td>
@@ -86,7 +93,7 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
         <div class="xs-display">
          <a href="#" class="opener-form" data-id="<?php the_ID(); ?>" data-titlelocal="<?php the_title(); ?>" ><?php echo $tekstButton; ?></a>
         <?php if($pdfRzut) { ?>
-        <a href="#" class="opener-pdf" data-pdf="<?php echo $pdfRzut; ?>">Pobierz PDF ></a>
+        <a href="<?php echo $pdfRzut; ?>"  target="_blank">Pobierz PDF ></a>
         <?php } ?>
         </div>
 
@@ -135,7 +142,7 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
     <td>
         <a href="#" class="opener-form" data-id="<?php the_ID(); ?>" data-titlelocal="<?php the_title(); ?>"><?php echo $tekstButton; ?></a>
         <?php if($pdfRzut) { ?>
-        <a href="#" class="opener-pdf" data-pdf="<?php echo $pdfRzut; ?>">Pobierz PDF ></a>
+        <a href="<?php echo $pdfRzut; ?>"  target="_blank">Pobierz PDF ></a>
         <?php } ?>
     </td>
 </tr>

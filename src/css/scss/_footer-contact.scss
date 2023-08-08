@@ -69,8 +69,10 @@
     margin-bottom: 18px;
     .info__item__title {
       font-size: 13px;
+      display: block;
       line-height: 18px;
-      font-weight: 600;
+      margin-bottom: 10px;
+      // font-weight: 600;
       margin: 0;
       padding: 0;
     }
