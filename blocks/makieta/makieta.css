@@ -1,11 +1,14 @@
 .go-makieta {
+  position: relative;
   margin-bottom: 20px;
   max-width: 1000px;
   margin: 0 auto;
   width: 100%;
+  display: block;
 }
 .go-makieta img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
   height: auto;
 }
 

@@ -10,7 +10,6 @@ $fill_color = "00000";
 $fill_opacity = "0.4";
 $stroke_opacity = "0.0";
 
-
 ?>
 
 <div class="go-makieta" data-inw="<?php echo esc_html( $term->slug); ?>" data-filter="<?php echo $filter; ?>" data-idform="<?php echo $form; ?>">
@@ -25,7 +24,6 @@ $stroke_opacity = "0.0";
            if(isset($cord['link'])) {
             $cordsLink = $cord['link'] ;
            }
-
            $idPost = $cord['mieszkaniedomlokal'];
            $idStatus = get_field( 'status', $idPost);
            $status = '';
@@ -50,17 +48,23 @@ $stroke_opacity = "0.0";
             }
         ?>
         <area
+        data-id="<?php echo  $idPost; ?>"
         data-status="<?php echo $status ?>"
         title="<?php echo $cord['naglowek']; ?>"
         date-na="<?php echo $cord['opis']; ?>"
         data-valu="<?php echo $cord['value']; ?>"
-   
-        class=" hasTooltip "
+        class=" hasTooltip opener-pdf "
         coords="<?php echo $cordsNumber; ?>"
         <?php echo $cordsLink ? $cordsLink : ''; ?>
-        data-maphilight='{"alwaysOn":true, "strokeOpacity ": "<?php echo $stroke_opacity; ?>", "strokeColor":"<?php echo $stroke_color; ?>","stroke":false,"strokeWidth":0,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
+        data-maphilight='{"strokeOpacity ": "<?php echo $stroke_opacity; ?>", "strokeColor":"<?php echo $stroke_color; ?>","strokeWidth":1,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
         shape="poly">
         <?php endforeach; ?>
     </map>
     <?php endif; ?>
 </div>
+
+<script>
+    // jQuery("#InvestmentMap").maphilight({
+  //   alwaysOn: true
+  // });
+</script>

@@ -26,6 +26,8 @@ get_template_part( 'templates-parts/modal/modal-pdf' );
     const page = document.querySelector('[name="page-url"]');
     page.value = '<?php the_title(); ?>'
 </script>
+
+
 <?php wp_footer(); ?>
 
 </body>

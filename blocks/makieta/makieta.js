@@ -1,5 +1,9 @@
 jQuery(document).ready(function () {
-  jQuery("#InvestmentMap").maphilight();
+  setTimeout(function () {
+    jQuery("#InvestmentMap").maphilight({
+      alwaysOn: true
+    });
+  }, 100);
   jQuery("img[usemap]").rwdImageMaps();
   // Data inwestycja
   var data = jQuery(".go-makieta");
@@ -44,12 +48,11 @@ jQuery(document).ready(function () {
         left: mousex
       });
     });
-  jQuery(".hasTooltip").on("click", function () {
-    var value = jQuery(this).attr("data-valu");
-    jQuery(this).data("value", value);
-    jQuery('[name="' + filterData + '[]"]').val(value);
-
-    var formElement = jQuery(`#search-filter-form-${idFormData}`);
-    formElement.submit();
-  });
+  // jQuery(".hasTooltip").on("click", function () {
+  //   // var value = jQuery(this).attr("data-valu");
+  //   // jQuery(this).data("value", value);
+  //   // jQuery('[name="' + filterData + '[]"]').val(value);
+  //   // var formElement = jQuery(`#search-filter-form-${idFormData}`);
+  //   // formElement.submit();
+  // });
 });

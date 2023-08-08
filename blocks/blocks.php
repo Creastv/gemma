@@ -123,10 +123,11 @@ function register_acf_block_types() {
             'jsx' 			=> true,
           ],
         'enqueue_assets'    => function(){
+           wp_enqueue_style( 'go-makieta',  get_template_directory_uri() . '/blocks/makieta/makieta.min.css' );
           wp_enqueue_script( 'go-maplight', get_template_directory_uri() . '/src/js/jquery.maphilight.js', array(), '20130478', true );
 	        wp_enqueue_script( 'go-responsive', get_template_directory_uri() . '/src/js/jquery.rwdImageMaps.js', array(), '20130478', true );
           wp_enqueue_script('go-makieta-init', get_template_directory_uri().'/blocks/makieta/makieta.js', array( 'jquery' ),'4', true );
-          wp_enqueue_style( 'go-makieta',  get_template_directory_uri() . '/blocks/makieta/makieta.min.css' );
+         
         },
     ));
     acf_register_block_type(array(
