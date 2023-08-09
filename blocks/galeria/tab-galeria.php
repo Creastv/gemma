@@ -8,23 +8,22 @@ endforeach;
 ?>
 
 <?php echo '<div id="go-tabs-'.$id.'" class="go-tabs">'; ?>
-<?php if($row > 1):
+<?php // if($row >= 1):
 if($taby):
-echo '<div class="tab">';
-$count = 0;
-echo $row;
-foreach($taby as $tab):
- 
-  // $idTabName = $tab['nazwa_zakladki'];
-  $idTab = $tab['nazwa_zakladki'];
-  $active = $count == 0 ? 'active' : '';
-  echo '<a href="#" class="tab-links '. $active .'" data-id="'.$idTab.'">'.$tab['nazwa_zakladki'].'</a href="#">';
+  echo '<div class="tab">';
+  $count = 0;
+  foreach($taby as $tab):
+  
+    // $idTabName = $tab['nazwa_zakladki'];
+    $idTab = $tab['nazwa_zakladki'];
+    $active = $count == 0 ? 'active' : '';
+    echo '<a href="#" class="tab-links '. $active .'" data-id="'.$idTab.'">'.$tab['nazwa_zakladki'].'</a href="#">';
 
-$count++;
-endforeach;
-echo '</div>';
+  $count++;
+  endforeach;
+  echo '</div>';
 endif; 
-endif;
+// endif;
 ?>
 
 <?php  if($taby):
