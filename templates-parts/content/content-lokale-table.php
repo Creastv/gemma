@@ -2,7 +2,7 @@
     <thead>
         <tr>
             <th></th>
-            <th ></th>
+            <th data-priority="2"></th>
             <th data-priority="1">Nazwa i liczba pokoi</th>
             <th data-priority="6">Powierzchnia</th>
             <th data-priority="7">Cena</th>
