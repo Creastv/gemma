@@ -327,6 +327,10 @@ figure img {
   z-index: -1;
 }
 
+#post-18 .entry-title {
+  display: none;
+}
+
 #footer {
   position: relative;
   background-color: black;
