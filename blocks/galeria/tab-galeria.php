@@ -1,24 +1,30 @@
 <?php 
 $id = $block['id'];
 $taby = get_field( 'taby' );
+$rows = count($taby);
+
+$disabled = ' disabled';
+if(count($taby) > 1){
+  $disabled = "active";
+  echo $rows;
+}
 ?>
 
 <?php echo '<div id="go-tabs-'.$id.'" class="go-tabs">'; ?>
-<?php // if($row >= 1):
-if($taby):
-  echo '<div class="tab">';
-  $count = 0;
-  foreach($taby as $tab):
-    // $idTabName = $tab['nazwa_zakladki'];
-    $idTab = $tab['nazwa_zakladki'];
-    $active = $count == 0 ? 'active' : '';
-    echo  $idTab ? '<a href="#" class="tab-links '. $active .'" data-id="'.$idTab.'">'.$tab['nazwa_zakladki'].'</a href="#">' : false;
-  $count++;
-  endforeach;
-  echo '</div>';
-endif; 
-// endif;
-?>
+<?php  if($taby):
+echo '<div class="tab ' . $disabled . '">';
+$count = 0;
+foreach($taby as $tab):
+  // $idTabName = $tab['nazwa_zakladki'];
+  $idTab = $tab['nazwa_zakladki'];
+  $active = $count == 0 ? 'active' : '';
+  echo '<a href="#" class="tab-links '. $active .'" data-id="'.$idTab.'">'.$tab['nazwa_zakladki'].'</a >';
+
+$count++;
+endforeach;
+echo '</div>';
+
+endif; ?>
 
 <?php  if($taby):
 echo '<div class="tab-wraper">';

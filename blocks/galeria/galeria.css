@@ -22,6 +22,10 @@
   display: block;
 }
 
+.tab.disabled {
+  display: none;
+}
+
 .galeria-wraper {
   overflow: hidden;
   padding-bottom: 60px;
