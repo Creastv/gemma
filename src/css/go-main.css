@@ -824,7 +824,6 @@ figure img {
 @media only screen and (max-width: 768px) {
   .post-item .entry-title {
     font-size: 19px;
-    line-height: 11px;
   }
 }
 .post-item .entry-title a {
@@ -1421,6 +1420,10 @@ td.child ul li {
   .xs-display {
     display: block;
   }
+}
+
+.dtr-data {
+  text-align: right;
 }
 
 .btn {
