@@ -632,6 +632,7 @@ figure img {
   .navbar__brand img {
     width: 80%;
     height: auto;
+    max-width: 160px;
   }
 }
 @media only screen and (max-width: 350px) {
@@ -705,6 +706,11 @@ figure img {
   margin: 0;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .navbar__icons {
+    display: none;
+  }
 }
 .navbar__icons li a {
   padding: 15px;
@@ -793,6 +799,10 @@ figure img {
   .posts-wraper {
     grid-template-columns: 1fr;
   }
+}
+
+.meta {
+  margin-bottom: 20px;
 }
 
 .post-item header img {

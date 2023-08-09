@@ -43,6 +43,7 @@
     @media #{$xs} {
       width: 80%;
       height: auto;
+      max-width: 160px;
     }
     @media #{$xx} {
       width: 50%;
@@ -111,6 +112,9 @@
   margin: 0;
   display: flex;
   align-items: center;
+  @media #{$sm} {
+    display: none;
+  }
   li {
     a {
       padding: 15px;

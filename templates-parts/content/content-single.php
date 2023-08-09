@@ -1,5 +1,6 @@
 <article id="post-<?php the_ID(); ?>" class="single-post hentry">
     <header class="entry-header">
+        <div class="meta"><time class="meta meta-data-pub published" datetime="<?php the_time() ?>"> <span><?php the_time('d.m.Y');?></span></time></div>
         <h1 class="entry-title ">
             <?php the_title(); ?>
         </h1>

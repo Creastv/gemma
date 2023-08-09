@@ -102,7 +102,6 @@ $inw = get_field( 'lokale' );
             <th></th>
             <th>Nazwa i liczba pokoi</th>
             <th>Powierzchnia</th>
-            <th>Pietro</th>
             <th>Cena</th>
             <th>Udogodnienia</th>
             <th>Status</th>
