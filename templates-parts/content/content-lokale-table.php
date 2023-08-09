@@ -5,7 +5,6 @@
             <th data-priority="3"></th>
             <th data-priority="1">Nazwa i liczba pokoi</th>
             <th data-priority="6">Powierzchnia</th>
-            <th data-priority="7">Pietro</th>
             <th data-priority="7">Cena</th>
             <th data-priority="8">Udogodienia</th>
             <th data-priority="5">Status</th>

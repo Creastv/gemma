@@ -120,9 +120,7 @@ $img = get_field( 'zdjecie_w_tabeli', get_the_ID() );
          echo '</ul>';
         endif;?>
     </td>
-    <td>
-        <p class="floor"><?php echo $floor ? $floor : "---"; ?></p>
-    </td>
+    
     <td>
         <p class="price"> <?php echo $priceDisplay ? $priceDisplay : "---"; ?></p>
     </td>
