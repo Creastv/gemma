@@ -1713,9 +1713,11 @@ form.searchandfilter ul .sf-field-post-meta-powierzchnia {
   }
 }
 form.searchandfilter ul .sf-field-post-meta-powierzchnia .sf-meta-range {
-  font-size: 16px;
-  margin-top: 16px;
-  color: #757575;
+  font-size: 14px;
+  padding: 11px 0;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1771,6 +1773,17 @@ form.searchandfilter ul .sf-field-post-meta-powierzchnia .sf-meta-range .meta-sl
 
 .select2-search__field {
   display: none !important;
+}
+
+.select2-selection__rendered {
+  color: black;
+  /* line-height: 28px; */
+  font-size: 14px;
+  /* color: red; */
+  padding: 11px 0;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 label .select2.select2-container .select2-selection {
