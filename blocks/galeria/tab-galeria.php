@@ -1,24 +1,31 @@
 <?php 
 $id = $block['id'];
 $taby = get_field( 'taby' );
-
-
+$row = 0;
+foreach($taby as $no):
+  $row++;
+endforeach;
 ?>
 
 <?php echo '<div id="go-tabs-'.$id.'" class="go-tabs">'; ?>
-<?php  if($taby):
+<?php if($row > 1):
+if($taby):
 echo '<div class="tab">';
 $count = 0;
+echo $row;
 foreach($taby as $tab):
+ 
   // $idTabName = $tab['nazwa_zakladki'];
   $idTab = $tab['nazwa_zakladki'];
   $active = $count == 0 ? 'active' : '';
   echo '<a href="#" class="tab-links '. $active .'" data-id="'.$idTab.'">'.$tab['nazwa_zakladki'].'</a href="#">';
+
 $count++;
 endforeach;
 echo '</div>';
-
-endif; ?>
+endif; 
+endif;
+?>
 
 <?php  if($taby):
 echo '<div class="tab-wraper">';

@@ -17,7 +17,8 @@ $floor = get_post_meta($post_id, "pietro", true);
 $status = get_post_meta($post_id, "status", true);
 $size = get_post_meta($post_id, "powierzchnia", true);
 $price = get_post_meta($post_id, "cena", true);
-
+$sizeInfo = get_field( 'dodatkowe_info_o_powierzchni', $post_id );
+$moreInfo = get_field( 'dodatkowe_info', $post_id );
 switch ($floor) {
 case '0':
 $floor = "Parter";
@@ -47,9 +48,9 @@ break;
 <?php if($title) : ?>
 <h4><?php echo $title; ?></h4>
 <?php endif; ?>
-<?php if( $inw ) : ?>
+<!-- <?php if( $inw ) : ?>
 <p><?php echo  $inw_string; ?></p>
-<?php endif; ?>
+<?php endif; ?> -->
 <?php if($img) : ?>
 <?php echo $img; ?>
 <?php endif; ?>
@@ -58,10 +59,10 @@ break;
     <li><span class="status <?php echo $classStatus; ?>"><?php echo $textStatus; ?></span></li>
     <?php endif; ?>
     <?php if($typeInv) : ?>
-    <li>
+    <!-- <li>
         <span>Typ lokalu:</span>
         <span><?php echo $typeInv_string; ?></span>
-    </li>
+    </li> -->
     <?php endif; ?>
     <?php if($floor) : ?>
     <li>
@@ -75,6 +76,23 @@ break;
         <span><?php echo $rooms; ?> </span>
     </li>
     <?php endif; ?>
+     <?php if($moreInfo) :
+        foreach($moreInfo as $inf) :
+            echo '<li>';
+            echo '<span>'.$inf['nazwa'].'</span >';
+            echo '<span> '.$inf['rozmiar_w_m2'].'</span >';
+            echo '</li>';
+        endforeach;
+    endif;?>
+
+   <?php if($sizeInfo) :
+        foreach($sizeInfo as $info) :
+            echo '<li>';
+            echo '<span>'.$info['nazwa'].'</span >';
+            echo '<span> '.$info['rozmiar_w_m2'].' m<sup>2</sup></span >';
+            echo '</li>';
+        endforeach;
+    endif;?>
     <?php if($size) : ?>
     <li>
         <span>Powierzchnia: </span>
