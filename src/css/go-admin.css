@@ -708,7 +708,20 @@ figure img {
 }
 @media only screen and (max-width: 768px) {
   .navbar__icons {
-    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 150px;
+    right: 0px;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    background-color: #fff;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar__icons li {
+    background-color: #fff;
+    padding: 5px;
   }
 }
 .navbar__icons li a {
@@ -716,7 +729,13 @@ figure img {
 }
 @media only screen and (max-width: 768px) {
   .navbar__icons li a {
-    padding: 7.5px;
+    padding: 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar__icons li:nth-child(3) img {
+    width: 22px;
+    height: auto;
   }
 }
 .navbar__icons li:last-child a {
@@ -729,7 +748,7 @@ figure img {
 }
 @media only screen and (max-width: 768px) {
   .navbar__icons li:last-child a {
-    padding-right: 7.5px;
+    padding-right: 0px;
   }
 }
 
