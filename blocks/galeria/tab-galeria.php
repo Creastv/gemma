@@ -6,7 +6,6 @@ $rows = count($taby);
 $disabled = ' disabled';
 if(count($taby) > 1){
   $disabled = "active";
-  echo $rows;
 }
 ?>
 

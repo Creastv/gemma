@@ -204,6 +204,9 @@ table.dataTable tbody td {
 td.child {
   ul {
     width: 100%;
+    @media #{$xs} {
+      padding-left: 50px;
+    }
     li {
       display: flex;
       justify-content: space-between;
@@ -220,6 +223,9 @@ td.child {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  @media #{$xs} {
+    gap: 5px;
+  }
   li {
     // width: 25%;
     span {

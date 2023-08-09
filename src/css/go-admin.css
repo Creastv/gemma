@@ -1339,6 +1339,11 @@ table.dataTable tbody td a {
 td.child ul {
   width: 100%;
 }
+@media only screen and (max-width: 460px) {
+  td.child ul {
+    padding-left: 50px;
+  }
+}
 td.child ul li {
   display: flex;
   justify-content: space-between;
@@ -1355,6 +1360,11 @@ td.child ul li {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+}
+@media only screen and (max-width: 460px) {
+  .extras {
+    gap: 5px;
+  }
 }
 .extras li span {
   margin-bottom: 0 !important;

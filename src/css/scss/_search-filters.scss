@@ -99,9 +99,15 @@ form.searchandfilter {
       }
       &:first-child {
         padding-left: 0px !important;
+        @media #{$xs} {
+          padding-left: 10px !important;
+        }
       }
       &:last-child {
         padding-right: 0px !important;
+        @media #{$xs} {
+          padding-right: 10px !important;
+        }
       }
     }
     select.sf-input-select {

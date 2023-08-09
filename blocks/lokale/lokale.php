@@ -97,15 +97,15 @@ $inw = get_field( 'lokale' );
 <?php  if($loop->have_posts() ) : ?>
 <table id="mieszkania-inw" cellspacing="0" class=" table table-hover" style="width:100%">
     <thead>
-        <tr>
+         <tr>
             <th></th>
-            <th></th>
-            <th>Nazwa i liczba pokoi</th>
-            <th>Powierzchnia</th>
-            <th>Cena</th>
-            <th>Udogodnienia</th>
-            <th>Status</th>
-            <th></th>
+            <th ></th>
+            <th data-priority="1">Nazwa i liczba pokoi</th>
+            <th data-priority="6">Powierzchnia</th>
+            <th data-priority="7">Cena</th>
+            <th data-priority="8">Udogodienia</th>
+            <th data-priority="5">Status</th>
+            <th data-priority="4"></th>
         </tr>
     </thead>
     <tbody>
