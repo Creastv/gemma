@@ -68,15 +68,22 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
     $textButton = "Zapytaj o " . strtolower($typ->name) . " >";
 }
 
+$img = get_field( 'zdjecie', get_the_ID() );
+
+
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('local-item'); ?>>
     <div class="post-item__wraper">
         <header>
-            <?php if ( has_post_thumbnail() )  : ?>
-            <?php the_post_thumbnail('post-item'); ?>
-            <?php else: ?>
-            <img src="<?php echo get_template_directory_uri()."/src/img/thumbnail.png"; ?>" width="350" height="490" alt="<?php the_title(); ?>">
-            <?php endif; ?>
+            <?php if($img) { ?>
+                <?php echo wp_get_attachment_image( $img, 'post-item'); ?>
+            <?php } else { ?>
+                <?php if ( has_post_thumbnail() )  : ?>
+                <?php the_post_thumbnail('post-item'); ?>
+                <?php else: ?>
+                <img src="<?php echo get_template_directory_uri()."/src/img/thumbnail.png"; ?>" width="350" height="490" alt="<?php the_title(); ?>">
+                <?php endif; ?>
+            <?php } ?>
             <?php echo $label; ?>
         </header>
         <div class="content">

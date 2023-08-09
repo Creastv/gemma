@@ -70,23 +70,29 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
     $tekstButton = "Zapytaj o " . strtolower($typ->name) . " >";
 }
 
+
+$img = get_field( 'zdjecie_w_tabeli', get_the_ID() );
+
 ?>
 
 <tr>
     <td></td>
     <td>
-        <?php if ( has_post_thumbnail() )  : ?>
         <?php if($pdfRzut) { ?>
         <a href="<?php echo $pdfRzut; ?>"  target="_blank">
         <?php } ?>   
-        <?php the_post_thumbnail('local-table'); ?>
+            <?php if($img) { ?>
+                <?php echo wp_get_attachment_image( $img, 'local-table'); ?>
+            <?php } else { ?>
+                <?php if ( has_post_thumbnail() )  : ?>
+                    <?php the_post_thumbnail('local-table'); ?>
+                <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri()."/src/img/thumbnail.png"; ?>" width="120" height="120" alt="<?php the_title(); ?>">
+                <?php endif; ?>
+            <?php } ?>
         <?php if($pdfRzut) { ?>
-        </a>
+            </a>
         <?php } ?>
-        <?php else: ?>
-        <img src="<?php echo get_template_directory_uri()."/src/img/thumbnail.png"; ?>" width="120" height="120" alt="<?php the_title(); ?>">
- 
-        <?php endif; ?>
     </td>
     <td>
         <p class="title-local"><?php the_title(); ?></p>

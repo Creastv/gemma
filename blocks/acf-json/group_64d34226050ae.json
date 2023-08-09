@@ -1,11 +1,11 @@
 {
-    "key": "group_6464a29a10a5d",
-    "title": "Zdjęcie wyróżniający tabela",
+    "key": "group_64d34226050ae",
+    "title": "Zdjęcie wyróżniające kafelki",
     "fields": [
         {
-            "key": "field_6464a299718ad",
-            "label": "Zdjęcie w tabeli",
-            "name": "zdjecie_w_tabeli",
+            "key": "field_64d34226f606c",
+            "label": "Zdjęcie w kafelkach",
+            "name": "zdjecie",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -37,14 +37,14 @@
             }
         ]
     ],
-    "menu_order": 1,
+    "menu_order": 0,
     "position": "side",
     "style": "default",
-    "label_placement": "top",
+    "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691567330
+    "modified": 1691566752
 }
