@@ -1,67 +1,70 @@
-.inw-zre{
-    display: flex;
-    margin-top: 50px;
-     @media #{$sm} {
-        flex-wrap: wrap;
-     }
-    article{
-        width: 75%;
-        order:2;
-        @media #{$sm} {
-            width: 100%;
-            order:1;
-        }
-        header{
-            margin-bottom: 10px;
-            h1{
-                margin-bottom: 20px;
-            }
-            p{
-                margin-bottom: 20px;
-            }
-        }
+.inw-zre {
+  display: flex;
+  margin-top: 50px;
+  @media #{$sm} {
+    flex-wrap: wrap;
+  }
+  article {
+    width: 75%;
+    order: 2;
+    @media #{$sm} {
+      width: 100%;
+      order: 1;
     }
-    
-    aside{
-        width: 25%;
-        order:1;
-        padding-right: 50px;
-        @media #{$sm} {
-            padding-right: 0px;
-            width: 100%;
-            order: 2;
-        }
-        ul{
+    header {
+      margin-bottom: 10px;
+      h1 {
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  aside {
+    width: 25%;
+    order: 1;
+    padding-right: 50px;
+    @media #{$sm} {
+      padding-right: 0px;
+      width: 100%;
+      order: 2;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      padding: none;
+      li {
+        a {
+          display: block;
+          color: $black;
+          margin-bottom: 20px;
+          h3 {
+            font-size: 21px;
+            margin: 0;
             padding: 0;
-            list-style: none;
-            padding: none;
-            li{
-                a{
-                    display: block;
-                    color:$black;
-                    margin-bottom: 20px;
-                    h3{
-                        font-size: 21px;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    p{
-                        font-size: 13px;
-                        margin: 0;
-                    }
-                    &:hover{
-                        h3{
-                        color:$main2;
-                        }
-                    }
-                }
+          }
+          p {
+            font-size: 13px;
+            margin: 0;
+            > br {
+              display: none;
             }
-            .active{
-                h3{
-                    font-weight: 500;
-                    color:$main2;
-                }
+          }
+          &:hover {
+            h3 {
+              color: $main2;
             }
+          }
         }
+      }
+      .active {
+        h3 {
+          font-weight: 500;
+          color: $main2;
+        }
+      }
     }
+  }
 }

@@ -972,6 +972,9 @@ body.single-post .entry-content {
   font-size: 13px;
   margin: 0;
 }
+.inw-zre aside ul li a p > br {
+  display: none;
+}
 .inw-zre aside ul li a:hover h3 {
   color: #528ABF;
 }
