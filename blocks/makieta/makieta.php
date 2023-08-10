@@ -28,21 +28,21 @@ $stroke_opacity = "0.0";
            $disabled = '';
            switch ($idStatus) {
                 case '1':
-                    $status = 'Wolne';
+                    $status = 'Dostępny';
                     $stroke_color = "008000";
                     $fill_color = "008000";
                     $fill_opacity = "0.5";
                     $stroke_opacity = "0.5";
                     break;
                 case '2':
-                    $status = 'Zarezerwowane';
+                    $status = 'Zarezerwowany';
                     $stroke_color = "1788c9";
                     $fill_color = "1788c9";
                     $fill_opacity = "0.5";
                     $stroke_opacity = "0.5";
                     break;
                 case '3':
-                    $status = 'Sprzedane';
+                    $status = 'Sprzedany';
                     $stroke_color = "ff0000";
                     $fill_color = "ff0000";
                     $fill_opacity = "0.5";
@@ -50,7 +50,7 @@ $stroke_opacity = "0.0";
                     $disabled = "disabled";
                     break;
                default:
-                    $status = 'Sprzedane';
+                    $status = 'Sprzedany';
                     $stroke_color = "ff0000";
                     $fill_color = "ff0000";
                     $fill_opacity = "0.5";

@@ -2,13 +2,13 @@
 $status = get_field( 'status', get_the_ID() );
 switch ($status) {
     case "1":
-        $label = '<span class="label-status available">Wolne</span>';
+        $label = '<span class="label-status available">Dostępny</span>';
     break;
     case "2":
-        $label = '<span class="label-status booked">Zarezerwowane</span>';
+        $label = '<span class="label-status booked">Zarezerwowany</span>';
     break;
     case "3":
-        $label = '<span class="label-status sold">Sprzedane</span>';
+        $label = '<span class="label-status sold">Sprzedany</span>';
     break;
     
     default:

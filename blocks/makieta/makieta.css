@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .go-makieta {
   position: relative;
   margin-bottom: 20px;
@@ -24,13 +25,13 @@
   padding: 10px;
   border-radius: 3px;
 }
-.tooltip-makieta > div.Wolne {
+.tooltip-makieta > div.Dostępny {
   background-color: green;
 }
-.tooltip-makieta > div.Zarezerwowane {
+.tooltip-makieta > div.Zarezerwowany {
   background-color: #1788c9;
 }
-.tooltip-makieta > div.Sprzedane {
+.tooltip-makieta > div.Sprzedany {
   background-color: red;
   display: none !important;
 }

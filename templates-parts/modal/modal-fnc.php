@@ -76,6 +76,13 @@ break;
         <span><?php echo $rooms; ?> </span>
     </li>
     <?php endif; ?>
+    
+    <?php if($size) : ?>
+    <li>
+        <span>Powierzchnia: </span>
+        <span><?php echo $size; ?> m<sup>2</sup></span>
+    </li>
+    <?php endif; ?>
      <?php if($moreInfo) :
         foreach($moreInfo as $inf) :
             echo '<li>';
@@ -93,12 +100,6 @@ break;
             echo '</li>';
         endforeach;
     endif;?>
-    <?php if($size) : ?>
-    <li>
-        <span>Powierzchnia: </span>
-        <span><?php echo $size; ?> m<sup>2</sup></span>
-    </li>
-    <?php endif; ?>
     <?php if($price) : ?>
     <li>
         <span>Cena: </span>
