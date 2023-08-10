@@ -4,7 +4,7 @@
         <h1 class="entry-title ">
             <?php the_title(); ?>
         </h1>
-        <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+        <!-- <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?> -->
         </div>
         <div class="img-wraper">
             <div class="img">
