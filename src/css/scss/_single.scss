@@ -37,11 +37,12 @@
     }
   }
   p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 20px;
     margin: 0 0 20px;
     @media #{$lg} {
       line-height: 16px;
+      font-size: 12px;
     }
   }
   .btn-wraper {

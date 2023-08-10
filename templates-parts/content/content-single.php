@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="author-footer">
-                    <p> <?php the_author_description(); ?></p>
+                    <p> <?php the_author_meta('description'); ?></p>
                 </div>
             </div><!-- #author-details -->
         </div><!-- #author-bio -->

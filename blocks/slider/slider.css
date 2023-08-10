@@ -96,8 +96,8 @@
   padding: 10px 20px;
 }
 .swiper-pagination .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border: 1px solid #fff;
   opacity: 1;
   background-color: transparent;

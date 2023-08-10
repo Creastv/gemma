@@ -186,3 +186,22 @@ figure {
 #post-18 .entry-title {
   display: none;
 }
+
+.page-id-18 {
+  .footer-contact {
+    .row {
+      .col {
+        &:nth-child(1) {
+          @media #{$sm} {
+            order: 2;
+          }
+        }
+        &:nth-child(2) {
+          @media #{$sm} {
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}
