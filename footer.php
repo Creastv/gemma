@@ -1,6 +1,7 @@
 </div>
 </div>
 <?php get_template_part('templates-parts/footer/footer', 'contact'); ?>
+<?php get_template_part('templates-parts/footer/footer', 'cta-call'); ?>
 </main>
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
     <span class="footer_bg"></span>

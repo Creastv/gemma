@@ -469,6 +469,40 @@ figure img {
   padding-left: 0px;
 }
 
+.footer-contact__call {
+  position: fixed;
+  z-index: 999;
+  bottom: 10px;
+  right: 10px;
+  position: fixed;
+  z-index: 999;
+  bottom: 10px;
+  right: 10px;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.14);
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .footer-contact__call {
+    display: block;
+  }
+}
+.footer-contact__call .footer-contact__call__wraper {
+  background-color: #fff;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+}
+.footer-contact__call .footer-contact__call__wraper svg {
+  width: 100%;
+  height: auto;
+}
+
 .footer-contact {
   padding: 50px 0;
 }
@@ -725,11 +759,11 @@ figure img {
 }
 @media only screen and (max-width: 768px) {
   .navbar__icons {
+    display: none;
     position: fixed;
     z-index: 9999;
     top: 150px;
     right: 0px;
-    display: block;
     text-align: center;
     padding: 5px;
     background-color: #fff;
