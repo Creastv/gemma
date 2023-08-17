@@ -5,10 +5,10 @@ $term = get_field( 'inwestycja' );
 $filter = get_field( 'clasa_filtra' );
 $form = get_field( 'formularz_filtrujacy' );
 
-$stroke_color = "00000";
+// $stroke_color = "00000";
 $fill_color = "00000";
 $fill_opacity = "0.4";
-$stroke_opacity = "0.0";
+// $stroke_opacity = "0.0";
 
 ?>
 
@@ -29,32 +29,32 @@ $stroke_opacity = "0.0";
            switch ($idStatus) {
                 case '1':
                     $status = 'Dostępny';
-                    $stroke_color = "008000";
+                    // $stroke_color = "008000";
                     $fill_color = "008000";
                     $fill_opacity = "0.5";
-                    $stroke_opacity = "0.5";
+                    // $stroke_opacity = "0.5";
                     break;
                 case '2':
                     $status = 'Zarezerwowany';
-                    $stroke_color = "1788c9";
+                    // $stroke_color = "1788c9";
                     $fill_color = "1788c9";
                     $fill_opacity = "0.5";
-                    $stroke_opacity = "0.5";
+                    // $stroke_opacity = "0.5";
                     break;
                 case '3':
                     $status = 'Sprzedany';
-                    $stroke_color = "ff0000";
+                    // $stroke_color = "ff0000";
                     $fill_color = "ff0000";
                     $fill_opacity = "0.5";
-                    $stroke_opacity = "0.5";
+                    // $stroke_opacity = "0.5";
                     $disabled = "disabled";
                     break;
                default:
                     $status = 'Sprzedany';
-                    $stroke_color = "ff0000";
+                    // $stroke_color = "ff0000";
                     $fill_color = "ff0000";
                     $fill_opacity = "0.5";
-                    $stroke_opacity = "0.5";
+                    // $stroke_opacity = "0.5";
                     $disabled = "disabled";
                      break;
             }  
@@ -76,7 +76,7 @@ $stroke_opacity = "0.0";
         class=" hasTooltip  <?php echo $disabled !== 'disabled' ? 'opener-form' : false; ?> "
         coords="<?php echo $cordsNumber; ?>"
 
-        data-maphilight='{"strokeOpacity ": "<?php echo $stroke_opacity; ?>", "strokeColor":"<?php echo $stroke_color; ?>","strokeWidth":1,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
+        data-maphilight='{"stroke":false ,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
         shape="poly">
         <?php endforeach; ?>
     </map>
