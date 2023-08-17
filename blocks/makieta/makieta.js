@@ -54,8 +54,6 @@ jQuery(document).ready(function () {
         left: mousex
       });
     });
-  // var formElement = jQuery(`#search-filter-form-496`);
-  // formElement.submit();
   // jQuery(".hasTooltip").on("click", function () {
   //   // var value = jQuery(this).attr("data-valu");
   //   // jQuery(this).data("value", value);
