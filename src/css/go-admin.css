@@ -580,7 +580,8 @@ figure img {
   font-size: 13px;
   display: block;
   line-height: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 3px !important;
+  font-weight: 500;
   margin: 0;
   padding: 0;
 }
