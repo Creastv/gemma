@@ -47,8 +47,8 @@ jQuery(document).ready(function () {
       }
     )
     .mousemove(function (e) {
-      var mousex = e.pageX + 20; //Get X coordinates
-      var mousey = e.pageY - 5; //Get Y coordinates
+      var mousex = e.pageX + -100; //Get X coordinates
+      var mousey = e.pageY - 100; //Get Y coordinates
       jQuery(".tooltip-makieta").css({
         top: mousey,
         left: mousex
