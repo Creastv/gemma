@@ -97,7 +97,7 @@ $inw = get_field( 'lokale' );
 <?php  if($loop->have_posts() ) : ?>
 <table id="mieszkania-inw" cellspacing="0" class=" table table-hover" style="width:100%">
     <thead>
-             <tr>
+        <tr>
             <th></th>
             <th data-priority="2"></th>
             <th class="bdoll" data-priority="10">Baby doll</th>
