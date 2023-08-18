@@ -101,9 +101,9 @@ $inw = get_field( 'lokale' );
            <th></th>
             <th data-priority="2"></th>
             <th class="bdoll">Baby doll</th>
-            <th data-priority="1">Nazwa i liczba pokoi</th>
+            <th class="name" data-priority="1">Nazwa i liczba pokoi</th>
             <th data-priority="6">Powierzchnia</th>
-            <th data-priority="7">Cena</th>
+            <th class="cena" data-priority="7">Cena</th>
             <th data-priority="8">Udogodnienia</th>
             <th data-priority="5">Status</th>
             <th class="ws" >W. spacer</th>
