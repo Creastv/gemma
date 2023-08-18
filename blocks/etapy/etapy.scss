@@ -2,6 +2,7 @@
 .etapy {
   ul {
     margin: 0px;
+    position: relative;
 
     li.active {
       .etap__pointer {
@@ -10,6 +11,31 @@
         }
         &:before {
           background-color: $black !important;
+        }
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 55%;
+      right: 0px;
+      transform: translate(0, -50%);
+      width: 16px;
+      height: 16px;
+      background-color: #d4d4d4;
+      border-radius: 100%;
+      @media #{$sm} {
+        display: none;
+      }
+    }
+    li {
+      &:last-child {
+        .etap__content {
+          justify-content: flex-end;
+          @media #{$sm} {
+            justify-content: flex-start;
+          }
         }
       }
     }
