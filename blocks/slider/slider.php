@@ -83,7 +83,6 @@ if( !empty($block['className']) ) {
                     <?php if($ca['link']): ?>
                     <a class="btn-revers" href="<?php echo $ca['link']['url']; ?>">
                     <?php echo $ca['link']['title'] ? '<span>' . $ca['link']['title'] .'</span>' : false ;?>
-                    <!-- <span>test</span> -->
                     </a>
                     <?php endif; ?>
                     </div>
