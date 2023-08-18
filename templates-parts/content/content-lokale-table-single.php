@@ -94,6 +94,7 @@ $img = get_field( 'zdjecie_w_tabeli', get_the_ID() );
             </a>
         <?php } ?>
     </td>
+    <td class="text-center">---</td>
     <td>
         <p class="title-local"><?php the_title(); ?></p>
         <span><?php echo $rooms; ?></span>
@@ -110,6 +111,7 @@ $img = get_field( 'zdjecie_w_tabeli', get_the_ID() );
         <?php } ?>
         </div>
     </td>
+    
     <td>
         <p class="size"><?php echo $sizeDisplay ? $sizeDisplay : "---"; ?></p>
         <?php if($sizeInfo) :
@@ -144,6 +146,14 @@ $img = get_field( 'zdjecie_w_tabeli', get_the_ID() );
     </td>
     <td>
         <?php echo $label; ?>
+    </td>
+    
+    <td>
+        <?php if($wirtualnySpacer) { ?>
+        <a href="<?php echo $wirtualnySpacer; ?>" target="_blank" >Wirtualny spacer ></a>
+        <?php } else { ?>
+            ---
+        <?php } ?>
     </td>
     <td>
         <a href="#" class="opener-form" data-id="<?php the_ID(); ?>" data-titlelocal="<?php the_title(); ?>"><?php echo $tekstButton; ?></a>

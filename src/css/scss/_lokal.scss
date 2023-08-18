@@ -71,11 +71,19 @@ tr {
     }
   }
 }
+.bdoll,
+.ws,
+th {
+  width: 100px !important;
+}
+.ud {
+  width: 150px !important;
+}
 table.dataTable thead th {
   // text-align: center;
   border-left: 1px solid #e2e2e2;
   border-bottom: 1px solid #959fad !important;
-  padding: 10px 36px 10px 18px;
+  padding: 10px 15px 10px 5px;
   font-size: 16px;
   font-weight: 300;
   @media #{$sm} {
