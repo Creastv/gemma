@@ -102,3 +102,18 @@
     background-color: #fff;
   }
 }
+
+.slider-inwestycja {
+  .slider__wraper {
+    min-height: 462px !important;
+    height: 462px !important;
+    @media #{$lg} {
+      min-height: 336.59px !important;
+      height: 336.59px !important;
+    }
+    @media #{$xs} {
+      min-height: 207.59px !important;
+      height: 207.59px !important;
+    }
+  }
+}

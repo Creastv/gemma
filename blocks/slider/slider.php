@@ -3,9 +3,14 @@ $carousel = get_field( 'karuzela' );
 $colorApla = get_field( 'kolor_apla' );
 $colorBg = get_field( 'kolor_tla_nad_zdjeciem' );
 
+$className = '';
+if( !empty($block['className']) ) {
+    $className =  $block['className'];
+}
+
 ?>
 
-<section id="slider" class="container-full">
+<section id="slider" class="container-full <?php echo $className; ?>">
     <div class="swiper s-slider">
         <div class="swiper-wrapper">
             <?php foreach($carousel as $ca) :
