@@ -73,6 +73,9 @@ if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
 
 $img = get_field( 'zdjecie_w_tabeli', get_the_ID() );
 
+$imgBabydoll = get_field( 'baby_doll_image', get_the_ID() );
+$opdf = get_field( 'link_do_baby_doll', get_the_ID() );
+
 ?>
 
 <tr>
@@ -94,7 +97,17 @@ $img = get_field( 'zdjecie_w_tabeli', get_the_ID() );
             </a>
         <?php } ?>
     </td>
-    <td class="text-center">---</td>
+    <td class="bd-img">
+        <?php if($imgBabydoll) : ?>
+            <?php echo $opdf ? '<a href="' . $opdf . '" target="_blank"> ' : false; ?> 
+     
+            <?php  echo wp_get_attachment_image( $imgBabydoll, 'local-table' ); ?>
+        
+            <?php echo $opdf ? '</a>' : false; ?>
+        <?php else : ?>
+            <span>---</span>
+        <?php endif; ?>
+    </td>
     <td>
         <p class="title-local"><?php the_title(); ?></p>
         <span><?php echo $rooms; ?></span>

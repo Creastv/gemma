@@ -1288,6 +1288,10 @@ tr:hover td {
   background-color: #ebebeb;
 }
 
+.bd-img img {
+  max-width: 100px !important;
+}
+
 .bdoll,
 .ws,
 th {
