@@ -24,8 +24,8 @@ $bgKolorMobile = get_field( 'kolor_tla_mobile' );
 $bg = get_field( 'kolor_tla_main' );
 $height = get_field( 'minimalna_wysokosc' );
 
-$conteinerStyle = $container == 'container' ? 'bg-section bg-section-normal' : 'bg-section container-full';
-// $bgKolorElement = $bgKolor ? '<span class="bg-section__bg" style="background-color:' .$bgKolor. '"></span>' : false;
+$conteinerStyle = $container == 'container' ? 'header-section header-section-normal' : 'header-section container-full';
+// $bgKolorElement = $bgKolor ? '<span class="header-section__bg" style="background-color:' .$bgKolor. '"></span>' : false;
 
 $className = 'testimonial';
 if( !empty($block['className']) ) {
@@ -35,7 +35,7 @@ if( !empty($block['className']) ) {
 ?>
 
 <div id="<?php echo $id; ?>" class="<?php echo $conteinerStyle; ?> <?php echo $className; ?>">
-    <?php echo '<span class="bg-section__bg" ></span>'; ?>
+    <?php echo '<span class="header-section__bg" ></span>'; ?>
     <?php echo $container == 'container-full' ? '<div class="container">': false; ?>
     <div class="row">
         <div class="col">
@@ -73,7 +73,7 @@ if( !empty($block['className']) ) {
 
 <?php if($bgKolor) : ?>
         
-        <?php echo $idCss; ?> .bg-section__bg {
+        <?php echo $idCss; ?> .header-section__bg {
             background-color: <?php echo $bgKolor; ?>;
         }
     
@@ -106,7 +106,7 @@ if( !empty($block['className']) ) {
 <?php if($bgKolorTablet) : ?>
     @media only screen and (max-width: 1024px) {
         
-        <?php echo $idCss; ?> .bg-section__bg {
+        <?php echo $idCss; ?> .header-section__bg {
             background-color: <?php echo $bgKolorTablet; ?>;
         }
     }
@@ -142,7 +142,7 @@ if( !empty($block['className']) ) {
 <?php if($bgKolorMobile) : ?>
     @media only screen and (max-width: 768px) {
         
-        <?php echo $idCss; ?> .bg-section__bg {
+        <?php echo $idCss; ?> .header-section__bg {
             background-color: <?php echo $bgKolorMobile; ?>;
         }
     }

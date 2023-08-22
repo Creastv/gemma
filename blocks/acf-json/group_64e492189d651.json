@@ -1,9 +1,9 @@
 {
-    "key": "group_64536022e0c1f",
-    "title": "B:container",
+    "key": "group_64e492189d651",
+    "title": "B:header-title",
     "fields": [
         {
-            "key": "field_645363343183b",
+            "key": "field_64e492194cb81",
             "label": "Container",
             "name": "container",
             "aria-label": "",
@@ -28,7 +28,7 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_64536d3ee939e",
+            "key": "field_64e492194cf64",
             "label": "Kolor tła",
             "name": "kolor_tla_main",
             "aria-label": "",
@@ -46,7 +46,7 @@
             "return_format": "string"
         },
         {
-            "key": "field_6453752b0be1a",
+            "key": "field_64e492194d352",
             "label": "Mobile",
             "name": "",
             "aria-label": "",
@@ -63,7 +63,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_645360fdaf26f",
+            "key": "field_64e492194d734",
             "label": "Kolor nad tłem  mobile",
             "name": "kolor_tla_mobile",
             "aria-label": "",
@@ -81,7 +81,7 @@
             "return_format": ""
         },
         {
-            "key": "field_645360f0af26e",
+            "key": "field_64e492194db21",
             "label": "Tło mobile",
             "name": "tlo_mobile",
             "aria-label": "",
@@ -106,7 +106,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6453811874d42",
+            "key": "field_64e492194df0b",
             "label": "Pozycja tła",
             "name": "pozycja_tla_mobil",
             "aria-label": "",
@@ -133,7 +133,7 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_6453753b0be1b",
+            "key": "field_64e4921951cfb",
             "label": "Tablet",
             "name": "",
             "aria-label": "",
@@ -150,7 +150,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_646e2431ce649",
+            "key": "field_64e49219521f8",
             "label": "Kolor nad tłem tablet",
             "name": "kolor_tla_tablet",
             "aria-label": "",
@@ -168,7 +168,7 @@
             "return_format": ""
         },
         {
-            "key": "field_645375cb414c1",
+            "key": "field_64e49219525de",
             "label": "Tło tablet",
             "name": "tlo_desktop_tablet",
             "aria-label": "",
@@ -193,7 +193,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6453812174d43",
+            "key": "field_64e49219529c1",
             "label": "Pozycja tła",
             "name": "pozycja_tla_tablet",
             "aria-label": "",
@@ -220,7 +220,7 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_645375450be1c",
+            "key": "field_64e4921952da5",
             "label": "Desktop",
             "name": "",
             "aria-label": "",
@@ -237,7 +237,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_646e249354064",
+            "key": "field_64e4921953193",
             "label": "Kolor nad tłem",
             "name": "kolor_tla",
             "aria-label": "",
@@ -255,7 +255,7 @@
             "return_format": ""
         },
         {
-            "key": "field_645360c6af26d",
+            "key": "field_64e4921953571",
             "label": "Tło desktop",
             "name": "tlo_desktop",
             "aria-label": "",
@@ -280,7 +280,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_645380ed74d41",
+            "key": "field_64e4921953958",
             "label": "Pozycja tła",
             "name": "pozycja_tla_desktop",
             "aria-label": "",
@@ -312,7 +312,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/container"
+                "value": "acf\/header"
             }
         ]
     ],
@@ -325,5 +325,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692701199
+    "modified": 1692701250
 }

@@ -74,11 +74,33 @@ function register_acf_block_types() {
         'supports'		=> [
             'align'			=> false,
             'anchor'		=> false,
-            'customClassName'	=> false,
+            'customClassName'	=> true,
             'jsx' 			=> true,
           ],
         'enqueue_assets'    => function(){
             wp_enqueue_style( 'go-container',  get_template_directory_uri() . '/blocks/container/container.min.css' );
+        },
+    ));
+    acf_register_block_type(array(
+        'name'              => 'header',
+        'title'             => __('Header'),
+        'render_template'   => 'blocks/header/header.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#122b4f',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+        'mode'            => 'preview', 
+        'keywords'          => array( 'header' ),
+        'supports'		=> [
+            'align'			=> false,
+            'anchor'		=> false,
+            'customClassName'	=> true,
+            'jsx' 			=> true,
+          ],
+        'enqueue_assets'    => function(){
+            wp_enqueue_style( 'go-header',  get_template_directory_uri() . '/blocks/header/header.min.css' );
         },
     ));
      acf_register_block_type(array(
