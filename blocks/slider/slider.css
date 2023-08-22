@@ -134,18 +134,12 @@
 }
 
 .slider-inwestycja .slider__wraper {
-  min-height: 462px !important;
-  height: 462px !important;
-}
-@media only screen and (max-width: 1300px) {
-  .slider-inwestycja .slider__wraper {
-    min-height: 336.59px !important;
-    height: 336.59px !important;
-  }
+  min-height: 500px !important;
+  height: 500px !important;
 }
 @media only screen and (max-width: 460px) {
   .slider-inwestycja .slider__wraper {
-    min-height: 207.59px !important;
-    height: 207.59px !important;
+    min-height: 350px !important;
+    height: 350px !important;
   }
 }/*# sourceMappingURL=slider.css.map */
