@@ -133,28 +133,6 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_64537581414be",
-            "label": "Margin góra dół",
-            "name": "padding_gora_dol_mobile",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6453753b0be1b",
             "label": "Tablet",
             "name": "",
@@ -242,28 +220,6 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_645375ba414c0",
-            "label": "Margin góra dół",
-            "name": "padding_gora_dol_tablet",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_645375450be1c",
             "label": "Desktop",
             "name": "",
@@ -349,28 +305,6 @@
             "other_choice": 0,
             "layout": "vertical",
             "save_other_choice": 0
-        },
-        {
-            "key": "field_645375a5414bf",
-            "label": "Margin góra dół",
-            "name": "padding_gora_dol_desktop",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "step": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -391,5 +325,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684939947
+    "modified": 1692699109
 }

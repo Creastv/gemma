@@ -2,6 +2,18 @@
   background-size: cover;
   position: relative;
 }
+.bg-section .container {
+  display: flex;
+  /* align-self: center; */
+  align-items: center;
+  height: 100%;
+  min-height: 450px;
+}
+@media only screen and (max-width: 768px) {
+  .bg-section .container {
+    min-height: 250px;
+  }
+}
 
 .bg-section-normal {
   padding-left: 50px;

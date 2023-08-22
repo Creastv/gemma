@@ -5,11 +5,22 @@
   background-size: cover;
   position: relative;
   // background-position: center right;
+  // min-height: 450px;
+  .container {
+    display: flex;
+    /* align-self: center; */
+    align-items: center;
+    height: 100%;
+    min-height: 450px;
+    @media #{$sm} {
+      min-height: 250px;
+    }
+  }
 }
 
-.bg-section-normal{
+.bg-section-normal {
   padding-left: 50px;
-  padding-right:50px;
+  padding-right: 50px;
   @media #{$md} {
     padding-left: 20px;
     padding-right: 0px;
