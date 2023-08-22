@@ -133,8 +133,7 @@ form.searchandfilter {
         }
       }
     }
-    .sf-field-post-meta-powierzchnia,
-    .sf-field-post-meta-_additional_settings {
+    .sf-field-post-meta-powierzchnia {
       flex: auto;
       min-width: 220px;
       max-width: 320px;
@@ -171,6 +170,158 @@ form.searchandfilter {
             font-size: 16px;
             margin-left: 2px;
             color: #757575;
+          }
+        }
+        .meta-slider {
+          min-width: 100%;
+          width: 100%;
+          height: 1px;
+          box-shadow: none;
+          border: none;
+          margin: 15px 0 0;
+
+          .noUi-connects {
+            height: 1px;
+            background-color: #e2e2e2;
+            box-shadow: none;
+            .noUi-connect {
+              height: 1px;
+              background-color: $black;
+            }
+          }
+          .noUi-origin {
+            .noUi-handle {
+              box-shadow: none;
+              border: none;
+              background-color: $black;
+              width: 12px;
+              height: 12px;
+              right: -6px;
+
+              &:before,
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sf-field-post-meta-cena {
+      flex: auto;
+      min-width: 220px;
+      max-width: 320px;
+      @media #{$lg} {
+        //  width: 100%;
+        min-width: initial;
+        max-width: initial;
+      }
+      .sf-meta-range {
+        font-size: 14px;
+        padding: 11px 0;
+        line-height: 24px;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .sf-range-min {
+          display: flex;
+          transform: translate(0, 4px);
+          &:after {
+            content: " zł";
+            display: block;
+            font-size: 14px;
+            margin-left: 2px;
+            color: #444;
+          }
+        }
+        .sf-range-max {
+          display: flex;
+          transform: translate(0, 4px);
+          &:after {
+            content: " zł";
+            display: block;
+            font-size: 14px;
+            margin-left: 2px;
+            color: #444;
+          }
+        }
+        .meta-slider {
+          min-width: 100%;
+          width: 100%;
+          height: 1px;
+          box-shadow: none;
+          border: none;
+          margin: 15px 0 0;
+
+          .noUi-connects {
+            height: 1px;
+            background-color: #e2e2e2;
+            box-shadow: none;
+            .noUi-connect {
+              height: 1px;
+              background-color: $black;
+            }
+          }
+          .noUi-origin {
+            .noUi-handle {
+              box-shadow: none;
+              border: none;
+              background-color: $black;
+              width: 12px;
+              height: 12px;
+              right: -6px;
+
+              &:before,
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sf-field-post-meta-liczba_pokoi {
+      flex: auto;
+      min-width: 220px;
+      max-width: 320px;
+      @media #{$lg} {
+        //  width: 100%;
+        min-width: initial;
+        max-width: initial;
+      }
+      .sf-meta-range {
+        font-size: 14px;
+        padding: 11px 0;
+        line-height: 24px;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .sf-range-min {
+          display: flex;
+          transform: translate(0, 4px);
+          &:after {
+            content: " l.pokoi";
+            display: block;
+            font-size: 14px;
+            margin-left: 2px;
+            color: #444;
+          }
+        }
+        .sf-range-max {
+          display: flex;
+          transform: translate(0, 4px);
+          &:after {
+            content: " l.pokoi";
+            display: block;
+            font-size: 14px;
+            margin-left: 2px;
+            color: #444;
           }
         }
         .meta-slider {
