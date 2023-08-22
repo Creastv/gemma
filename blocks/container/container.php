@@ -4,19 +4,19 @@ $idCss = '#' . $id;
 $container = get_field( 'container' );
 // Desktop
 $bgDesctopImage = get_field( 'tlo_desktop' );
-// $pDesktop = get_field( 'padding_gora_dol_desktop' );
+$pDesktop = get_field( 'padding_gora_dol_desktop' );
 $poDesktop = get_field( 'pozycja_tla_desktop' );
 $bgKolor = get_field( 'kolor_tla' );
 
 // Tablet
 $bgTabletImage = get_field( 'tlo_desktop_tablet' );
-// $pTablet = get_field( 'padding_gora_dol_tablet' );
+$pTablet = get_field( 'padding_gora_dol_tablet' );
 $poTablet = get_field( 'pozycja_tla_tablet' );
 $bgKolorTablet = get_field( 'kolor_tla_tablet' );
 
 // Mobile
 $bgMobileImage = get_field( 'tlo_mobile' );
-// $pMobile = get_field( 'padding_gora_dol_mobile' );
+$pMobile = get_field( 'padding_gora_dol_mobile' );
 $poMobile = get_field( 'pozycja_tla_mobil' );
 $bgKolorMobile = get_field( 'kolor_tla_mobile' );
 
@@ -54,6 +54,13 @@ $conteinerStyle = $container == 'container' ? 'bg-section bg-section-normal' : '
             background-image: url(<?php echo $bgDesctopImage; ?>);
         }
 <?php endif; ?>
+<?php if($pDesktop) :?>
+    
+        <?php echo $idCss; ?> {
+           padding:<?php echo $pDesktop; ?>px 0;
+        }
+    
+<?php endif; ?>
 <?php if($poDesktop) :?>
         <?php echo $idCss; ?> {
            background-position:<?php echo $poDesktop['label']; ?>;
@@ -76,6 +83,14 @@ $conteinerStyle = $container == 'container' ? 'bg-section bg-section-normal' : '
         }
     }
 <?php endif; ?>
+<?php if($pTablet) :?>
+    @media only screen and (max-width: 1024px) {
+        <?php echo $idCss; ?>  {
+           padding:<?php echo $pTablet; ?>px 0;
+        }
+    }
+<?php endif; ?>
+
 <?php if($poTablet) : ?>
      @media only screen and (max-width: 1024px) {
         <?php echo $idCss; ?> {
@@ -112,7 +127,13 @@ $conteinerStyle = $container == 'container' ? 'bg-section bg-section-normal' : '
         }
     }
 <?php endif; ?>
-
+<?php if($pMobile) :?>
+    @media only screen and (max-width: 768px) {
+        <?php echo $idCss; ?> {
+           padding:<?php echo $pMobile; ?>px 0;
+        }
+    }
+<?php endif; ?>
 
 <?php if($bgKolorMobile) : ?>
     @media only screen and (max-width: 768px) {
