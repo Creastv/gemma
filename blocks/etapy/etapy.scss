@@ -49,6 +49,8 @@
     align-items: flex-end;
     @media #{$sm} {
       display: block;
+      margin-top: 20px;
+      padding-top: 20px;
     }
     li {
       width: 100%;
@@ -68,6 +70,16 @@
             padding-top: 20px;
             @media #{$sm} {
               padding-top: 0px;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        .etap__pointer {
+          &:before {
+            @media #{$sm} {
+              display: none !important;
             }
           }
         }
@@ -101,6 +113,8 @@
             width: calc(100% - 50px);
             padding-left: 40px;
             height: initial;
+            margin-top: -20px;
+            margin-bottom: 20px;
           }
           p {
             font-size: 14px;
@@ -138,6 +152,7 @@
             border-radius: 100%;
             @media #{$sm} {
               left: 9px;
+              top: 0px;
             }
           }
           &:before {

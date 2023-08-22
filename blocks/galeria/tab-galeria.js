@@ -18,44 +18,50 @@ for (i = 0; i < tablinks.length; i++) {
   });
 }
 
-for (i = 0; i < tablinks.length; i++) {
-  let id = `.galeria-${tablinks[i].getAttribute("data-id")}`;
+function sliderEnabler() {
+  if (window.innerWidth > 768) {
+    for (i = 0; i < tablinks.length; i++) {
+      let id = `.galeria-${tablinks[i].getAttribute("data-id")}`;
 
-  let idSwiper = "swiper" + i;
-  // console.log(id, idSwiper);
-  idSwiper = new Swiper(id, {
-    slidesPerView: 2,
-    //   centeredSlides: true,
-    // loop: true,
-    //   effect: "coverflow",
-    //   grabCursor: true,
-    //   centeredSlides: true,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false
-    // },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2
-      },
-      768: {
-        slidesPerView: 2
-      },
-      998: {
-        slidesPerView: 3
-      }
+      let idSwiper = "swiper" + i;
+      // console.log(id, idSwiper);
+      idSwiper = new Swiper(id, {
+        slidesPerView: 2,
+        //   centeredSlides: true,
+        // loop: true,
+        //   effect: "coverflow",
+        //   grabCursor: true,
+        //   centeredSlides: true,
+        // autoplay: {
+        //   delay: 2500,
+        //   disableOnInteraction: false
+        // },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2
+          },
+          768: {
+            slidesPerView: 2
+          },
+          998: {
+            slidesPerView: 3
+          }
+        }
+      });
     }
-  });
+  }
+  console.log("rtest");
 }
-
+sliderEnabler();
+// window.addEventListener("resize", sliderEnabler);
 // var swiper = new Swiper(".galeria", {
 //   slidesPerView: 4,
 //   //   centeredSlides: true,

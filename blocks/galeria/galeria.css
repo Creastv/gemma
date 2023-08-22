@@ -62,4 +62,24 @@
   top: initial !important;
   width: 44px;
   height: 44px;
+}
+
+@media only screen and (max-width: 768px) {
+  .tab-content .galeria-wraper {
+    overflow: initial !important;
+    padding-bottom: 60px;
+  }
+  .tab-content .swiper-wrapper {
+    flex-wrap: wrap;
+  }
+  .tab-content .swiper-wrapper .swiper-slide a {
+    display: block;
+  }
+  .tab-content .swiper-wrapper .swiper-slide a img {
+    display: block;
+    margin-bottom: 0px;
+  }
+  .tab-content .arrows {
+    display: none;
+  }
 }/*# sourceMappingURL=galeria.css.map */

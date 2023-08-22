@@ -43,6 +43,8 @@
 @media only screen and (max-width: 768px) {
   .etapy .etapy__wraper {
     display: block;
+    margin-top: 20px;
+    padding-top: 20px;
   }
 }
 .etapy .etapy__wraper li {
@@ -68,6 +70,11 @@
 @media only screen and (max-width: 768px) {
   .etapy .etapy__wraper li:nth-child(even) .etap .etap__content {
     padding-top: 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .etapy .etapy__wraper li:last-child .etap__pointer:before {
+    display: none !important;
   }
 }
 .etapy .etapy__wraper li .etap {
@@ -105,6 +112,8 @@
     width: calc(100% - 50px);
     padding-left: 40px;
     height: initial;
+    margin-top: -20px;
+    margin-bottom: 20px;
   }
 }
 .etapy .etapy__wraper li .etap .etap__content p {
@@ -146,6 +155,7 @@
 @media only screen and (max-width: 768px) {
   .etapy .etapy__wraper li .etap .etap__pointer:after {
     left: 9px;
+    top: 0px;
   }
 }
 .etapy .etapy__wraper li .etap .etap__pointer:before {
