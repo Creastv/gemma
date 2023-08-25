@@ -154,7 +154,7 @@ $inw = get_field( 'lokale' );
     var ppp = 4; // Post per page
     var pageNumber = 1;
     var idd = <?php echo json_encode($inw->slug); ?>;
-    var ajaxpagination = "https://gemma.regalestate.pl/wp-admin/admin-ajax.php";
+    var ajaxpagination = "https://uat.gemma.waw.pl/wp-admin/admin-ajax.php";
     // var ajaxpagination = "http://localhost/gemma/wp-admin/admin-ajax.php";
     
     function load_posts(){
