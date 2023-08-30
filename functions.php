@@ -59,6 +59,7 @@ function filter_plugin_updates( $value ) {
 	return $value;
 }
 
+add_filter( 'site_transient_update_plugins', 'filter_plugin_updates' );
 // Excerpt changing 3 dots
 Function new_excerpt_more( $more ) {
 	return ' ... ';
