@@ -392,6 +392,13 @@ figure img {
 #footer * {
   color: #fff;
 }
+#footer .row_two_column .col {
+  margin-bottom: 30px;
+}
+#footer .row_two_column .footer__socialmedia,
+#footer .row_two_column .logo img {
+  margin-bottom: 30px;
+}
 #footer .top {
   margin-bottom: 30px;
   align-items: flex-end;

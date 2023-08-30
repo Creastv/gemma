@@ -39,6 +39,16 @@
   * {
     color: #fff;
   }
+  .row_two_column {
+    .col {
+      margin-bottom: 30px;
+    }
+    .footer__socialmedia,
+    .logo img {
+      margin-bottom: 30px;
+      // display: block;
+    }
+  }
   .top {
     margin-bottom: 30px;
     align-items: flex-end;
