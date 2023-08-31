@@ -97,17 +97,6 @@ $opdf = get_field( 'link_do_baby_doll', get_the_ID() );
             </a>
         <?php } ?>
     </td>
-    <td class="bd-img">
-        <?php if($imgBabydoll) : ?>
-            <?php echo $opdf ? '<a href="' . $opdf . '" target="_blank"> ' : false; ?> 
-     
-            <?php  echo wp_get_attachment_image( $imgBabydoll, 'local-table' ); ?>
-        
-            <?php echo $opdf ? '</a>' : false; ?>
-        <?php else : ?>
-            <span>---</span>
-        <?php endif; ?>
-    </td>
     <td>
         <p class="title-local"><?php the_title(); ?></p>
         <span><?php echo $rooms; ?></span>
@@ -160,14 +149,7 @@ $opdf = get_field( 'link_do_baby_doll', get_the_ID() );
     <td>
         <?php echo $label; ?>
     </td>
-    
-    <td>
-        <?php if($wirtualnySpacer) { ?>
-        <a href="<?php echo $wirtualnySpacer; ?>" target="_blank" >Wirtualny spacer ></a>
-        <?php } else { ?>
-            ---
-        <?php } ?>
-    </td>
+
     <td>
         <a href="#" class="opener-form" data-id="<?php the_ID(); ?>" data-titlelocal="<?php the_title(); ?>"><?php echo $tekstButton; ?></a>
         <?php if($pdfRzut) { ?>
