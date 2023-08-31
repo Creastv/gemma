@@ -36,7 +36,7 @@ $display = get_field( 'wylacz_tytul_strony' );
 					elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 						_e( 'Links', 'go' );
 					else :
-						_e( 'Blog', 'go' );
+						_e( 'Aktualności', 'go' );
 				endif; ?>
     </h1>
     <?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
