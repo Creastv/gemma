@@ -182,3 +182,10 @@ add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 
 
+
+
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyB8pMQYqHehRWSDeAVKOrv8JD9s1dR6Y2Q';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

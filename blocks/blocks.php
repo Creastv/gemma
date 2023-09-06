@@ -197,6 +197,36 @@ function register_acf_block_types() {
             wp_enqueue_style( 'go-lokalizacja',  get_template_directory_uri() . '/blocks/lokalizacja/lokalizacja.min.css' );
         },
     ));
+
+    acf_register_block_type(array(
+        'name'              => 'map',
+        'title'             => __('Mapa'),
+        'render_template'   => 'blocks/map/map.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#122b4f',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+        'mode'            => 'preview', 
+        'keywords'          => array( 'map' ),
+        'supports'		=> [
+            'align'			=> false,
+            'anchor'		=> false,
+            'customClassName'	=> false,
+            'jsx' 			=> true,
+          ],
+        'enqueue_assets'    => function(){
+          if ( ! is_admin() ) {
+             wp_enqueue_script( 'go-map-markerclusterer', 'https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer.js', array(), '20130459', true );
+          wp_enqueue_script( 'go-map', get_template_directory_uri() . '/blocks/map/map.js', array(), '20130459', true );
+          
+          
+          }
+            wp_enqueue_style( 'go-map',  get_template_directory_uri() . '/blocks/map/map.min.css' );
+        },
+    ));
+
     acf_register_block_type(array(
         'name'              => 'kontakt',
         'title'             => __('Kontakt kredyt'),

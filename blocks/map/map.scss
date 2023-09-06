@@ -1,0 +1,107 @@
+@import "../../src/css/scss/variable";
+.go-map {
+  margin-bottom: 40px;
+  .row {
+    display: flex;
+    align-items: stretch;
+    @media #{$md} {
+      flex-wrap: wrap;
+    }
+
+    .col-map {
+      width: 65%;
+      @media #{$md} {
+        width: 100%;
+      }
+    }
+    .col-desc {
+      width: 35%;
+      @media #{$md} {
+        width: 100%;
+      }
+    }
+    .col-full {
+      width: 100%;
+    }
+  }
+  .go-map__opis {
+    // padding: 20px 0px;
+    padding-right: 30px;
+    @media #{$md} {
+      padding-right: 0px;
+    }
+  }
+  .sticky {
+    position: sticky;
+    top: 110px;
+  }
+  iframe {
+    display: block;
+    min-height: 450px;
+    height: 100%;
+  }
+}
+
+.wrapper {
+  align-item: center;
+  display: flex;
+
+  .filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+  }
+}
+.js-check-all.active {
+  border-color: green;
+}
+
+h3 small {
+  display: block;
+  font-size: 12px;
+}
+
+button {
+  margin-top: 40px;
+}
+
+#map {
+  height: 100vh;
+  width: 700px;
+}
+
+.alert {
+  color: red;
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+  &.is-visible {
+    display: block;
+  }
+}
+
+.tt-menu {
+  border: 1px solid transparent;
+  border-color: transparent lightgrey lightgrey lightgrey;
+  background: white;
+  width: 100%;
+
+  .tt-dataset {
+    .tt-suggestion {
+      color: darkgrey;
+      cursor: pointer;
+      padding: 1rem;
+      user-select: none;
+
+      &.tt-cursor,
+      &:hover {
+        background: lightgrey;
+        color: white;
+      }
+
+      & + .tt-suggestion {
+        border-top: 1px solid lightgrey;
+      }
+    }
+  }
+}
