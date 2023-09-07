@@ -162,11 +162,11 @@ function setMarkers(marker, map) {
 }
 
 function clusterManager(array) {
-  // markerCluster.clearMarkers();
+  markerCluster.clearMarkers();
   // markerCluster.remove(markers);
-  for (var i = 0; i < markers.length; i++) {
-  markerCluster.removeMarker(markers[i]);
-}
+    for (var i = 0; i < markers.length; i++) {
+    markerCluster.removeMarker(markers[i]);
+  }
 
 
   for (i = 0; i < array.length; i++) {
