@@ -9,65 +9,89 @@ endif;
 
 $colClass = $desc ? 'col-map' : 'col-full'; 
 
-echo '<div class="go-map" ' . $bgColor . '>';
+if($markers){
+$originalArray = $markers;
+$newArray = array();
+  foreach ($originalArray as $element) {
+    $newElement = $element['kategoria'];
+     $newArray[] = $newElement;
+  }
+$punkty = array_values(array_unique($newArray));
+
+}
+echo '<div class="go-map" >';
     echo '<div class="go-map__wraper">';
-        echo '<div class="row">';
+    ?>
+    <div class="filter-wrapper">
+      <div class="check-filters"> 
+        <?php if($markers) { ?>
+          <ul>
+          <?php  foreach($punkty as $el){ ?>
+            <li>
+            
+            <label><input type="checkbox" value="<?php echo $el; ?>" > <?php echo $el; ?></label>
+            
+            </li>
+          <?php } ?>
+          </ul>
+        <?php } ?>
+      </div>
+    </div>
+    <?php 
+        echo '<div class="row" ' . $bgColor . '>';
            if($desc) {
             echo '<div class="col col-des">';
                echo '<div class="go-map__opis">' . $desc . '</div>';
             echo '</div>';
            }
             echo '<div class="col ' . $colClass . '">';
-                ?>
-                
-                <div class="wrapper">
-                    <div class="filter-wrapper">
-                    <h3>Filter those markers: </h3>
-                        <p><button type="button" class="js-check-all active"> All</button></p>
-                        <div class="check-filters">
-                            <?php foreach($markers as $marker) : ?>
-                                <label><input type="checkbox" value="<?php echo $marker['nazwa_punktu']; ?>" checked> <?php echo $marker['nazwa_punktu']; ?></label>
-                            <?php endforeach; ?>
-                        <!-- <label><input type="checkbox" value="dog" checked> Dog</label>
-                        <label><input type="checkbox" value="ping" checked> Ping</label> -->
-                        </div>
-                    
-                    </div>
-
-                    <div id="map"></div>
-                </div>
-
-
-                <?php
+             echo '<div class="wrapper">';
+                  echo '<div id="map"></div>';
+              echo '</div>';
             echo '</div>';
         echo '</div>';
     echo '</div>';
 echo '</div>';
 
-
 var_dump($map);
 ?>
 
-<script src="https://maps.googleapis.com/maps/api/js"></script>    
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8pMQYqHehRWSDeAVKOrv8JD9s1dR6Y2Q&callback=initMap&v=weekly"></script>    
 <script>
-var json = [
-<?php foreach($markers as $marker) : ?>
+const json = [
   {
-    title: "<?php echo $marker['nazwa_punktu']; ?>",
-    animal: "<?php echo $marker['nazwa_punktu']; ?>",
-    icon: "<?php echo $marker['ikona']; ?>",
+    kategoria: "Inwestycja",
+    flag: "Inwestycja",
+    nazwa:"ghkj",
+    adres:"<?php echo $map['address']; ?>",
+    icon: "<?php bloginfo('template_url'); ?>/blocks/map/icon/home.png",
     geometry: {
-    //   type: "Point",
-      coordinates: [<?php echo $marker['lat']; ?>, <?php echo $marker['lang']; ?>]
+      type: "Point",
+      coordinates: [<?php echo $map['lng']; ?>, <?php echo $map['lat']; ?>]
     }
   },
-<?php endforeach; ?>
+  <?php 
+  if($markers) :
+  foreach($markers as $marker) : ?>
+    {
+      kategoria: "<?php echo $marker['kategoria']; ?>",
+      nazwa: "<?php echo $marker['nazwa_punktu']; ?>",
+      adres: "<?php echo $marker['adres']; ?>",
+      flag: "<?php echo $marker['kategoria']; ?>",
+      icon: "<?php echo $marker['ikona']; ?>",
+      geometry: {
+        type: "Point",
+        coordinates: [<?php echo $marker['lang']; ?>, <?php echo $marker['lat']; ?>]
+      }
+    },
+  <?php endforeach; 
+  endif;
+  ?>
 ];
-
 function initMap() {
-  var map = new google.maps.Map(document.getElementById("map"), {
+  const map = new google.maps.Map(document.getElementById("map"), {
     zoom: <?php echo $map['zoom']; ?>,
-    center: new google.maps.LatLng(<?php echo $map['lat']; ?>, <?php echo $map['lng']; ?>)
+    center: new google.maps.LatLng(<?php echo $map['lat']; ?>, <?php echo $map['lng']; ?>),
   });
 
   for (var i = 0; i < json.length; i++) {

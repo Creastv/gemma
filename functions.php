@@ -182,10 +182,8 @@ add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 
 
-
-
-function my_acf_google_map_api( $api ){
-    $api['key'] = 'AIzaSyB8pMQYqHehRWSDeAVKOrv8JD9s1dR6Y2Q';
-    return $api;
+function my_acf_init() {
+    acf_update_setting('google_api_key', 'AIzaSyB8pMQYqHehRWSDeAVKOrv8JD9s1dR6Y2Q');
 }
-add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+add_action('acf/init', 'my_acf_init');
+

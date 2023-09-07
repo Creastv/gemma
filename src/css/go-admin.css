@@ -1693,4 +1693,8 @@ html :where(.wp-block)[data-align=right] {
 
 .search-filter-disabled {
   opacity: 0.2 !important;
+}
+
+[data-name=punkty] .acf-input .canvas {
+  display: none;
 }/*# sourceMappingURL=go-admin.css.map */

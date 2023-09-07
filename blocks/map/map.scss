@@ -4,17 +4,20 @@
   .row {
     display: flex;
     align-items: stretch;
+    background-color: #e7ecf0;
     @media #{$md} {
       flex-wrap: wrap;
     }
 
     .col-map {
       width: 65%;
+
       @media #{$md} {
         width: 100%;
       }
     }
-    .col-desc {
+    .col-des {
+      padding: 20px;
       width: 35%;
       @media #{$md} {
         width: 100%;
@@ -42,16 +45,6 @@
   }
 }
 
-.wrapper {
-  align-item: center;
-  display: flex;
-
-  .filter-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-right: 50px;
-  }
-}
 .js-check-all.active {
   border-color: green;
 }
@@ -66,8 +59,9 @@ button {
 }
 
 #map {
-  height: 100vh;
-  width: 700px;
+  height: 500px;
+
+  width: 100%;
 }
 
 .alert {
@@ -102,6 +96,84 @@ button {
       & + .tt-suggestion {
         border-top: 1px solid lightgrey;
       }
+    }
+  }
+}
+
+.map-tooltip {
+  p {
+    margin-bottom: 0px;
+    font-size: 12px;
+  }
+}
+.gm-style-iw-c {
+  border-radius: 0px !important;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.check-filters {
+  ul {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  li {
+    display: flex;
+    align-items: center;
+  }
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+  }
+  label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #25414d;
+
+    &::before {
+      display: inline-block;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "✓";
+      width: 26px;
+      height: 26px;
+      text-align: center;
+      line-height: 1.4;
+      color: #e7ecf0;
+      background: #e7ecf0;
+      border-color: #e7ecf0;
+    }
+  }
+  .active {
+    &::before {
+      display: inline-block;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "✓";
+      width: 26px;
+      height: 26px;
+      text-align: center;
+      line-height: 1.4;
+      color: #fff;
+      background: $black;
+      border-color: $black;
     }
   }
 }

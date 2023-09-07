@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
+            "layout": "block",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -25,13 +25,13 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_64f7188a2bc1e",
-                    "label": "Nazwa Punktu",
+                    "key": "field_64f876d654724",
+                    "label": "Nazwa punktu",
                     "name": "nazwa_punktu",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -46,13 +46,67 @@
                     "parent_repeater": "field_64f70e8c49396"
                 },
                 {
+                    "key": "field_64f8768854723",
+                    "label": "Adres",
+                    "name": "adres",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64f70e8c49396"
+                },
+                {
+                    "key": "field_64f7188a2bc1e",
+                    "label": "Kategoria",
+                    "name": "kategoria",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Edukacja": "Edukacja",
+                        "Sklepy": "Sklepy",
+                        "Opieka zdrowotna": "Opieka zdrowotna",
+                        "Bary i restauracje": "Bary i restauracje",
+                        "Transport publiczny": "Transport publiczny",
+                        "Kultura": "Kultura",
+                        "Sport i relaks": "Sport i relaks",
+                        "Pozostałe usługi": "Pozostałe usługi"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_64f70e8c49396"
+                },
+                {
                     "key": "field_64f718a52bc1f",
                     "label": "Lat",
                     "name": "lat",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -73,7 +127,7 @@
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -94,7 +148,7 @@
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -112,58 +166,13 @@
                     "mime_types": "",
                     "preview_size": "medium",
                     "parent_repeater": "field_64f70e8c49396"
-                }
-            ]
-        },
-        {
-            "key": "field_64f844f219d99",
-            "label": "Punkty na mapie (kopia)",
-            "name": "punkty_na_mapie_kopia",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Dodaj wiersz",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_64f844f219d9a",
-                    "label": "Nazwa Punktu",
-                    "name": "nazwa_punktu",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_64f844f219d99"
                 },
                 {
-                    "key": "field_64f844f219d9d",
-                    "label": "Ikona",
-                    "name": "ikona",
+                    "key": "field_64f989b7871a9",
+                    "label": "Ico",
+                    "name": "ico",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "icon-picker",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -172,37 +181,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "url",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "parent_repeater": "field_64f844f219d99"
-                },
-                {
-                    "key": "field_64f8450019d9e",
-                    "label": "Punkt",
-                    "name": "point",
-                    "aria-label": "",
-                    "type": "google_map",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "center_lat": "",
-                    "center_lng": "",
-                    "zoom": "",
-                    "height": 200,
-                    "parent_repeater": "field_64f844f219d99"
+                    "initial_value": "",
+                    "parent_repeater": "field_64f70e8c49396"
                 }
             ]
         },
@@ -213,7 +193,7 @@
             "aria-label": "",
             "type": "google_map",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -282,5 +262,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693992583
+    "modified": 1694075335
 }

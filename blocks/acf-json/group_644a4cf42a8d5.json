@@ -686,6 +686,68 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_64f84e181aac8",
+            "label": "Mapa",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64f84e211aac9",
+            "label": "Punktów na mapie",
+            "name": "punktow_na_mapie",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Dodaj wiersz",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_64f84e3c1aaca",
+                    "label": "Nazwa puktu",
+                    "name": "nazwa_puktu",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64f84e211aac9"
+                }
+            ]
         }
     ],
     "location": [
@@ -706,5 +768,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691751860
+    "modified": 1693994604
 }
