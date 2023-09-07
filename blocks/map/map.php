@@ -28,10 +28,8 @@ echo '<div class="go-map" >';
         <?php if($markers) { ?>
           <ul>
           <?php  foreach($punkty as $el){ ?>
-            <li>
-            
-            <label><input type="checkbox" value="<?php echo $el; ?>" > <?php echo $el; ?></label>
-            
+            <li >
+            <label class="active"><input type="checkbox" value="<?php echo $el; ?>" checked> <?php echo $el; ?></label>
             </li>
           <?php } ?>
           </ul>
@@ -165,9 +163,7 @@ function clusterManager(array) {
     markerCluster.addMarker(array[i]);
   }
 }
-for (var i = 0; i < markers.length; i++) {
-    markerCluster.removeMarker(markers[i]);
- }
+
 function newFilter() {
   var filteredMarkers = [];
 
@@ -182,9 +178,14 @@ function newFilter() {
   clusterManager(filteredMarkers);
 }
 
+for (var i = 0; i < markers.length; i++) {
+    markerCluster.removeMarker(markers[i]);
+ }
+ 
+
 jQuery(document).ready(function () {
-  filters = ["Inwestycja"];
-  newFilter(filters);
+  // filters = markers;
+  // newFilter(filters);
   jQuery(".check-filters input").on("change", function () {
     filters = ["Inwestycja"];
     jQuery(".check-filters input:checked").each(function (index, elem) {
