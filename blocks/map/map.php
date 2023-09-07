@@ -165,9 +165,9 @@ function clusterManager(array) {
     markerCluster.addMarker(array[i]);
   }
 }
-// for (var i = 0; i < markers.length; i++) {
-//     markerCluster.removeMarker(markers[i]);
-//  }
+for (var i = 0; i < markers.length; i++) {
+    markerCluster.removeMarker(markers[i]);
+ }
 function newFilter() {
   var filteredMarkers = [];
 
