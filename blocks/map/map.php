@@ -139,17 +139,12 @@ function setMarkers(marker, map) {
   markers.push(markerMap);
 
   var infowindow = new google.maps.InfoWindow({
-    content: `
-    <div class="map-tooltip">
-     <p><b>${nazwa}</b></p>
-     <p>${adres}</p>
-    </div>
-    `
+    content: '<div class="map-tooltip"><p><b> ' + nazwa + '</b></p><p>' + adres + '</p></div>'
   });
 
   google.maps.event.addListener(markerMap, "click", function () {
     infowindow.close();
-    // infowindow.setContent(content);
+    infowindow.setContent(content);
     infowindow.open(map, markerMap);
   });
   // google.maps.event.addListener(markerMap, "mouseover", function () {
@@ -163,13 +158,16 @@ function setMarkers(marker, map) {
 
 function clusterManager(array) {
   // markerCluster.clearMarkers();
-  // for (var i = 0; i < markers.length; i++) {
-  //   markerCluster.removeMarker(markers[i]);
-  // }
+  for (var i = 0; i < markers.length; i++) {
+    markerCluster.removeMarker(markers[i]);
+  }
   for (i = 0; i < array.length; i++) {
     markerCluster.addMarker(array[i]);
   }
 }
+// for (var i = 0; i < markers.length; i++) {
+//     markerCluster.removeMarker(markers[i]);
+//  }
 function newFilter() {
   var filteredMarkers = [];
 
@@ -180,7 +178,7 @@ function newFilter() {
       }
     });
   });
-  markerCluster.clearMarkers(markers);
+  // markerCluster.clearMarkers(markers);
   clusterManager(filteredMarkers);
 }
 
