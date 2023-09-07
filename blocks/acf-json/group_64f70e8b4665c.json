@@ -46,6 +46,32 @@
                     "parent_repeater": "field_64f70e8c49396"
                 },
                 {
+                    "key": "field_64f718b82bc21",
+                    "label": "Ikona",
+                    "name": "ikona",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_64f70e8c49396"
+                },
+                {
                     "key": "field_64f8768854723",
                     "label": "Adres",
                     "name": "adres",
@@ -140,51 +166,28 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_64f70e8c49396"
-                },
-                {
-                    "key": "field_64f718b82bc21",
-                    "label": "Ikona",
-                    "name": "ikona",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "parent_repeater": "field_64f70e8c49396"
-                },
-                {
-                    "key": "field_64f989b7871a9",
-                    "label": "Ico",
-                    "name": "ico",
-                    "aria-label": "",
-                    "type": "icon-picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "initial_value": "",
-                    "parent_repeater": "field_64f70e8c49396"
                 }
             ]
+        },
+        {
+            "key": "field_64f98e2011181",
+            "label": "Nazwa inwestycji",
+            "name": "nazwa_inwestycji",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_64f72055c35e1",
@@ -262,5 +265,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694075335
+    "modified": 1694076473
 }

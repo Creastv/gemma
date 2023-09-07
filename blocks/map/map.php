@@ -1,6 +1,7 @@
 <?php
 $markers = get_field( 'punkty_na_mapie' );
 $map = get_field( 'mapa' );
+$inwe = get_field( 'nazwa_inwestycji' );
 $desc = get_field( 'opis' );
 $bgColor = get_field( 'kolor_tla' );
 if($bgColor):
@@ -52,8 +53,6 @@ echo '<div class="go-map" >';
         echo '</div>';
     echo '</div>';
 echo '</div>';
-
-var_dump($map);
 ?>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8pMQYqHehRWSDeAVKOrv8JD9s1dR6Y2Q&callback=initMap&v=weekly"></script>    
@@ -62,7 +61,7 @@ const json = [
   {
     kategoria: "Inwestycja",
     flag: "Inwestycja",
-    nazwa:"ghkj",
+    nazwa:"<?php echo $inwe; ?>",
     adres:"<?php echo $map['address']; ?>",
     icon: "<?php bloginfo('template_url'); ?>/blocks/map/icon/home.png",
     geometry: {
