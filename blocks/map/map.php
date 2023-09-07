@@ -162,13 +162,10 @@ function setMarkers(marker, map) {
 }
 
 function clusterManager(array) {
-  markerCluster.clearMarkers();
-  // markerCluster.remove(markers);
-    for (var i = 0; i < markers.length; i++) {
-    markerCluster.removeMarker(markers[i]);
-  }
-
-
+  // markerCluster.clearMarkers();
+  // for (var i = 0; i < markers.length; i++) {
+  //   markerCluster.removeMarker(markers[i]);
+  // }
   for (i = 0; i < array.length; i++) {
     markerCluster.addMarker(array[i]);
   }
@@ -183,6 +180,7 @@ function newFilter() {
       }
     });
   });
+  markerCluster.clearMarkers();
   clusterManager(filteredMarkers);
 }
 
