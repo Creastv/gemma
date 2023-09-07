@@ -53,6 +53,7 @@ echo '<div class="go-map" >';
         echo '</div>';
     echo '</div>';
 echo '</div>';
+
 ?>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8pMQYqHehRWSDeAVKOrv8JD9s1dR6Y2Q&callback=initMap&v=weekly"></script>    
@@ -96,6 +97,12 @@ function initMap() {
   for (var i = 0; i < json.length; i++) {
     setMarkers(json[i], map);
   }
-  markerCluster = new MarkerClusterer(map, markers, { ignoreHiddenMarkers: true, imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m" });
+  var mcOptions = {
+    gridSize: 30,
+    minimumClusterSize: 30,
+    ignoreHiddenMarkers: true,
+    imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"
+};
+  markerCluster = new MarkerClusterer(map, markers, mcOptions );
 }
 </script>

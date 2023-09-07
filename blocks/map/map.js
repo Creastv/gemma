@@ -33,6 +33,7 @@ function setMarkers(marker, map) {
   var infowindow = new google.maps.InfoWindow({
     content: `
     <div class="map-tooltip">
+
      <p><b>${nazwa}</b></p>
      <p>${adres}</p>
     </div>
