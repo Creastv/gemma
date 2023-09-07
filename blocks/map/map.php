@@ -56,7 +56,7 @@ echo '</div>';
 
 ?>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8pMQYqHehRWSDeAVKOrv8JD9s1dR6Y2Q&callback=initMap&v=weekly"></script>    
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8pMQYqHehRWSDeAVKOrv8JD9s1dR6Y2Q"></script>    
 <script>
 const json = [
   {
