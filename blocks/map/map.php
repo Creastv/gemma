@@ -180,7 +180,7 @@ function newFilter() {
       }
     });
   });
-  markerCluster.clearMarkers();
+  markerCluster.clearMarkers(markers);
   clusterManager(filteredMarkers);
 }
 
