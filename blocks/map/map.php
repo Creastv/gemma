@@ -141,7 +141,6 @@ function setMarkers(marker, map) {
   var infowindow = new google.maps.InfoWindow({
     content: `
     <div class="map-tooltip">
-
      <p><b>${nazwa}</b></p>
      <p>${adres}</p>
     </div>
@@ -150,7 +149,7 @@ function setMarkers(marker, map) {
 
   google.maps.event.addListener(markerMap, "click", function () {
     infowindow.close();
-    infowindow.setContent(content);
+    // infowindow.setContent(content);
     infowindow.open(map, markerMap);
   });
   // google.maps.event.addListener(markerMap, "mouseover", function () {
@@ -163,7 +162,12 @@ function setMarkers(marker, map) {
 }
 
 function clusterManager(array) {
-  markerCluster.clearMarkers();
+  // markerCluster.clearMarkers();
+  // markerCluster.remove(markers);
+  for (var i = 0; i < markers.length; i++) {
+  markerCluster.removeMarker(markers[i]);
+}
+
 
   for (i = 0; i < array.length; i++) {
     markerCluster.addMarker(array[i]);
