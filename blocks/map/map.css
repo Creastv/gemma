@@ -29,6 +29,11 @@
     width: 100%;
   }
 }
+@media only screen and (max-width: 768px) {
+  .go-map .row .col-des {
+    order: 2;
+  }
+}
 .go-map .row .col-full {
   width: 100%;
 }

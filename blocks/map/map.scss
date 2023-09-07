@@ -22,6 +22,9 @@
       @media #{$md} {
         width: 100%;
       }
+      @media #{$sm} {
+        order: 2;
+      }
     }
     .col-full {
       width: 100%;
