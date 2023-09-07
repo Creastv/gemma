@@ -124,3 +124,18 @@ html :where(.wp-block)[data-align="right"] {
 [data-name="punkty"] .acf-input .canvas {
   display: none;
 }
+
+.acf-block-preview {
+  .go-map {
+    .row {
+      flex-wrap: wrap;
+      .col {
+        width: 100% !important;
+      }
+    }
+  }
+  #map,
+  .col-map {
+    display: none !important;
+  }
+}

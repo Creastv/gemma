@@ -1697,4 +1697,15 @@ html :where(.wp-block)[data-align=right] {
 
 [data-name=punkty] .acf-input .canvas {
   display: none;
+}
+
+.acf-block-preview .go-map .row {
+  flex-wrap: wrap;
+}
+.acf-block-preview .go-map .row .col {
+  width: 100% !important;
+}
+.acf-block-preview #map,
+.acf-block-preview .col-map {
+  display: none !important;
 }/*# sourceMappingURL=go-admin.css.map */
