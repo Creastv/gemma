@@ -1031,6 +1031,10 @@ body.single-post .entry-content {
   }
 }
 
+.says {
+  display: none;
+}
+
 #author-bio {
   margin-top: 30px;
   padding: 20px 20px;
