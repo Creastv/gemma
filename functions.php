@@ -206,3 +206,15 @@ function cmplz_reload_after_consent() {
     <?php
 }
 add_action( 'wp_footer', 'cmplz_reload_after_consent' );
+
+function theme_queue_js(){
+    if ( 
+              ! is_admin() 
+           && is_singular() 
+           && comments_open() 
+           && get_option('thread_comments') 
+    )
+        wp_enqueue_script( 'comment-reply' );
+}
+add_action('wp_print_scripts', 'theme_queue_js');
+

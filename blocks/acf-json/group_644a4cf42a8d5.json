@@ -689,7 +689,7 @@
         },
         {
             "key": "field_64f84e181aac8",
-            "label": "Mapa",
+            "label": "Pojedynczy post",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -705,9 +705,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_64f84e211aac9",
-            "label": "Punktów na mapie",
-            "name": "punktow_na_mapie",
+            "key": "field_64faf50f908a3",
+            "label": "Social media",
+            "name": "social_media_post",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -718,7 +718,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
+            "layout": "",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -727,9 +727,26 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_64f84e3c1aaca",
-                    "label": "Nazwa puktu",
-                    "name": "nazwa_puktu",
+                    "key": "field_64faf50f908a4",
+                    "label": "Ikona",
+                    "name": "ikona",
+                    "aria-label": "",
+                    "type": "icon-picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "initial_value": "",
+                    "parent_repeater": "field_64faf50f908a3"
+                },
+                {
+                    "key": "field_64faf50f908a5",
+                    "label": "Link",
+                    "name": "link",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -745,7 +762,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_64f84e211aac9"
+                    "parent_repeater": "field_64faf50f908a3"
                 }
             ]
         }
@@ -768,5 +785,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693994604
+    "modified": 1694168377
 }

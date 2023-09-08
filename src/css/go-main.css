@@ -946,8 +946,13 @@ figure img {
   stroke: #fff;
 }
 
+body.single-post .entry-header {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+}
 body.single-post .img-wraper {
-  max-width: 998px;
+  max-width: 640px;
   width: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -957,9 +962,74 @@ body.single-post .img-wraper img {
   height: auto;
 }
 body.single-post .entry-content {
-  max-width: 768px;
+  max-width: 640px;
   width: 100%;
   margin: 0 auto;
+  text-align: justify;
+}
+
+.meta-pub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.meta-cat {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.meta-cat li a:hover {
+  text-decoration: underline;
+}
+
+.meta-com {
+  display: flex;
+  justify-content: center;
+}
+.meta-com a {
+  text-transform: uppercase;
+}
+.meta-com a:hover {
+  text-decoration: underline;
+}
+
+.meta-c {
+  margin-bottom: 20px;
+}
+.meta-c > span {
+  text-transform: uppercase;
+}
+.meta-c .meta-cat {
+  margin: 0;
+}
+
+.entry-commerts {
+  width: 450px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.entry-commerts #reply-title {
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+}
+@media only screen and (max-width: 1300px) {
+  .entry-commerts #reply-title {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .entry-commerts #reply-title {
+    font-size: 19px;
+  }
 }
 
 #author-bio {
@@ -1009,6 +1079,145 @@ body.single-post .entry-content {
 .kk-ata .kksr-muted,
 .kk-ata .kksr-legend {
   font-size: 12px;
+}
+
+.comment {
+  padding: 20px;
+  border-top: 1px solid #000;
+}
+.comment ul {
+  padding-left: 150px !important;
+}
+
+.comment-author img {
+  display: none;
+}
+
+.comment .comment-body {
+  width: calc(100% - 45px);
+}
+
+.comment-body {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.comment-body p {
+  order: 1;
+  width: 100%;
+  margin-bottom: 0px;
+}
+.comment-body .comment-author {
+  order: 2;
+  font-size: 12px;
+}
+.comment-body .comment-meta {
+  order: 3;
+  font-size: 12px;
+}
+.comment-body .reply {
+  order: 4;
+}
+.comment-body .reply a {
+  font-size: 12px;
+}
+
+.commentlist {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.commentlist ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.comment-respond .comment-reply-title {
+  font-size: 14px;
+  text-align: center;
+}
+.comment-respond .comment-reply-title small {
+  margin-left: 20px;
+}
+.comment-respond .comment-reply-title small a {
+  color: #5a86ae;
+}
+
+.comment-form {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+}
+.comment-form .comment-notes {
+  display: none;
+}
+.comment-form input,
+.comment-form textarea {
+  border: 1px solid #e2e2e2;
+  margin-bottom: 20px;
+}
+.comment-form .comment-form-cookies-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.comment-form .comment-form-cookies-consent input {
+  width: 20px;
+  min-height: 20px;
+}
+.comment-form .comment-form-cookies-consent label {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  text-align: justify;
+}
+
+.entry-socialmedia-post {
+  padding: 20px 0;
+}
+.entry-socialmedia-post ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0px;
+  margin: 20px 0;
+}
+
+.entry-recomended {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.entry-recomended h3 {
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+@media only screen and (max-width: 1300px) {
+  .entry-recomended h3 {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .entry-recomended h3 {
+    font-size: 19px;
+  }
+}
+.entry-recomended .row {
+  display: flex;
+  gap: 20px;
+}
+.entry-recomended .row article {
+  width: 33.333%;
 }
 
 .inw-zre {

@@ -1,10 +1,47 @@
+<?php
+$sm = get_field( 'social_media_post', 'options' );
+$comments_number = get_comments_number();
+$com = '0';
+if ($comments_number == 0) {
+   $com = '0';
+} elseif ($comments_number == 1) {
+   $com = '1';
+} else {
+   $com = $comments_number;
+}
+$args = array(
+    'orderby' => 'name', // Sortowanie kategorii według nazwy
+    'order' => 'ASC',    // Kolejność sortowania (rosnąco)
+    'hide_empty' => 1,    // Ukryj kategorie bez wpisów
+    'title_li' => '',     // Nie wyświetlaj tytułu kategorii
+);
+
+$post_link = get_permalink();
+
+$arr = new WP_Query( array(
+        'post_type' => 'Post',
+        'posts_per_page' => 3,
+        'order' => 'DESC',
+        'post__not_in' => array( get_the_ID() )
+));
+
+
+
+?>
 <article id="post-<?php the_ID(); ?>" class="single-post hentry">
     <header class="entry-header">
-        <div class="meta"><time class="meta meta-data-pub published" datetime="<?php the_time() ?>"> <span><?php the_time('d.m.Y');?></span></time></div>
+       <div class="meta">
+        <ul class="meta-cat">
+         <?php wp_list_categories($args); ?>
+        </ul>
+       </div>
         <h1 class="entry-title ">
             <?php the_title(); ?>
         </h1>
-        <!-- <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?> -->
+         <div class="meta-pub">
+            <time class="meta meta-data-pub published" datetime="<?php the_time() ?>"> <span><?php the_time('d.m.Y');?></span></time>
+              <span>@ <?php echo get_the_author(); ?></span>
+        </div>
         </div>
         <div class="img-wraper">
             <div class="img">
@@ -14,68 +51,49 @@
     </header>
     <div class="entry-content">
         <?php the_content(); ?>
-
-        <?php if(is_singular('post')) { 
-            $av_id = get_the_author_meta('ID');
-            $im = get_field( 'avatar', 'user_'. $av_id );
-        ?>
-        <div id="author-bio">
-            <?php if($im) { ?>
-            <div id="author-avatar"><img style="max-width:60px; height:auto;" src="<?php echo esc_url($im['url']); ?>" alt="<?php echo esc_attr($im['alt']); ?>" /></div>
-            <?php } else { ?>
-            <div id="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?></div>
-            <?php } ?>
-
-            <div id="author-details">
-                <div class="author-head">
-                    <div class="title">
-                        <p class="h3"><?php the_author_posts_link(); ?></p>
-                        <i><?php $author_id = get_the_author_meta('ID'); the_field('pozycja', 'user_'. $author_id); ?></i>
-                    </div>
-                    <div class="links">
-                        <?php  if (get_the_author_meta('user_url') ) { ?>
-                        <a href="<?php the_author_meta('user_url'); ?>" class="author-website" target="_blank">
-                            <i class="fas fa-link"></i>
-                        </a>
-                        <?php } ?>
-                        <?php  if (get_the_author_meta('linkedin') ) { ?>
-                        <a href="<?php the_author_meta('linkedin'); ?>" class="author-linkedin" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <?php } ?>
-                        <?php  if (get_the_author_meta('facebook') ) { ?>
-                        <a href="<?php the_author_meta('facebook'); ?>" class="author-facebook" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <?php } ?>
-                        <?php  if (get_the_author_meta('twitter') ) { ?>
-                        <a href="<?php the_author_meta('twitter'); ?>" class="author-twitter" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <?php }?>
-                        <?php  if (get_the_author_meta('instagram') ) { ?>
-                        <a href="<?php the_author_meta('instagram'); ?>" class="author-instagram" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <?php } ?>
-                    </div>
-                </div>
-                <div class="author-footer">
-                    <p> <?php the_author_meta('description'); ?></p>
-                </div>
-            </div><!-- #author-details -->
-        </div><!-- #author-bio -->
-        <?php } ?>
-        <div class="kk-ata">
-            <div class="kk-ata__wraper">
-                <span>Twoja ocena:</span>
-                <?php echo kk_star_ratings(); ?>
-            </div>
-            <div class="kk-ata__wraper">
-                <span>Udostępnij:</span>
-                <?php echo do_shortcode("[addtoany]"); ?>
-            </div>
-        </div>
     </div>
+    <footer class="entryfooter ">
+        <?php if($com !== '0') : ?>
+        <div class="meta-com">
+            <a href="<?php echo $post_link; ?>#comments">
+            <span>Komentarzy <?php echo $com; ?></span>
+            </a>
+        </div>
+        <?php endif; ?>
+        <?php if($sm) :
+                echo '<div class="entry-socialmedia-post"> <ul>';
+                foreach($sm as $s):
+                    echo '<li>';
+                    echo $s['link'] ? '<a href="' . $s['link'] . '" target="_blank" >' : false;
+                    //    echo $s['ikona'] ;
+                    echo '<img src="' .get_stylesheet_directory_uri() . '/src/img/icons/' . $s['ikona'] . '.svg"   height="28px" />';
+                    echo $s['link'] ? '</a>' : false;
+                    echo '</li>';
+                endforeach;
+                echo '</ul></div>';
+         endif; ?>
+         <div class="meta-c text-center">
+           <span> Kategorie:</span>
+            <ul class="meta-cat">
+               <?php wp_list_categories($args); ?>
+            </ul>
+       </div>
+        <div class="entry-recomended">
+             <h3 class="text-center">ZOBACZ PODOBNE</h3>
+            <?php if($arr) { ?>
+                <div class="row">
+                        <?php while ( $arr->have_posts() ) : $arr->the_post(); ?>
+                        <?php   get_template_part( 'templates-parts/content/content', 'index' );  ?>
+                        <?php endwhile; wp_reset_query(); ?>
+                </div>
+            <?php } ?>
+        </div>
+        
+    </footer>
 
+    <?php if (comments_open() || get_comments_number()) { ?>
+    <div id="comments" class="comments-template">     
+    <?php comments_template(); ?>
+    </div>
+    <?php } ?>
 </article>
