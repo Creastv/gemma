@@ -1234,6 +1234,16 @@ body.single-post .entry-content {
     width: 100%;
   }
 }
+.entry-recomended .row article header {
+  max-height: 260px;
+  overflow: hidden;
+  display: block;
+}
+@media only screen and (max-width: 998px) {
+  .entry-recomended .row article header {
+    max-height: inherit;
+  }
+}
 
 .inw-zre {
   display: flex;

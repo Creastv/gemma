@@ -360,6 +360,14 @@ body.single-post {
       @media #{$sm} {
         width: 100%;
       }
+      header {
+        max-height: 260px;
+        overflow: hidden;
+        display: block;
+        @media #{$md} {
+          max-height: inherit;
+        }
+      }
     }
   }
 }
