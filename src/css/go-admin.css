@@ -1087,6 +1087,11 @@ body.single-post .entry-content {
 .comment ul {
   padding-left: 150px !important;
 }
+@media only screen and (max-width: 768px) {
+  .comment ul {
+    padding-left: 50px !important;
+  }
+}
 
 .comment-author img {
   display: none;
@@ -1215,8 +1220,18 @@ body.single-post .entry-content {
   display: flex;
   gap: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .entry-recomended .row {
+    flex-wrap: wrap;
+  }
+}
 .entry-recomended .row article {
   width: 33.333%;
+}
+@media only screen and (max-width: 768px) {
+  .entry-recomended .row article {
+    width: 100%;
+  }
 }
 
 .inw-zre {

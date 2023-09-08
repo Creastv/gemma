@@ -217,6 +217,9 @@ body.single-post {
   border-top: 1px solid #000;
   ul {
     padding-left: 150px !important;
+    @media #{$sm} {
+      padding-left: 50px !important;
+    }
   }
 }
 
@@ -349,8 +352,14 @@ body.single-post {
   .row {
     display: flex;
     gap: 20px;
+    @media #{$sm} {
+      flex-wrap: wrap;
+    }
     article {
       width: 33.333%;
+      @media #{$sm} {
+        width: 100%;
+      }
     }
   }
 }
