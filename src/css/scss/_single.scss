@@ -136,7 +136,7 @@ body.single-post {
   margin-bottom: 20px;
 }
 .entry-commerts {
-  width: 450px;
+  // width: 450px;
   max-width: 100%;
   margin: 0 auto;
   #reply-title {
@@ -284,6 +284,9 @@ body.single-post {
       }
     }
   }
+}
+.comment-reply-link {
+  color: #5a86ae;
 }
 .comment-form {
   max-width: 640px;

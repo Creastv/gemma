@@ -1009,7 +1009,6 @@ body.single-post .entry-content {
 }
 
 .entry-commerts {
-  width: 450px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -1146,6 +1145,10 @@ body.single-post .entry-content {
   margin-left: 20px;
 }
 .comment-respond .comment-reply-title small a {
+  color: #5a86ae;
+}
+
+.comment-reply-link {
   color: #5a86ae;
 }
 
