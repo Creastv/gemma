@@ -1191,7 +1191,7 @@ body.single-post .entry-content {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 20px 0;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
