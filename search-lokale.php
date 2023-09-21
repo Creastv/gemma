@@ -10,7 +10,7 @@ $subtitle = get_field( 'subtitle', 'opinions' );
 get_header(); ?>
 <header class="entry-header">
     <h1 class="entry-title">
-        <?php echo $title ? $title : ' ZNAJDŹ SWOJE WMARZONE MIESZKANIE'; ?>
+        <?php echo $title ? $title : false; ?>
     </h1>
     <?php echo $subtitle ? '<p>' . $subtitle  . '</p>': false; ?>
 </header>

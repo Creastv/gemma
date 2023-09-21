@@ -173,6 +173,7 @@
     margin: 10px 0;
     text-align: left;
     padding-left: 70px;
+    margin-top: 0px;
   }
 }
 .steps__content ul li .steps__desc {
@@ -185,12 +186,17 @@
 @media only screen and (max-width: 768px) {
   .steps__content ul li .steps__desc {
     border: none;
+    margin-bottom: 0px;
   }
 }
 @media only screen and (max-width: 768px) {
   .steps__content ul li .steps__desc {
     display: block !important;
     padding-top: 0px;
+  }
+  .steps__content ul li .steps__desc p {
+    margin-bottom: 0px;
+    padding-bottom: 20px;
   }
 }
 .steps__content ul li .steps__desc:before {

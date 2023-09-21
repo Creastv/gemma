@@ -4,6 +4,19 @@
   @media #{$sm} {
     flex-wrap: wrap;
   }
+  h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 300;
+    @media #{$lg} {
+      font-size: 22px;
+    }
+    @media #{$sm} {
+      font-size: 19px;
+      // line-height: 11px;
+    }
+  }
   article {
     width: 75%;
     order: 2;
@@ -36,6 +49,7 @@
       list-style: none;
       padding: none;
       li {
+        margin-bottom: 20px;
         a {
           display: block;
           color: $black;
@@ -55,6 +69,9 @@
             }
           }
         }
+      }
+      .active {
+        display: none;
       }
       .active {
         h3 {

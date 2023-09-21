@@ -1261,6 +1261,22 @@ body.single-post .entry-content {
     flex-wrap: wrap;
   }
 }
+.inw-zre h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+@media only screen and (max-width: 1300px) {
+  .inw-zre h1 {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .inw-zre h1 {
+    font-size: 19px;
+  }
+}
 .inw-zre article {
   width: 75%;
   order: 2;
@@ -1297,6 +1313,9 @@ body.single-post .entry-content {
   list-style: none;
   padding: none;
 }
+.inw-zre aside ul li {
+  margin-bottom: 20px;
+}
 .inw-zre aside ul li a {
   display: block;
   color: black;
@@ -1313,6 +1332,9 @@ body.single-post .entry-content {
 }
 .inw-zre aside ul li a:hover h3 {
   color: #528ABF;
+}
+.inw-zre aside ul .active {
+  display: none;
 }
 .inw-zre aside ul .active h3 {
   font-weight: 500;
