@@ -8,13 +8,14 @@ $title = get_field( 'title', 'options' );
 $subtitle = get_field( 'subtitle', 'opinions' );
 
 get_header(); ?>
+<?php if($title) : ?>
 <header class="entry-header">
     <h1 class="entry-title">
         <?php echo $title ? $title : false; ?>
     </h1>
     <?php echo $subtitle ? '<p>' . $subtitle  . '</p>': false; ?>
 </header>
-
+<?php endif; ?>
 <div class="search-filters">
     <?php  echo do_shortcode('[searchandfilter id="477"]') ;?>
 </div>
