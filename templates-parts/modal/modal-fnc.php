@@ -43,6 +43,8 @@ $textStatus = 'Sprzedane';
 break;
 };
 
+
+$pdfRzut = get_field( 'rzut_pdf', get_the_ID() );
 ?>
 
 <?php if($title) : ?>
@@ -106,7 +108,11 @@ break;
         <span><?php echo $price; ?> zł</span>
     </li>
     <?php endif; ?>
+
 </ul>
+    <?php if($pdfRzut) : ?>
+        <a href="<?php echo $pdfRzut; ?>"  target="_blank" style="width: 100%; text-align: center; margin: 20px 0;"> Pobierz PDF  </a>  
+    <?php endif; ?>
 <?php
   wp_die();
 }
