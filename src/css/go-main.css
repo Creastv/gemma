@@ -2227,6 +2227,10 @@ form.searchandfilter ul .sf-field-post-meta-cena .sf-meta-range .meta-slider .no
 form.searchandfilter ul .sf-field-post-meta-cena .sf-meta-range .meta-slider .noUi-origin .noUi-handle:before, form.searchandfilter ul .sf-field-post-meta-cena .sf-meta-range .meta-slider .noUi-origin .noUi-handle:after {
   display: none;
 }
+form.searchandfilter ul .sf-range-max,
+form.searchandfilter ul .sf-range-min {
+  max-width: 99px;
+}
 form.searchandfilter ul .sf-field-post-meta-liczba_pokoi {
   flex: auto;
   min-width: 220px;
@@ -2269,6 +2273,10 @@ form.searchandfilter ul .sf-field-post-meta-liczba_pokoi .sf-meta-range .sf-rang
   font-size: 14px;
   margin-left: 2px;
   color: #444;
+}
+form.searchandfilter ul .sf-field-post-meta-liczba_pokoi .sf-meta-range .sf-range-max,
+form.searchandfilter ul .sf-field-post-meta-liczba_pokoi .sf-meta-range .sf-range-min {
+  max-width: 99px;
 }
 form.searchandfilter ul .sf-field-post-meta-liczba_pokoi .sf-meta-range .meta-slider {
   min-width: 100%;

@@ -283,6 +283,10 @@ form.searchandfilter {
         }
       }
     }
+    .sf-range-max,
+    .sf-range-min {
+      max-width: 99px;
+    }
     .sf-field-post-meta-liczba_pokoi {
       flex: auto;
       min-width: 220px;
@@ -323,6 +327,10 @@ form.searchandfilter {
             margin-left: 2px;
             color: #444;
           }
+        }
+        .sf-range-max,
+        .sf-range-min {
+          max-width: 99px;
         }
         .meta-slider {
           min-width: 100%;
