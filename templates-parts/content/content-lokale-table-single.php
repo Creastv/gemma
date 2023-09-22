@@ -131,9 +131,11 @@ $opdf = get_field( 'link_do_baby_doll', get_the_ID() );
     <td>
         <?php
         // var_dump($priceDisplay);
+        if($price ) {
          $pr = number_format($price , 0, ',', ' ');
+        }
         ?>
-        <p class="price"> <?php echo $priceDisplay ? $pr . " zł" : "---"; ?></p>
+        <p class="price"> <?php echo $price ? $pr . " zł" : "---"; ?></p>
     </td>
     <td class="ud">
         <?php if($extras) :
