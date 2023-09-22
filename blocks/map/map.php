@@ -2,6 +2,7 @@
 $markers = get_field( 'punkty_na_mapie' );
 $map = get_field( 'mapa' );
 $inwe = get_field( 'nazwa_inwestycji' );
+$inwePin = get_field( 'ikona_inwestycji_srodek_mapy' );
 $desc = get_field( 'opis' );
 $bgColor = get_field( 'kolor_tla' );
 if($bgColor):
@@ -62,7 +63,7 @@ const json = [
     flag: "Inwestycja",
     nazwa:"<?php echo $inwe; ?>",
     adres:"<?php echo $map['address']; ?>",
-    icon: "<?php bloginfo('template_url'); ?>/blocks/map/icon/home.png",
+    icon: "<?php echo $inwePin; ?>",
     geometry: {
       type: "Point",
       coordinates: [<?php echo $map['lng']; ?>, <?php echo $map['lat']; ?>]

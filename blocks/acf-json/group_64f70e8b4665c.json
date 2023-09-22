@@ -190,6 +190,31 @@
             "append": ""
         },
         {
+            "key": "field_650da4b923bdf",
+            "label": "Ikona inwestycji (środek mapy) (wymiary 43x57)",
+            "name": "ikona_inwestycji_srodek_mapy",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": 43,
+            "min_height": 57,
+            "min_size": "",
+            "max_width": 43,
+            "max_height": 57,
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
             "key": "field_64f72055c35e1",
             "label": "Mapa - środek mapy",
             "name": "mapa",
@@ -265,5 +290,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694076473
+    "modified": 1695393227
 }
