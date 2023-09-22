@@ -2,7 +2,7 @@
 global $searchandfilter;
 $sf_current_query = $searchandfilter->get(477)->current_query();
 // $link = 'http://localhost/gemma/lokale';
-$link = 'https://gemma.regalestate.pl/lokale/';
+$link = 'https://uat.gemma.waw.pl/wp/lokale/';
 
 $title = get_field( 'title', 'options' );
 $subtitle = get_field( 'subtitle', 'opinions' );
