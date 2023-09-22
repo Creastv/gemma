@@ -1627,7 +1627,8 @@ table.dataTable tbody td {
   }
 }
 table.dataTable tbody td:nth-child(1) {
-  width: 20px;
+  width: 28px;
+  padding: 0 4px;
 }
 table.dataTable tbody td:nth-child(3) {
   width: 20px !important;
