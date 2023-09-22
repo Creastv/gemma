@@ -19,6 +19,7 @@ $size = get_post_meta($post_id, "powierzchnia", true);
 $price = get_post_meta($post_id, "cena", true);
 $sizeInfo = get_field( 'dodatkowe_info_o_powierzchni', $post_id );
 $moreInfo = get_field( 'dodatkowe_info', $post_id );
+$pdfRzut = get_field( 'rzut_pdf', $post_id );
 switch ($floor) {
 case '0':
 $floor = "Parter";
@@ -44,7 +45,7 @@ break;
 };
 
 
-$pdfRzut = get_field( 'rzut_pdf', get_the_ID() );
+
 ?>
 
 <?php if($title) : ?>
@@ -111,7 +112,7 @@ $pdfRzut = get_field( 'rzut_pdf', get_the_ID() );
 
 </ul>
     <?php if($pdfRzut) : ?>
-        <a href="<?php echo $pdfRzut; ?>"  target="_blank" style="width: 100%; text-align: center; margin: 20px 0;"> Pobierz PDF  </a>  
+        <a href="<?php echo $pdfRzut; ?>" class="btn btn-no-arrow" target="_blank" style="width: 100%; text-align: center; margin: 20px 0;"> Pobierz PDF  </a>  
     <?php endif; ?>
 <?php
   wp_die();
