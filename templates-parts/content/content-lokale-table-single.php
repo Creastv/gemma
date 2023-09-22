@@ -130,7 +130,7 @@ $opdf = get_field( 'link_do_baby_doll', get_the_ID() );
 
     <td>
         <?php
-        var_dump($priceDisplay);
+        // var_dump($priceDisplay);
          $pr = number_format($price , 0, ',', ' ');
         ?>
         <p class="price"> <?php echo $priceDisplay ? $pr . " zł" : "---"; ?></p>
