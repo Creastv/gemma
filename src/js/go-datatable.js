@@ -1,4 +1,10 @@
 jQuery(document).ready(function () {
+  tableOn();
+});
+jQuery(document).ajaxComplete(function () {
+  tableOn();
+});
+function tableOn() {
   var oldStart = 0;
   jQuery("#mieszkania-inw").DataTable({
     responsive: {
@@ -40,4 +46,4 @@ jQuery(document).ready(function () {
       }
     }
   });
-});
+}
