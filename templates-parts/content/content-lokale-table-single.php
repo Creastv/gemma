@@ -46,7 +46,11 @@ switch ($floor) {
     break;
 }
 $price = get_field( 'cena', get_the_ID() );
-$priceDisplay = $price ? $price . ' zł' : false ;
+// $priceDisplay = $price ? $price . ' zł' : false ;
+
+if($price ) {
+    $pr = number_format($price , 0, ',', ' ');
+}
 
 $size = get_field( 'powierzchnia', get_the_ID() );
 $sizeDisplay = $size ?  $size  : false;
@@ -129,12 +133,6 @@ $opdf = get_field( 'link_do_baby_doll', get_the_ID() );
     </td>
 
     <td>
-        <?php
-        // var_dump($priceDisplay);
-        if($price ) {
-         $pr = number_format($price , 0, ',', ' ');
-        }
-        ?>
         <p class="price"> <?php echo $price ? $pr . " zł" : "---"; ?></p>
     </td>
     <td class="ud">

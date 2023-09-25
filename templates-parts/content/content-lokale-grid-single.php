@@ -56,6 +56,11 @@ $excerpt = $roomsDisplay . ' ' . $floorDisplay . ' ' . $sizeDisplay; ;
 $price = get_field( 'cena', get_the_ID() );
 $priceDisplay = $price ? $price . ' zł' : false ;
 
+if($price ) {
+    $pr = number_format($price , 0, ',', ' ');
+}
+
+
 $typ_lokalu = get_the_terms($post->ID, 'typ-lokalu');
 $typ = $typ_lokalu[0];
 
@@ -98,7 +103,7 @@ $pdfRzut = get_field( 'rzut_pdf', get_the_ID() );
             </h2>
             <div class="entry-content">
                 <p><?php echo $excerpt; ?></p>
-                <p><?php echo $priceDisplay; ?></p>
+                <p> <?php echo $price ? $pr . " zł" : "---"; ?></p>
             </div>
             <a href="#" class="opener-form"  data-titlelocal="<?php the_title(); ?>" data-id="<?php the_ID(); ?>"><?php echo $textButton; ?></a>
         </div>

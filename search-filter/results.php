@@ -31,9 +31,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( $query->have_posts() ) { ?>
 <div class="search-resoults-info">
-    <!-- <div class="search-results-count">
-        <span> Znaleziono <?php echo $loop->found_posts; ?>  <?php if($loop->found_posts == '1')  { echo 'wynik'; } else if($loop->found_posts >= '1' && $loop->found_posts <= '4' ) { echo 'wyniki'; } else { echo 'wyników'; } ;?> wyszukiwania. </span>
-    </div> -->
+    <div class="search-results-count">
+        <span> Znaleziono <?php echo  $query->found_posts; ?>  <?php if( $query->found_posts == '1')  { echo 'wynik'; } else if( $query->found_posts >= '1' &&  $query->found_posts <= '4' ) { echo 'wyniki'; } else { echo 'wyników'; } ;?> wyszukiwania. </span>
+    </div>
     <div class="swicher-results-display">
         <span> Widok prezentacji: </span>
         
