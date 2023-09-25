@@ -21,7 +21,7 @@ function tableOn() {
       }
     ],
     pageLength: 10,
-    columns: [{ orderable: false }, null, null, null, null, null, { orderable: false }],
+    columns: [null, { orderable: false }, null, null, null, null, null, { orderable: false }],
     bLengthChange: false,
     // "scrollY": scrollY + "px",
     // "scrollCollapse": true,
