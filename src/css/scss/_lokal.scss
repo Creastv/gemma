@@ -93,11 +93,17 @@ table.dataTable thead th {
   font-weight: 300;
   @media #{$sm} {
     width: auto !important;
+    font-size: 12px;
   }
   &:first-child {
     border-left: 1px solid transparent;
     width: 50px;
     padding: 0px;
+  }
+  &:nth-child(1) {
+    @media #{$sm} {
+      display: none !important;
+    }
   }
   &:nth-child(2) {
     border-left: 1px solid transparent;
@@ -105,8 +111,21 @@ table.dataTable thead th {
   &:nth-child(3) {
     width: 200px;
   }
+  &:nth-child(5) {
+    @media #{$md} {
+      display: none !important;
+    }
+  }
   &:nth-child(6) {
     width: 100px;
+    @media #{$xs} {
+      display: none !important;
+    }
+  }
+  &:nth-child(7) {
+    @media #{$md} {
+      display: none !important;
+    }
   }
   &:nth-child(8) {
     width: 100px;
@@ -137,19 +156,36 @@ table.dataTable tbody td {
   &:nth-child(1) {
     width: 28px;
     padding: 0 4px;
+    @media #{$sm} {
+      display: none !important;
+    }
+  }
+  &:nth-child(2) {
+    border-left: 1px solid transparent;
   }
   &:nth-child(3) {
     width: 20px !important;
+  }
+  &:nth-child(5) {
+    @media #{$md} {
+      display: none !important;
+    }
+  }
+  &:nth-child(6) {
+    @media #{$xs} {
+      display: none !important;
+    }
+  }
+  &:nth-child(7) {
+    @media #{$md} {
+      display: none !important;
+    }
   }
 
   &:first-child {
     border-left: 1px solid transparent;
   }
-  &:last-child {
-  }
-  &:nth-child(2) {
-    border-left: 1px solid transparent;
-  }
+
   .size {
     position: relative;
     display: inline-block;
@@ -279,7 +315,7 @@ td.child {
     }
 
     .tooltip .tooltiptext {
-      font-size: 11px;
+      font-size: 14px;
       line-height: 1;
       visibility: hidden;
       width: auto;
@@ -320,11 +356,25 @@ td.child {
 
 .xs-display {
   display: none;
-  @media #{$xs} {
+  @media #{$md} {
     display: block;
   }
 }
 
 .dtr-data {
   text-align: right;
+}
+
+.md-price {
+  display: block;
+  @media #{$xs} {
+    display: none;
+  }
+}
+
+.xs-price {
+  display: none;
+  @media #{$xs} {
+    display: block;
+  }
 }

@@ -4,14 +4,15 @@ jQuery(document).ready(function () {
 jQuery(document).ajaxComplete(function () {
   tableOn();
 });
+
 function tableOn() {
   var oldStart = 0;
   jQuery("#mieszkania-inw").DataTable({
-    responsive: {
-      details: {
-        type: "column"
-      }
-    },
+    // responsive: {
+    //   details: {
+    //     type: "column"
+    //   }
+    // },
     columnDefs: [
       {
         className: "dtr-control",
@@ -20,7 +21,7 @@ function tableOn() {
       }
     ],
     pageLength: 10,
-    columns: [null, { orderable: false }, null, null, null, null, null, { orderable: false }],
+    columns: [{ orderable: false }, null, null, null, null, null, { orderable: false }],
     bLengthChange: false,
     // "scrollY": scrollY + "px",
     // "scrollCollapse": true,

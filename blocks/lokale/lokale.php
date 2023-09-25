@@ -98,7 +98,6 @@ $inw = get_field( 'lokale' );
 <table id="mieszkania-inw" cellspacing="0" class=" table table-hover" style="width:100%">
     <thead>
         <tr>
-           <th></th>
             <th data-priority="10" ></th>
             <th data-priority="1" class="name" >Nazwa i liczba pokoi</th>
             <th data-priority="2" >Powierzchnia</th>

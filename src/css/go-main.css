@@ -1613,6 +1613,7 @@ table.dataTable thead th {
 @media only screen and (max-width: 768px) {
   table.dataTable thead th {
     width: auto !important;
+    font-size: 12px;
   }
 }
 table.dataTable thead th:first-child {
@@ -1620,14 +1621,34 @@ table.dataTable thead th:first-child {
   width: 50px;
   padding: 0px;
 }
+@media only screen and (max-width: 768px) {
+  table.dataTable thead th:nth-child(1) {
+    display: none !important;
+  }
+}
 table.dataTable thead th:nth-child(2) {
   border-left: 1px solid transparent;
 }
 table.dataTable thead th:nth-child(3) {
   width: 200px;
 }
+@media only screen and (max-width: 998px) {
+  table.dataTable thead th:nth-child(5) {
+    display: none !important;
+  }
+}
 table.dataTable thead th:nth-child(6) {
   width: 100px;
+}
+@media only screen and (max-width: 460px) {
+  table.dataTable thead th:nth-child(6) {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 998px) {
+  table.dataTable thead th:nth-child(7) {
+    display: none !important;
+  }
 }
 table.dataTable thead th:nth-child(8) {
   width: 100px;
@@ -1662,13 +1683,33 @@ table.dataTable tbody td:nth-child(1) {
   width: 28px;
   padding: 0 4px;
 }
+@media only screen and (max-width: 768px) {
+  table.dataTable tbody td:nth-child(1) {
+    display: none !important;
+  }
+}
+table.dataTable tbody td:nth-child(2) {
+  border-left: 1px solid transparent;
+}
 table.dataTable tbody td:nth-child(3) {
   width: 20px !important;
 }
-table.dataTable tbody td:first-child {
-  border-left: 1px solid transparent;
+@media only screen and (max-width: 998px) {
+  table.dataTable tbody td:nth-child(5) {
+    display: none !important;
+  }
 }
-table.dataTable tbody td:nth-child(2) {
+@media only screen and (max-width: 460px) {
+  table.dataTable tbody td:nth-child(6) {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 998px) {
+  table.dataTable tbody td:nth-child(7) {
+    display: none !important;
+  }
+}
+table.dataTable tbody td:first-child {
   border-left: 1px solid transparent;
 }
 table.dataTable tbody td .size {
@@ -1798,7 +1839,7 @@ td.child ul li {
   border-bottom: 1px dotted black;
 }
 .extras li .tooltip .tooltiptext {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1;
   visibility: hidden;
   width: auto;
@@ -1836,7 +1877,7 @@ td.child ul li {
 .xs-display {
   display: none;
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 998px) {
   .xs-display {
     display: block;
   }
@@ -1844,6 +1885,24 @@ td.child ul li {
 
 .dtr-data {
   text-align: right;
+}
+
+.md-price {
+  display: block;
+}
+@media only screen and (max-width: 460px) {
+  .md-price {
+    display: none;
+  }
+}
+
+.xs-price {
+  display: none;
+}
+@media only screen and (max-width: 460px) {
+  .xs-price {
+    display: block;
+  }
 }
 
 .btn {

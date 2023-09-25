@@ -75,10 +75,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <thead>
             <tr>
                 <th></th>
-                <th data-priority="10" ></th>
-                <th data-priority="1" class="name" >Nazwa i liczba pokoi</th>
-                <th data-priority="2" >Powierzchnia</th>
-                <th class="cena" data-priority="3" >Cena</th>
+                <th  class="name" >Nazwa i liczba pokoi</th>
+                <th >Powierzchnia</th>
+                <th class="cena" >Cena</th>
                 <th >Udogodnienia</th>
                 <th >Status</th>
                 <th ></th>

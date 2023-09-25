@@ -47,7 +47,7 @@ switch ($floor) {
 }
 $price = get_field( 'cena', get_the_ID() );
 // $priceDisplay = $price ? $price . ' zł' : false ;
-
+$pr = "";
 if($price ) {
     $pr = number_format($price , 0, ',', ' ');
 }
@@ -83,7 +83,6 @@ $opdf = get_field( 'link_do_baby_doll', get_the_ID() );
 ?>
 
 <tr>
-    <td></td>
     <td>
         <?php if($pdfRzut) { ?>
         <a href="<?php echo $pdfRzut; ?>"  target="_blank">
@@ -133,7 +132,13 @@ $opdf = get_field( 'link_do_baby_doll', get_the_ID() );
     </td>
 
     <td>
-        <p class="price"> <?php echo $price ? $pr . " zł" : "---"; ?></p>
+        <p class="price md-price"> <?php echo $price ? $pr . " zł" : "---"; ?></p>
+            <?php 
+            if($status == '3' || $price == null ) {
+                echo '<p class="price xs-price stat sold"><span style="display:none;">3</span> Sprzedany</p>';
+            } else {
+                echo '<p class="price xs-price">' . $pr . " zł </p>";
+            } ?>
     </td>
     <td class="ud">
         <?php if($extras) :
