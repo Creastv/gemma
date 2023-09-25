@@ -59,13 +59,13 @@ echo '</div>';
 <script>
 const json = [
   {
-    kategoria: "Inwestycja",
-    flag: "Inwestycja",
-    nazwa:"<?php echo $inwe; ?>",
-    adres:"<?php echo $map['address']; ?>",
-    icon: "<?php echo $inwePin; ?>",
+    kategoria: 'Inwestycja',
+    flag: 'Inwestycja',
+    nazwa:'<?php echo $inwe; ?>',
+    adres:'<?php echo $map['address']; ?>',
+    icon: '<?php echo $inwePin; ?>',
     geometry: {
-      type: "Point",
+      type: 'Point',
       coordinates: [<?php echo $map['lng']; ?>, <?php echo $map['lat']; ?>]
     }
   },
@@ -73,13 +73,13 @@ const json = [
   if($markers) :
   foreach($markers as $marker) : ?>
     {
-      kategoria: "<?php echo $marker['kategoria']; ?>",
-      nazwa: "<?php echo $marker['nazwa_punktu']; ?>",
-      adres: "<?php echo $marker['adres']; ?>",
-      flag: "<?php echo $marker['kategoria']; ?>",
-      icon: "<?php echo $marker['ikona']; ?>",
+      kategoria: '<?php echo $marker['kategoria']; ?>',
+      nazwa: '<?php echo $marker['nazwa_punktu']; ?>',
+      adres: '<?php echo $marker['adres']; ?>',
+      flag: '<?php echo $marker['kategoria']; ?>',
+      icon: '<?php echo $marker['ikona']; ?>',
       geometry: {
-        type: "Point",
+        type: 'Point',
         coordinates: [<?php echo $marker['lang']; ?>, <?php echo $marker['lat']; ?>]
       }
     },
