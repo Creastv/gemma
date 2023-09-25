@@ -81,7 +81,6 @@ $imgBabydoll = get_field( 'baby_doll_image', get_the_ID() );
 $opdf = get_field( 'link_do_baby_doll', get_the_ID() );
 
 ?>
-
 <tr>
     <td>
         <?php if($pdfRzut) { ?>

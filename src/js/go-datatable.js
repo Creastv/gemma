@@ -1,18 +1,13 @@
 jQuery(document).ready(function () {
   tableOn();
 });
-jQuery(document).ajaxComplete(function () {
+// jQuery(document).ajaxComplete(function () {
+jQuery(document).on("sf:ajaxfinish", ".searchandfilter", () => {
   tableOn();
 });
-
 function tableOn() {
   var oldStart = 0;
   jQuery("#mieszkania-inw").DataTable({
-    // responsive: {
-    //   details: {
-    //     type: "column"
-    //   }
-    // },
     columnDefs: [
       {
         className: "dtr-control",
@@ -21,7 +16,7 @@ function tableOn() {
       }
     ],
     pageLength: 10,
-    columns: [null, { orderable: false }, null, null, null, null, null, { orderable: false }],
+    columns: [{ orderable: false }, null, null, null, null, null, { orderable: false }],
     bLengthChange: false,
     // "scrollY": scrollY + "px",
     // "scrollCollapse": true,
