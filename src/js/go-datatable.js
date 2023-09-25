@@ -2,9 +2,9 @@ jQuery(document).ready(function () {
   tableOn();
 });
 // jQuery(document).ajaxComplete(function () {
-// jQuery(document).on("sf:ajaxfinish", ".searchandfilter", () => {
-//   tableOn();
-// });
+jQuery(document).on("sf:ajaxfinish", ".searchandfilter", () => {
+  tableOn();
+});
 function tableOn() {
   var oldStart = 0;
   jQuery("#mieszkania-inw").DataTable({
