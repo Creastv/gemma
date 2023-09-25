@@ -62,6 +62,7 @@ select {
   position: relative;
   margin-bottom: 0px;
   .wpcf7-submit {
+    padding: 10.5px 10px;
     transition: all 0.3s linear;
     cursor: pointer;
     // font-size: 0px;
@@ -71,7 +72,8 @@ select {
     background-position: center center;
     border: 1px solid #e2e2e2;
     width: 145px;
-    // height: 45px;
+    font-size: initial;
+    font-weight: 400;
     min-height: 45px;
     &:hover {
       background-color: #000;

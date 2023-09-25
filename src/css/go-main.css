@@ -2040,6 +2040,7 @@ select {
   margin-bottom: 0px;
 }
 .btn-form-wraper .wpcf7-submit {
+  padding: 10.5px 10px;
   transition: all 0.3s linear;
   cursor: pointer;
   background-color: #fff;
@@ -2047,6 +2048,8 @@ select {
   background-position: center center;
   border: 1px solid #e2e2e2;
   width: 145px;
+  font-size: initial;
+  font-weight: 400;
   min-height: 45px;
 }
 .btn-form-wraper .wpcf7-submit:hover {
