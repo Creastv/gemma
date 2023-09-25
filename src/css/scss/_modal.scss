@@ -83,7 +83,7 @@ body.active {
     }
     .col {
       &:nth-child(1) {
-        width: 70%;
+        width: 50%;
         padding-right: 50px;
         @media #{$sm} {
           width: 100%;
@@ -92,7 +92,7 @@ body.active {
         }
       }
       &:nth-child(2) {
-        width: 30%;
+        width: 50%;
         @media #{$sm} {
           width: 100%;
           order: 1;
@@ -109,6 +109,7 @@ body.active {
     }
     img {
       max-width: 100%;
+      width: 100%;
       height: auto;
       border: 1px solid #000;
     }

@@ -1453,7 +1453,7 @@ body.active {
   }
 }
 .lokal-ms .row .col:nth-child(1) {
-  width: 70%;
+  width: 50%;
   padding-right: 50px;
 }
 @media only screen and (max-width: 768px) {
@@ -1464,7 +1464,7 @@ body.active {
   }
 }
 .lokal-ms .row .col:nth-child(2) {
-  width: 30%;
+  width: 50%;
 }
 @media only screen and (max-width: 768px) {
   .lokal-ms .row .col:nth-child(2) {
@@ -1480,6 +1480,7 @@ body.active {
 }
 .lokal-ms .lokal-ms__info img {
   max-width: 100%;
+  width: 100%;
   height: auto;
   border: 1px solid #000;
 }
