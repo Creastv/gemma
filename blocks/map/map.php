@@ -81,7 +81,7 @@ const json = [
       nazwa: '<?php echo $marker['nazwa_punktu']; ?>',
       adres: '<?php echo $marker['adres']; ?>',
       flag: '<?php echo $marker['kategoria']; ?>',
-      icon: '<?php // echo $marker['ikona']; ?>',
+      icon: '<?php  echo $marker['ikona']; ?>',
       geometry: {
         type: 'Point',
         // coordinates: [<?php // echo $marker['lang']; ?>, <?php // echo $marker['lat']; ?>]
