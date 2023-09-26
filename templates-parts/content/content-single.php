@@ -9,13 +9,9 @@ if ($comments_number == 0) {
 } else {
    $com = $comments_number;
 }
-$args = array(
-    'orderby' => 'name', // Sortowanie kategorii według nazwy
-    'order' => 'ASC',    // Kolejność sortowania (rosnąco)
-    'hide_empty' => 1,    // Ukryj kategorie bez wpisów
-    'title_li' => '',     // Nie wyświetlaj tytułu kategorii
-);
 
+$categories = get_the_category();
+$numCat = count($categories);
 $post_link = get_permalink();
 
 $arr = new WP_Query( array(
@@ -30,11 +26,20 @@ $arr = new WP_Query( array(
 ?>
 <article id="post-<?php the_ID(); ?>" class="single-post hentry">
     <header class="entry-header">
+        <?php if($numCat > 1) : ?>
        <div class="meta">
         <ul class="meta-cat">
-         <?php wp_list_categories($args); ?>
+         <?php 
+            foreach( $categories as $category) {
+                $name = $category->name;
+                $category_link = get_category_link( $category->term_id );
+                echo "<li> <a href='$category_link'>
+                        <span class=" . esc_attr( $name) . ">" . esc_attr( $name) . "</span>
+                   </a></li>";
+            } ?>
         </ul>
        </div>
+       <?php endif; ?>
         <h1 class="entry-title ">
             <?php the_title(); ?>
         </h1>
@@ -71,13 +76,26 @@ $arr = new WP_Query( array(
                     echo '</li>';
                 endforeach;
                 echo '</ul></div>';
-         endif; ?>
-         <div class="meta-c text-center">
-           <span> Kategorie:</span>
-            <ul class="meta-cat">
-               <?php wp_list_categories($args); ?>
-            </ul>
+                    endif; ?>
+                      <?php if($numCat > 1) : ?>
+                    <div class="meta-c text-center">
+                    <span> Kategorie:</span>
+                  
+                    <div class="meta">
+                        <ul class="meta-cat">
+                        <?php 
+                            foreach( $categories as $category) {
+                                $name = $category->name;
+                                $category_link = get_category_link( $category->term_id );
+                                echo "<li> <a href='$category_link'>
+                                        <span class=" . esc_attr( $name) . ">" . esc_attr( $name) . "</span>
+                                </a></li>";
+                            } ?>
+                        </ul>
+                    </div>
+                   
        </div>
+        <?php endif; ?>
         <div class="entry-recomended">
              <h3 class="text-center">ZOBACZ PODOBNE</h3>
             <?php if($arr) { ?>
