@@ -94,6 +94,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 else
 {
-	echo "No Results Found";
+	echo "<h1 class='text-center'>Nic nie znaleziono</h1> ";
 }
 ?>
