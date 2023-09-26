@@ -71,6 +71,12 @@
   }
   .tab-content .swiper-wrapper {
     flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    transform: initial !important;
+  }
+  .tab-content .swiper-wrapper .swiper-slide {
+    width: 100% !important;
   }
   .tab-content .swiper-wrapper .swiper-slide a {
     display: block;

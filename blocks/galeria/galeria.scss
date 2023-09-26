@@ -93,7 +93,11 @@
     }
     .swiper-wrapper {
       flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 100%;
+      transform: initial !important;
       .swiper-slide {
+        width: 100% !important;
         a {
           display: block;
           img {
