@@ -140,20 +140,22 @@
   position: relative;
   z-index: 3;
   margin: 0 auto;
-  width: 46px;
-  height: 46px;
-  font-size: 21px;
-  padding: 8px;
-  background-color: #fff;
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  padding: 6px;
+  background-color: black;
   border: 1px solid black;
   border-radius: 100%;
   margin-bottom: 20px;
+  transform: translate(0px, 8px);
+  color: #fff;
   cursor: pointer;
   transition: all 0.2s;
 }
 .steps__content ul li .steps__number:hover {
-  background-color: black;
-  color: #fff;
+  background-color: #fff;
+  color: black;
 }
 @media only screen and (max-width: 768px) {
   .steps__content ul li .steps__number {
@@ -167,6 +169,9 @@
   font-size: 21px;
   line-height: 28px;
   text-align: center;
+}
+.steps__content ul li .steps__title:hover {
+  opacity: 0.8;
 }
 @media only screen and (max-width: 768px) {
   .steps__content ul li .steps__title {
