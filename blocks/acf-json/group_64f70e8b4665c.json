@@ -168,8 +168,8 @@
                     "parent_repeater": "field_64f70e8c49396"
                 },
                 {
-                    "key": "field_651287dbda10c",
-                    "label": "Lat i lag",
+                    "key": "field_65128d3b2bf31",
+                    "label": "lng i lat (punkt na mapie)",
                     "name": "lat_and_lag",
                     "aria-label": "",
                     "type": "text",
@@ -311,5 +311,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695714395
+    "modified": 1695716670
 }
