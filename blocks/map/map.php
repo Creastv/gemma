@@ -31,7 +31,7 @@ echo '<div class="go-map" >';
           <ul>
           <?php  foreach($punkty as $el){ ?>
             <li >
-            <label class="active"><input type="checkbox" value="<?php echo $el; ?>" checked> <?php echo $el; ?></label>
+            <label class="active"><input type="checkbox" value="<?php echo $el; ?>" checked> <span><?php echo $el; ?></span></label>
             </li>
           <?php } ?>
           </ul>
