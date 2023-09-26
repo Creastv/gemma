@@ -1,9 +1,31 @@
 jQuery(document).ready(function () {
   setTimeout(function () {
     jQuery("#InvestmentMap").maphilight({
-      alwaysOn: true
+      alwaysOn: true,
+      fillOpacity: "0.5",
+      stroke: false
     });
   }, 100);
+
+  jQuery("area").each(function () {
+    jQuery(this).mouseover(function () {
+      jQuery(this)
+        .data("maphilight", {
+          fillOpacity: "0.8",
+          fillColor: jQuery(this).attr("data-fill")
+        })
+        .trigger("alwaysOn.maphilight");
+    });
+    jQuery(this).mouseout(function () {
+      jQuery(this)
+        .data("maphilight", {
+          fillOpacity: "0.5",
+          fillColor: jQuery(this).attr("data-fill")
+        })
+        .trigger("alwaysOn.maphilight");
+    });
+  });
+
   jQuery("img[usemap]").rwdImageMaps();
   // Data inwestycja
   var data = jQuery(".go-makieta");

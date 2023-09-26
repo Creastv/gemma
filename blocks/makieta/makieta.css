@@ -12,6 +12,9 @@
   max-width: 100%;
   height: auto;
 }
+.go-makieta area {
+  cursor: pointer;
+}
 
 .tooltip-makieta {
   display: none;

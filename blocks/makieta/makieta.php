@@ -75,16 +75,10 @@ $fill_opacity = "0.4";
         data-titlelocal="<?php echo $tileLocal; ?>"
         class=" hasTooltip  <?php echo $disabled !== 'disabled' ? 'opener-form' : false; ?> "
         coords="<?php echo $cordsNumber; ?>"
-
-        data-maphilight='{"stroke":false ,"fillColor":"<?php echo $fill_color; ?>","fillOpacity":<?php echo $fill_opacity; ?>}'
+        data-fill="<?php echo $fill_color; ?>"
+        data-maphilight='{"stroke":false ,"fillColor":"<?php echo $fill_color; ?>", "fillOpacity":<?php echo $fill_opacity; ?>}'
         shape="poly">
         <?php endforeach; ?>
     </map>
     <?php endif; ?>
 </div>
-
-<script>
-    // jQuery("#InvestmentMap").maphilight({
-  //   alwaysOn: true
-  // });
-</script>
