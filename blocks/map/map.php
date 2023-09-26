@@ -23,6 +23,9 @@ $punkty = array_values(array_unique($newArray));
 }
 echo '<div class="go-map" >';
     echo '<div class="go-map__wraper">';
+    $test = explode(', ', $markers[0]["lat_and_lag"]);
+
+    var_dump($test);
     ?>
     <div class="filter-wrapper">
       <div class="check-filters"> 
@@ -57,6 +60,7 @@ echo '</div>';
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8pMQYqHehRWSDeAVKOrv8JD9s1dR6Y2Q"></script>    
 <script>
+
 const json = [
   {
     kategoria: 'Inwestycja',
@@ -71,7 +75,9 @@ const json = [
   },
   <?php 
   if($markers) :
-  foreach($markers as $marker) : ?>
+  foreach($markers as $marker) : 
+    $test = explode(', ', $marker["lat_and_lag"]);
+  ?>
     {
       kategoria: '<?php echo $marker['kategoria']; ?>',
       nazwa: '<?php echo $marker['nazwa_punktu']; ?>',
@@ -80,13 +86,17 @@ const json = [
       icon: '<?php echo $marker['ikona']; ?>',
       geometry: {
         type: 'Point',
-        coordinates: [<?php echo $marker['lang']; ?>, <?php echo $marker['lat']; ?>]
+        // coordinates: [<?php // echo $marker['lang']; ?>, <?php // echo $marker['lat']; ?>]
+        coordinates: [<?php echo $test[1]; ?>, <?php echo $test[0]; ?>]
       }
     },
   <?php endforeach; 
   endif;
   ?>
 ];
+
+
+
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: <?php echo $map['zoom']; ?>,
@@ -203,8 +213,10 @@ jQuery(document).ready(function () {
   });
 });
 
-jQuery(window).on("load", function () {
+// jQuery(window).on("load", function () {
+setTimeout(function () {
   initMap();
-});
+  }, 1500);
+// });
 
 </script>

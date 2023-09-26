@@ -166,6 +166,27 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_64f70e8c49396"
+                },
+                {
+                    "key": "field_651287dbda10c",
+                    "label": "Lat i lag",
+                    "name": "lat_and_lag",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64f70e8c49396"
                 }
             ]
         },
@@ -290,5 +311,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695393227
+    "modified": 1695714395
 }
