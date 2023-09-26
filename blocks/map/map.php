@@ -23,6 +23,7 @@ $punkty = array_values(array_unique($newArray));
 }
 echo '<div class="go-map" >';
     echo '<div class="go-map__wraper">';
+
     ?>
     <div class="filter-wrapper">
       <div class="check-filters"> 
@@ -80,8 +81,7 @@ const json = [
       nazwa: '<?php echo $marker['nazwa_punktu']; ?>',
       adres: '<?php echo $marker['adres']; ?>',
       flag: '<?php echo $marker['kategoria']; ?>',
-      // icon: '<?php // echo $marker['ikona']; ?>',
-      icon: 'https://uat.gemma.waw.pl/wp/wp-content/uploads/2023/06/edu.png',
+      icon: '<?php // echo $marker['ikona']; ?>',
       geometry: {
         type: 'Point',
         // coordinates: [<?php // echo $marker['lang']; ?>, <?php // echo $marker['lat']; ?>]

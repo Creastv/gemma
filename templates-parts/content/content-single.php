@@ -21,8 +21,6 @@ $arr = new WP_Query( array(
         'post__not_in' => array( get_the_ID() )
 ));
 
-
-
 ?>
 <article id="post-<?php the_ID(); ?>" class="single-post hentry">
     <header class="entry-header">
