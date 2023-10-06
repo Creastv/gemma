@@ -150,12 +150,12 @@
   z-index: 999;
   top: 60%;
   right: 20px;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   padding: 10px;
   background: #fff;
   border-radius: 100%;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.14);
+  box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.4);
 
   display: none;
   @media #{$sm} {

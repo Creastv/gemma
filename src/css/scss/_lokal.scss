@@ -315,15 +315,17 @@ td.child {
     }
 
     .tooltip .tooltiptext {
-      font-size: 14px;
-      line-height: 1;
+      font-size: 12px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 600;
       visibility: hidden;
       width: auto;
       background-color: black;
       color: #fff;
       text-align: center;
       border-radius: 0px;
-      padding: 5px 5px;
+      padding: 10px 15px;
       position: absolute;
       z-index: 1;
       bottom: 100%;

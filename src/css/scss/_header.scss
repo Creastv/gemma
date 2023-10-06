@@ -112,26 +112,31 @@
   margin: 0;
   display: flex;
   align-items: center;
-  @media #{$sm} {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 150px;
-    right: 0px;
+  // @media #{$sm} {
+  //   display: none;
+  //   position: fixed;
+  //   z-index: 9999;
+  //   top: 150px;
+  //   right: 0px;
 
-    text-align: center;
-    padding: 5px;
-    background-color: #fff;
-  }
+  //   text-align: center;
+  //   padding: 5px;
+  //   background-color: #fff;
+  // }
   li {
-    @media #{$sm} {
+    @media #{$xs} {
       background-color: #fff;
-      padding: 5px;
+      // padding: 5px;
+      display: none;
+      &:first-child {
+        display: block !important;
+        margin-right: 15px;
+      }
     }
     a {
       padding: 15px;
       @media #{$sm} {
-        padding: 0px;
+        // padding: 0px;
       }
     }
     &:nth-child(3) {
@@ -149,7 +154,7 @@
           padding-right: 15px;
         }
         @media #{$sm} {
-          padding-right: 0px;
+          // padding-right: 0px;
         }
       }
     }

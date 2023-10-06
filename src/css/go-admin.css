@@ -551,12 +551,12 @@ figure img {
   z-index: 999;
   top: 60%;
   right: 20px;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   padding: 10px;
   background: #fff;
   border-radius: 100%;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.14);
+  box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.4);
   display: none;
 }
 @media only screen and (max-width: 768px) {
@@ -831,31 +831,18 @@ figure img {
   display: flex;
   align-items: center;
 }
-@media only screen and (max-width: 768px) {
-  .navbar__icons {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 150px;
-    right: 0px;
-    text-align: center;
-    padding: 5px;
-    background-color: #fff;
-  }
-}
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 460px) {
   .navbar__icons li {
     background-color: #fff;
-    padding: 5px;
+    display: none;
+  }
+  .navbar__icons li:first-child {
+    display: block !important;
+    margin-right: 15px;
   }
 }
 .navbar__icons li a {
   padding: 15px;
-}
-@media only screen and (max-width: 768px) {
-  .navbar__icons li a {
-    padding: 0px;
-  }
 }
 @media only screen and (max-width: 768px) {
   .navbar__icons li:nth-child(3) img {
@@ -871,12 +858,6 @@ figure img {
     padding-right: 15px;
   }
 }
-@media only screen and (max-width: 768px) {
-  .navbar__icons li:last-child a {
-    padding-right: 0px;
-  }
-}
-
 .navbar__swicher {
   padding: 15px;
 }
@@ -1874,15 +1855,17 @@ td.child ul li {
   border-bottom: 1px dotted black;
 }
 .extras li .tooltip .tooltiptext {
-  font-size: 14px;
-  line-height: 1;
+  font-size: 12px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 600;
   visibility: hidden;
   width: auto;
   background-color: black;
   color: #fff;
   text-align: center;
   border-radius: 0px;
-  padding: 5px 5px;
+  padding: 10px 15px;
   position: absolute;
   z-index: 1;
   bottom: 100%;
