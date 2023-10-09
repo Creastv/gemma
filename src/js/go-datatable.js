@@ -20,6 +20,7 @@ function tableOn() {
     bLengthChange: false,
     // "scrollY": scrollY + "px",
     // "scrollCollapse": true,
+    order: [[5, "asc"]],
     paging: true,
     ordering: true,
     info: false,
