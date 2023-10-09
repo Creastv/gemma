@@ -810,7 +810,7 @@ figure img {
     display: block;
   }
   .navbar__navigation ul li a:hover {
-    color: #528ABF !important;
+    color: #528abf !important;
   }
 }
 .navbar__navigation ul li a:hover {
@@ -980,7 +980,7 @@ figure img {
   text-align: right;
 }
 .post-item:hover .entry-title a {
-  color: #528ABF;
+  color: #528abf;
 }
 .post-item:hover .btn {
   color: #fff;
@@ -1085,8 +1085,8 @@ body.single-post .entry-content {
 #author-bio {
   margin-top: 30px;
   padding: 20px 20px;
-  border-top: 1px solid #F7F8FB;
-  border-bottom: 1px solid #F7F8FB;
+  border-top: 1px solid #f7f8fb;
+  border-bottom: 1px solid #f7f8fb;
   display: flex;
   gap: 10px;
 }
@@ -1378,14 +1378,14 @@ body.single-post .entry-content {
   margin: 0;
 }
 .inw-zre aside ul li a:hover h3 {
-  color: #528ABF;
+  color: #528abf;
 }
 .inw-zre aside ul .active {
   display: none;
 }
 .inw-zre aside ul .active h3 {
   font-weight: 500;
-  color: #528ABF;
+  color: #528abf;
 }
 
 body.active {
@@ -1786,13 +1786,13 @@ table.dataTable tbody td a {
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   padding: 0px;
-  color: #528ABF !important;
+  color: #528abf !important;
   border: none !important;
   box-shadow: none !important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
   background: none;
-  color: #528ABF !important;
+  color: #528abf !important;
   opacity: 0.8;
 }
 

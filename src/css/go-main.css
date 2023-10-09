@@ -811,7 +811,7 @@ figure img {
     display: block;
   }
   .navbar__navigation ul li a:hover {
-    color: #528ABF !important;
+    color: #528abf !important;
   }
 }
 .navbar__navigation ul li a:hover {
@@ -981,7 +981,7 @@ figure img {
   text-align: right;
 }
 .post-item:hover .entry-title a {
-  color: #528ABF;
+  color: #528abf;
 }
 .post-item:hover .btn {
   color: #fff;
@@ -1086,8 +1086,8 @@ body.single-post .entry-content {
 #author-bio {
   margin-top: 30px;
   padding: 20px 20px;
-  border-top: 1px solid #F7F8FB;
-  border-bottom: 1px solid #F7F8FB;
+  border-top: 1px solid #f7f8fb;
+  border-bottom: 1px solid #f7f8fb;
   display: flex;
   gap: 10px;
 }
@@ -1379,14 +1379,14 @@ body.single-post .entry-content {
   margin: 0;
 }
 .inw-zre aside ul li a:hover h3 {
-  color: #528ABF;
+  color: #528abf;
 }
 .inw-zre aside ul .active {
   display: none;
 }
 .inw-zre aside ul .active h3 {
   font-weight: 500;
-  color: #528ABF;
+  color: #528abf;
 }
 
 body.active {
@@ -1787,13 +1787,13 @@ table.dataTable tbody td a {
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   padding: 0px;
-  color: #528ABF !important;
+  color: #528abf !important;
   border: none !important;
   box-shadow: none !important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
   background: none;
-  color: #528ABF !important;
+  color: #528abf !important;
   opacity: 0.8;
 }
 
@@ -2108,7 +2108,7 @@ select {
 .search-resoults-info .swicher-results-display .swicher:hover rect,
 .search-resoults-info .swicher-results-display .swicher:hover text {
   transition: all 0.3s linear;
-  fill: #528ABF;
+  fill: #528abf;
 }
 .search-resoults-info path,
 .search-resoults-info rect,
@@ -2491,4 +2491,114 @@ label .select2.select2-container .select2-selection__arrow {
 }
 .select2-dropdown ul .select2-results__option--highlighted {
   background-color: black !important;
+}
+
+.single-inwestycje li {
+  min-width: initial !important;
+  max-width: initial !important;
+}
+.single-inwestycje .sf-field-post-meta-cena {
+  width: 40%;
+}
+@media only screen and (max-width: 1200px) {
+  .single-inwestycje .sf-field-post-meta-cena {
+    width: 50%;
+  }
+}
+.single-inwestycje .sf-field-post-meta-powierzchnia {
+  width: 20%;
+}
+@media only screen and (max-width: 1200px) {
+  .single-inwestycje .sf-field-post-meta-powierzchnia {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .single-inwestycje .sf-field-post-meta-powierzchnia {
+    width: 100%;
+  }
+}
+.single-inwestycje .sf-field-post-meta-liczba_pokoi {
+  width: 15%;
+}
+@media only screen and (max-width: 1200px) {
+  .single-inwestycje .sf-field-post-meta-liczba_pokoi {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .single-inwestycje .sf-field-post-meta-liczba_pokoi {
+    width: 100%;
+  }
+}
+.single-inwestycje .sf-field-post-meta-status {
+  width: 15%;
+}
+@media only screen and (max-width: 1200px) {
+  .single-inwestycje .sf-field-post-meta-status {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .single-inwestycje .sf-field-post-meta-status {
+    width: 100%;
+  }
+}
+.single-inwestycje .sf-field-submit {
+  width: 15%;
+}
+@media only screen and (max-width: 1200px) {
+  .single-inwestycje .sf-field-submit {
+    width: 10%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .single-inwestycje .sf-field-submit {
+    width: 100%;
+  }
+}
+
+#search-filter-form-477 li {
+  min-width: initial !important;
+  max-width: initial !important;
+  width: 10%;
+}
+@media only screen and (max-width: 1200px) {
+  #search-filter-form-477 li {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #search-filter-form-477 li {
+    width: 100%;
+  }
+}
+#search-filter-form-477 select.sf-input-select {
+  min-width: 100px;
+}
+#search-filter-form-477 .sf-field-post-meta-cena {
+  width: 30%;
+}
+@media only screen and (max-width: 1200px) {
+  #search-filter-form-477 .sf-field-post-meta-cena {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #search-filter-form-477 .sf-field-post-meta-cena {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #search-filter-form-477 .sf-field-post-meta-powierzchnia {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #search-filter-form-477 .sf-field-post-meta-powierzchnia {
+    width: 100%;
+  }
+}
+#search-filter-form-477 .sf-field-submit {
+  width: initial;
 }/*# sourceMappingURL=go-main.css.map */

@@ -10,7 +10,7 @@
   display: inline-block;
 }
 .go-tabs .tab a:hover {
-  color: #528ABF;
+  color: #528abf;
 }
 .go-tabs .tab a.active {
   border: 1px solid black;

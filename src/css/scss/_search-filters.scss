@@ -419,3 +419,92 @@ label {
     }
   }
 }
+
+.single-inwestycje {
+  li {
+    // flex: auto;
+    min-width: initial !important;
+    max-width: initial !important;
+  }
+  .sf-field-post-meta-cena {
+    width: 40%;
+    @media #{$slg} {
+      width: 50%;
+    }
+  }
+  .sf-field-post-meta-powierzchnia {
+    width: 20%;
+    @media #{$slg} {
+      width: 50%;
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+  .sf-field-post-meta-liczba_pokoi {
+    width: 15%;
+    @media #{$slg} {
+      width: 45%;
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+  .sf-field-post-meta-status {
+    width: 15%;
+    @media #{$slg} {
+      width: 45%;
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+  .sf-field-submit {
+    width: 15%;
+    @media #{$slg} {
+      width: 10%;
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+}
+
+#search-filter-form-477 {
+  li {
+    // flex: auto;
+    min-width: initial !important;
+    max-width: initial !important;
+    width: 10%;
+    @media #{$slg} {
+      width: 20%;
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+  select.sf-input-select {
+    min-width: 100px;
+  }
+  .sf-field-post-meta-cena {
+    width: 30%;
+    @media #{$slg} {
+      width: 50%;
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+  .sf-field-post-meta-powierzchnia {
+    @media #{$slg} {
+      width: 50%;
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+
+  .sf-field-submit {
+    width: initial;
+  }
+}
