@@ -98,8 +98,8 @@ form.searchandfilter {
         width: 100%;
       }
       &:first-child {
-        padding-left: 0px !important;
-        @media #{$xs} {
+        padding-left: 5px !important;
+        @media #{$sm} {
           padding-left: 10px !important;
         }
       }
