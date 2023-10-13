@@ -160,7 +160,6 @@
 @media only screen and (max-width: 768px) {
   .steps__content ul li .steps__number {
     position: absolute;
-    margin: 10px 0;
     left: 17px;
   }
 }
