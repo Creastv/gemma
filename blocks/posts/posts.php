@@ -4,7 +4,6 @@ $id = $block['id'];
 $way = get_field( 'sposob_dodawania_postow' );
 $pos = get_field( 'posty' );
 
-
 $postPerPage = get_field( 'posts_per_page' );
 $postType = get_field( 'typ_postow' );
 $posts = new WP_Query( array(
@@ -12,8 +11,6 @@ $posts = new WP_Query( array(
         'posts_per_page' => $postPerPage,
         'order' => 'DESC',
 ));
-
-$num_cols = count( $pos );
 
 ?>
 
@@ -30,9 +27,8 @@ $num_cols = count( $pos );
     <?php } ?>
 <?php else : ?>
 <?php if( $pos ): ?>
-    
     <div class="row">
-        <div class="posts-wraper rows-<?php echo $num_cols; ?>">
+        <div class="posts-wraper">
         <?php foreach( $pos as $post ): 
             $zf = get_field( 'zdjecie', $post->ID );
         ?>
