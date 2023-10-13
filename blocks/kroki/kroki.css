@@ -161,7 +161,7 @@
   .steps__content ul li .steps__number {
     position: absolute;
     margin: 10px 0;
-    min-width: 46px;
+    left: 17px;
   }
 }
 .steps__content ul li .steps__title {
