@@ -1,5 +1,23 @@
 @import "../../src/css/scss/variable";
 
-.swiper-button-disabled{
-    display: none;
+.swiper-button-disabled {
+  display: none;
+}
+
+.posts-wraper.rows-3 {
+  display: flex !important;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+
+  article {
+    width: calc(25% - 20px);
+    @media #{$md} {
+      width: calc(50% - 20px);
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
 }

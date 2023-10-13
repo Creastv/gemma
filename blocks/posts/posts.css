@@ -1,3 +1,23 @@
 .swiper-button-disabled {
   display: none;
+}
+
+.posts-wraper.rows-3 {
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+}
+.posts-wraper.rows-3 article {
+  width: calc(25% - 20px);
+}
+@media only screen and (max-width: 998px) {
+  .posts-wraper.rows-3 article {
+    width: calc(50% - 20px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .posts-wraper.rows-3 article {
+    width: 100%;
+  }
 }/*# sourceMappingURL=posts.css.map */

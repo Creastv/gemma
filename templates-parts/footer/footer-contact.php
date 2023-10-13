@@ -47,4 +47,6 @@ $display = get_field( 'wylacz_formularz_u_dolu_srony' );
         </div>
     </div>
 </section>
+<?php else : ?>
+<div style="height:20px; display:block;"></div>
 <?php endif; ?>
