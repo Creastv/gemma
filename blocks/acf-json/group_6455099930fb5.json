@@ -106,8 +106,8 @@
             "default_value": "",
             "min": "",
             "max": "",
-            "placeholder": "",
             "step": "",
+            "placeholder": "",
             "prepend": "",
             "append": ""
         },
@@ -362,8 +362,28 @@
         },
         {
             "key": "field_645b62d379e8b",
-            "label": "Rzut 3D",
+            "label": "Rzut 3D PDF  - link w tabeli",
             "name": "rzut_3d",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_65365fa1f7114",
+            "label": "Rzut 3D PDF   - miniaturki (tabela, kafelki)",
+            "name": "rzut_3d_img",
             "aria-label": "",
             "type": "file",
             "instructions": "",
@@ -399,51 +419,6 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_64df845c0f248",
-            "label": "Baby doll image",
-            "name": "baby_doll_image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_64df846d0f249",
-            "label": "Link do baby doll (pdf)",
-            "name": "link_do_baby_doll",
-            "aria-label": "",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
         }
     ],
     "location": [
@@ -464,5 +439,5 @@
     "active": true,
     "description": "extras",
     "show_in_rest": 1,
-    "modified": 1695381785
+    "modified": 1698062306
 }

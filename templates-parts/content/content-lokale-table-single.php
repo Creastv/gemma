@@ -57,6 +57,7 @@ $sizeDisplay = $size ?  $size  : false;
 
 $pdfRzut = get_field( 'rzut_pdf', get_the_ID() );
 $pdf3D = get_field( 'rzut_3d', get_the_ID() );
+$pdf3DImg = get_field( 'rzut_3d_img', get_the_ID() );
 $wirtualnySpacer = get_field( 'spacer_wirtualny', get_the_ID() );
 
 $extras = get_field( 'udogodnienia_lokalu', get_the_ID() );
@@ -80,12 +81,15 @@ $img = get_field( 'zdjecie_w_tabeli', get_the_ID() );
 $imgBabydoll = get_field( 'baby_doll_image', get_the_ID() );
 $opdf = get_field( 'link_do_baby_doll', get_the_ID() );
 
+
 ?>
 <tr>
     <td>
-        <?php if($pdfRzut) { ?>
-        <a href="<?php echo $pdfRzut; ?>"  target="_blank">
-        <?php } ?>   
+        <?php if($pdf3DImg) { ?>
+          <a href="<?php echo $pdf3DImg; ?>"  target="_blank">
+        <?php } else { ?>
+			<a href="<?php echo $pdfRzut; ?>"  target="_blank">
+		<?php } ?>   
             <?php if($img) { ?>
                 <?php echo wp_get_attachment_image( $img, 'local-table'); ?>
             <?php } else { ?>
@@ -95,7 +99,7 @@ $opdf = get_field( 'link_do_baby_doll', get_the_ID() );
                     <img src="<?php echo get_template_directory_uri()."/src/img/thumbnail.png"; ?>" width="120" height="120" alt="<?php the_title(); ?>">
                 <?php endif; ?>
             <?php } ?>
-        <?php if($pdfRzut) { ?>
+        <?php if($pdf3DImg || $pdfRzut) { ?>
             </a>
         <?php } ?>
     </td>

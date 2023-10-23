@@ -52,7 +52,8 @@ $size = get_field( 'powierzchnia', get_the_ID() );
 $sizeDisplay = $size ? '<span>' . $size . ' m<sup>2</sup></span>' : false;
 
 $excerpt = $roomsDisplay . ' ' . $floorDisplay . ' ' . $sizeDisplay; ;
-
+$pdf3D = get_field( 'rzut_3d', get_the_ID() );
+$pdf3DImg = get_field( 'rzut_3d_img', get_the_ID() );
 $price = get_field( 'cena', get_the_ID() );
 $priceDisplay = $price ? $price . ' zł' : false ;
 
@@ -80,9 +81,11 @@ $pdfRzut = get_field( 'rzut_pdf', get_the_ID() );
 <article id="post-<?php the_ID(); ?>" <?php post_class('local-item'); ?>>
     <div class="post-item__wraper">
         <header>
-            <?php if($pdfRzut) { ?>
-            <a href="<?php echo $pdfRzut; ?>"  target="_blank">
-            <?php } ?>   
+            <?php if($pdf3DImg) { ?>
+			  <a href="<?php echo $pdf3DImg; ?>"  target="_blank">
+			<?php } else { ?>
+				<a href="<?php echo $pdfRzut; ?>"  target="_blank">
+			<?php } ?>   
                 <?php if($img) { ?>
                     <?php echo wp_get_attachment_image( $img, 'post-item'); ?>
                 <?php } else { ?>
@@ -93,7 +96,7 @@ $pdfRzut = get_field( 'rzut_pdf', get_the_ID() );
                     <?php endif; ?>
                 <?php } ?>
                 <?php echo $label; ?>
-            <?php if($pdfRzut) { ?>
+            <?php if($pdf3DImg || $pdfRzut) { ?>
                 </a>
             <?php } ?>
         </header>
