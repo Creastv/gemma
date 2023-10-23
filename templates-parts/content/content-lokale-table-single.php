@@ -67,7 +67,9 @@ $typ_lokalu = get_the_terms(get_the_ID(), 'typ-lokalu');
 $typ = $typ_lokalu[0];
 
 $tekstButton = "";
-if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
+if(  $typ->name == "Dom" ) {
+    $tekstButton = "Zapytaj o dom >";
+} else if( $typ->name == "Mieszkanie" ) {
     $tekstButton = "Zapytaj o mieszkanie >";
 } else if($typ->name == "Lokal usługowy" ) {
     $tekstButton = "Zapytaj o lokal >";

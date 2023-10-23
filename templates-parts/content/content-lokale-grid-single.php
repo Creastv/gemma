@@ -66,12 +66,14 @@ $typ_lokalu = get_the_terms($post->ID, 'typ-lokalu');
 $typ = $typ_lokalu[0];
 
 $tekstButton = "";
-if( $typ->name == "Mieszkanie" ||  $typ->name == "Dom") {
-    $textButton = "Zapytaj o mieszkanie >";
+if(  $typ->name == "Dom" ) {
+    $tekstButton = "Zapytaj o dom >";
+} else if( $typ->name == "Mieszkanie" ) {
+    $tekstButton = "Zapytaj o mieszkanie >";
 } else if($typ->name == "Lokal usługowy" ) {
-    $textButton = "Zapytaj o lokal >";
+    $tekstButton = "Zapytaj o lokal >";
 } else {
-    $textButton = "Zapytaj o " . strtolower($typ->name) . " >";
+    $tekstButton = "Zapytaj o " . strtolower($typ->name) . " >";
 }
 
 $img = get_field( 'zdjecie', get_the_ID() );
